@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecipeManagementApp">
         <activity
+            android:name=".Intro_1"
+            android:exported="false" />
+        <activity
             android:name=".Activities.ExitPage"
             android:exported="true" />
         <activity
