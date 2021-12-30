@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecipeManagementApp">
         <activity
+            android:name=".Activities.Recipe_with_paper"
+            android:exported="true" />
+        <activity
             android:name=".Activities.Intro_1"
             android:exported="false" />
         <activity
