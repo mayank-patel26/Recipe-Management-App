@@ -46,19 +46,20 @@
         app:layout_constraintBottom_toTopOf="@+id/sign_up_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.25" />
 
     <ImageView
+        android:id="@+id/imageView5"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:background="@drawable/rounded_corner_button"
         android:contentDescription="@string/intro_app_logo"
-        app:layout_constraintBottom_toTopOf="@+id/startup_text"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.65"
+        app:layout_constraintVertical_bias="0.25"
         app:srcCompat="@drawable/temp_app_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
