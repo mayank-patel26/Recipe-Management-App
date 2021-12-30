@@ -4,22 +4,24 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.24537037037037038" />
-        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/rectangle.xml" value="0.2546875" />
-        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/rounded_corner_button.xml" value="0.21875" />
-        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/rounded_corner_rectangle.xml" value="0.23854166666666668" />
-        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/rounded_corners.xml" value="0.2546875" />
-        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout-v21/activity_exit_page.xml" value="0.20260416666666667" />
-        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_exit_page.xml" value="0.2" />
-        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_intro1.xml" value="0.2" />
+        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_exit_page.xml" value="0.136" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_recipe_with_paper.xml" value="0.4" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/cuisine.xml" value="0.17300724637681159" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/fragment_cuisine.xml" value="0.4" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.24537037037037038" />
+        <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
         <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/rounded_corners.xml" value="0.28229166666666666" />
         <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_exit_page.xml" value="0.22780797101449277" />
-        <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_intro1.xml" value="0.264" />
+        <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_intro1.xml" value="0.2" />
+        <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_intro2.xml" value="0.264" />
+        <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_intro3.xml" value="0.25416666666666665" />
+        <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_intro4.xml" value="0.25416666666666665" />
+        <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_login_signup.xml" value="0.24407582938388625" />
+        <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_login_signup_page.xml" value="0.2" />
         <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_recipe_with_paper.xml" value="0.25416666666666665" />
+        <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_startup.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

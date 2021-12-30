@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:contentDescription="@string/intro_app_logo"
-    tools:context=".Activities.Intro_1">
+    tools:context=".Activities.login_signup">
+
 
     <ImageView
         android:id="@+id/imageView"
@@ -23,7 +23,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_corner_button"
-        android:text="@string/intro_skip_btn"
+        android:text="@string/sign_up_button"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -34,32 +34,49 @@
         app:layout_constraintTop_toTopOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.9" />
 
+    <Button
+        android:id="@+id/login_button1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_button"
+        android:text="@string/login_text"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_button"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startup_text"
+        app:layout_constraintVertical_bias="0.9" />
+
     <TextView
         android:id="@+id/startup_text"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/intro_app_feature1"
+        android:text="@string/intro_app_feature3"
         android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/sign_up_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintTop_toBottomOf="@+id/app_logo"
+        app:layout_constraintVertical_bias="0.19999999" />
 
     <ImageView
+        android:id="@+id/app_logo"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:background="@drawable/rounded_corner_button"
         android:contentDescription="@string/intro_app_logo"
-        app:layout_constraintBottom_toTopOf="@+id/startup_text"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.65"
+        app:layout_constraintVertical_bias="0.25"
         app:srcCompat="@drawable/temp_app_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:contentDescription="@string/intro_app_logo"
-    tools:context=".Activities.Intro_1">
+    tools:context=".Activities.Intro_3">
 
     <ImageView
         android:id="@+id/imageView"
@@ -39,7 +38,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/intro_app_feature1"
+        android:text="@string/intro_app_feature3"
         android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -62,4 +61,3 @@
         app:srcCompat="@drawable/temp_app_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
