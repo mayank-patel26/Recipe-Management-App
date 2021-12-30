@@ -1,7 +1,9 @@
+
 package com.javaproject.recipemanagementapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Rect;
 import android.os.Bundle;
 
 import com.javaproject.recipemanagementapp.R;
@@ -12,5 +14,11 @@ public class ExitPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exit_page);
+        setElements();
+    }
+
+    void setElements()
+    {
+        Rect r=new Rect(0,0,0,0);
     }
 }
