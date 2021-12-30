@@ -2,7 +2,9 @@
     <string name="app_name">Recipe Management App</string>
     <string name="intro_skip_btn">SKIP</string>
     <string name="sign_up_button">SIGN UP</string>
+    <string name="full_name">full name</string>
     <string name="login_text">LOGIN</string>
+    <string name="signup_text">SIGN UP</string>
     <string name="sandal_image1">image1</string>
     <string name="startup_text">TEXT</string>
     <string name="intro_app_feature1">App_Feature1</string>
@@ -16,4 +18,5 @@
     <string name="forgot_password">forgot password?</string>
     <string name="email_address">email address</string>
     <string name="password">password</string>
+    <string name="reenter_password">Re-enter password</string>
 </resources>

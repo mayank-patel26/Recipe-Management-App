@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.login">
+    tools:context=".signup">
 
     <ImageView
         android:id="@+id/imageView"
@@ -42,7 +42,7 @@
         android:layout_width="140dp"
         android:layout_height="49dp"
         android:background="@drawable/rounded_corner_button"
-        android:text="@string/login_text"
+        android:text="@string/signup_text"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -56,10 +56,10 @@
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
-        android:id="@+id/login_text"
+        android:id="@+id/signup_text"
         android:layout_width="173dp"
         android:layout_height="wrap_content"
-        android:text="@string/login_text"
+        android:text="@string/signup_text"
         android:textAlignment="center"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -84,7 +84,25 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/login_text"
+        app:layout_constraintTop_toBottomOf="@+id/fullname"
+        app:layout_constraintVertical_bias="0.028" />
+
+    <EditText
+        android:id="@+id/fullname"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_corner_rectangle"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="@string/full_name"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/signup_button1"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/signup_text"
         app:layout_constraintVertical_bias="0.16000003" />
 
     <EditText
@@ -105,21 +123,26 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/login_email"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
-    <TextView
-        android:id="@+id/forgot_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/forgot_password"
-        android:textColor="#6D4C41"
-        android:textSize="12sp"
+    <EditText
+        android:id="@+id/reenter_password"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_corner_rectangle"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="@string/password"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/signup_button1"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/login_password"
-        app:layout_constraintVertical_bias="0.031" />
+        app:layout_constraintVertical_bias="0.044" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
