@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:contentDescription="@string/intro_app_logo"
-    tools:context=".Intro_1">
+    tools:context=".Activities.Intro_1">
 
     <ImageView
         android:id="@+id/imageView"
@@ -22,7 +22,7 @@
         android:id="@+id/skip_button"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corners"
+        android:background="@drawable/rounded_corner_button"
         android:text="@string/intro_skip_btn"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -52,7 +52,7 @@
     <ImageView
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@drawable/rounded_corners"
+        android:background="@drawable/rounded_corner_button"
         android:contentDescription="@string/intro_app_logo"
         app:layout_constraintBottom_toTopOf="@+id/intro_text1"
         app:layout_constraintEnd_toEndOf="parent"

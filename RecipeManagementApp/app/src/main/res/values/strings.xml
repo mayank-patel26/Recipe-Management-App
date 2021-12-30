@@ -4,4 +4,6 @@
     <string name="sandal_image1">image1</string>
     <string name="intro_app_feature1">App_Feature1</string>
     <string name="intro_app_logo">app_logo</string>
+    <string name="white_rectangle">White rectangle</string>
+    <string name="close">Close?</string>
 </resources>

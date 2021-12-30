@@ -5,7 +5,12 @@
       <map>
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.24537037037037038" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/rectangle.xml" value="0.2546875" />
+        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/rounded_corner_button.xml" value="0.21875" />
+        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/rounded_corner_rectangle.xml" value="0.23854166666666668" />
+        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/rounded_corners.xml" value="0.2546875" />
+        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout-v21/activity_exit_page.xml" value="0.20260416666666667" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_exit_page.xml" value="0.264" />
+        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_intro1.xml" value="0.4" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/cuisine.xml" value="0.17300724637681159" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/fragment_cuisine.xml" value="0.4" />
