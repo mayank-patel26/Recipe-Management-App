@@ -3,6 +3,8 @@
     <color name="sandal">#EECF80</color>
     <color name="green">#6D8E47</color>
     <color name="red">#E02C2C</color>
+    <color name="choco">#AE741C</color>
+    <color name="blue">#638EE3</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

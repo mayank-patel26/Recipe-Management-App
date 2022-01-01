@@ -3,26 +3,226 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".Activities.Recipe_with_paper">
 
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/RoundRect"
         android:layout_width="334dp"
         android:layout_height="487dp"
+        android:layout_marginBottom="30dp"
+        android:alpha="0.8"
+        android:contentDescription="@string/sandal_image1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/rounded_corner_rectangle"
-        tools:layout_editor_absoluteY="193dp" />
+        app:tint="@color/sandal"
+        tools:ignore="ImageContrastCheck" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/red_line"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/RoundRect"
+        app:layout_constraintStart_toStartOf="@+id/RoundRect"
+        app:layout_constraintTop_toTopOf="@+id/RoundRect"
+        app:srcCompat="@drawable/rounded_corner_rectangle"
+        app:tint="@color/red"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/red_line" />
+
+    <ImageView
+        android:id="@+id/RoundHeader"
         android:layout_width="347dp"
         android:layout_height="56dp"
         android:layout_marginTop="20dp"
+        android:alpha="0.8"
+        android:contentDescription="@string/sandal_image1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rounded_corner_button"
+        app:tint="@color/sandal" />
+
+    <ImageView
+        android:id="@+id/RoundIconBg1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="@string/sandal_image1"
+        app:layout_constraintBottom_toTopOf="@+id/RoundRect"
+        app:layout_constraintStart_toStartOf="@+id/RoundRect"
+        app:layout_constraintTop_toBottomOf="@+id/RoundHeader"
         app:srcCompat="@drawable/rounded_corner_button" />
+
+    <ImageView
+        android:id="@+id/timer_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/timer_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/RoundIconBg1"
+        app:layout_constraintEnd_toEndOf="@+id/RoundIconBg1"
+        app:layout_constraintStart_toStartOf="@+id/RoundIconBg1"
+        app:layout_constraintTop_toTopOf="@+id/RoundIconBg1"
+        app:srcCompat="@drawable/ic_baseline_timer_24"
+        app:tint="@color/black"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/cooking_time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cooking_time"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/RoundIconBg1"
+        app:layout_constraintEnd_toEndOf="@+id/RoundIconBg1"
+        app:layout_constraintStart_toStartOf="@+id/RoundIconBg1"
+        app:layout_constraintTop_toBottomOf="@+id/RoundHeader" />
+
+    <TextView
+        android:id="@+id/cooking_time_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cooking_time_value"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/RoundRect"
+        app:layout_constraintEnd_toEndOf="@+id/RoundIconBg1"
+        app:layout_constraintStart_toStartOf="@+id/RoundIconBg1"
+        app:layout_constraintTop_toBottomOf="@+id/RoundIconBg1" />
+
+    <ImageView
+        android:id="@+id/RoundIconBg2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/sandal_image1"
+        app:layout_constraintBottom_toTopOf="@+id/RoundRect"
+        app:layout_constraintEnd_toStartOf="@+id/RoundIconBg3"
+        app:layout_constraintStart_toEndOf="@+id/RoundIconBg1"
+        app:layout_constraintTop_toBottomOf="@+id/RoundHeader"
+        app:srcCompat="@drawable/rounded_corner_button"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/RoundIconBg3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/sandal_image1"
+        app:layout_constraintBottom_toTopOf="@+id/RoundRect"
+        app:layout_constraintEnd_toEndOf="@+id/RoundHeader"
+        app:layout_constraintTop_toBottomOf="@+id/RoundHeader"
+        app:srcCompat="@drawable/rounded_corner_button"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/prep_time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/prep_time"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/RoundIconBg2"
+        app:layout_constraintEnd_toEndOf="@+id/RoundIconBg2"
+        app:layout_constraintStart_toStartOf="@+id/RoundIconBg2"
+        app:layout_constraintTop_toBottomOf="@+id/RoundHeader"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/hourglass_icon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:contentDescription="@string/hourglass_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/RoundIconBg2"
+        app:layout_constraintEnd_toEndOf="@+id/RoundIconBg2"
+        app:layout_constraintStart_toStartOf="@+id/RoundIconBg2"
+        app:layout_constraintTop_toTopOf="@+id/RoundIconBg2"
+        app:srcCompat="@drawable/ic_baseline_hourglass_bottom_24"
+        app:tint="@color/black"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/serving_icon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:contentDescription="@string/serving_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/RoundIconBg3"
+        app:layout_constraintEnd_toEndOf="@+id/RoundIconBg3"
+        app:layout_constraintStart_toStartOf="@+id/RoundIconBg3"
+        app:layout_constraintTop_toTopOf="@+id/RoundIconBg3"
+        app:srcCompat="@drawable/ic_baseline_rice_bowl_24"
+        app:tint="@color/black"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/prep_time_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prep_time_value"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/RoundRect"
+        app:layout_constraintEnd_toEndOf="@+id/RoundIconBg2"
+        app:layout_constraintStart_toStartOf="@+id/RoundIconBg2"
+        app:layout_constraintTop_toBottomOf="@+id/RoundIconBg2"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/servings_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/servings"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/RoundIconBg3"
+        app:layout_constraintEnd_toEndOf="@+id/RoundIconBg3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/RoundIconBg3"
+        app:layout_constraintTop_toBottomOf="@+id/RoundHeader"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/servings_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/servings_value"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/RoundRect"
+        app:layout_constraintEnd_toEndOf="@+id/RoundIconBg3"
+        app:layout_constraintStart_toStartOf="@+id/RoundIconBg3"
+        app:layout_constraintTop_toBottomOf="@+id/RoundIconBg3"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/recipe_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recipe_name"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/RoundHeader"
+        app:layout_constraintEnd_toEndOf="@+id/RoundHeader"
+        app:layout_constraintStart_toStartOf="@+id/RoundHeader"
+        app:layout_constraintTop_toTopOf="@+id/RoundHeader" />
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/RoundRect"
+        app:layout_constraintEnd_toEndOf="@+id/RoundRect"
+        app:layout_constraintStart_toStartOf="@+id/RoundRect"
+        app:layout_constraintTop_toTopOf="@+id/RoundRect">
+
+
+
+
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
