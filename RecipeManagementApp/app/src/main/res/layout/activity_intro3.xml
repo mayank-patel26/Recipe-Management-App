@@ -17,11 +17,25 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/yellow_transparent_rect" />
 
+    <ProgressBar
+        android:id="@+id/progressbarintro3"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:progress="100"
+        android:progressDrawable="@drawable/custom_progress_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/sign_up_button"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corner_button"
+        android:background="@drawable/rounded_corner_button_white"
         android:text="@string/intro_skip_btn"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -52,7 +66,7 @@
         android:id="@+id/imageView7"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@drawable/rounded_corner_button"
+        android:background="@drawable/rounded_corner_button_white"
         android:contentDescription="@string/intro_app_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

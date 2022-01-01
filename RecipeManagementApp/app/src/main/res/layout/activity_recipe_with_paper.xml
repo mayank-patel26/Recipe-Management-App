@@ -17,7 +17,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/rounded_corner_rectangle"
+        app:srcCompat="@drawable/rounded_corner_rectangle_white"
         app:tint="@color/sandal"
         tools:ignore="ImageContrastCheck" />
 
@@ -29,7 +29,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/RoundRect"
         app:layout_constraintStart_toStartOf="@+id/RoundRect"
         app:layout_constraintTop_toTopOf="@+id/RoundRect"
-        app:srcCompat="@drawable/rounded_corner_rectangle"
+        app:srcCompat="@drawable/rounded_corner_rectangle_white"
         app:tint="@color/red"
         tools:ignore="ImageContrastCheck"
         android:contentDescription="@string/red_line" />
@@ -44,7 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/rounded_corner_button"
+        app:srcCompat="@drawable/rounded_corner_button_white"
         app:tint="@color/sandal" />
 
     <ImageView
@@ -56,7 +56,7 @@
         app:layout_constraintBottom_toTopOf="@+id/RoundRect"
         app:layout_constraintStart_toStartOf="@+id/RoundRect"
         app:layout_constraintTop_toBottomOf="@+id/RoundHeader"
-        app:srcCompat="@drawable/rounded_corner_button" />
+        app:srcCompat="@drawable/rounded_corner_button_white" />
 
     <ImageView
         android:id="@+id/timer_icon"
@@ -104,7 +104,7 @@
         app:layout_constraintEnd_toStartOf="@+id/RoundIconBg3"
         app:layout_constraintStart_toEndOf="@+id/RoundIconBg1"
         app:layout_constraintTop_toBottomOf="@+id/RoundHeader"
-        app:srcCompat="@drawable/rounded_corner_button"
+        app:srcCompat="@drawable/rounded_corner_button_white"
         tools:ignore="ImageContrastCheck" />
 
     <ImageView
@@ -116,7 +116,7 @@
         app:layout_constraintBottom_toTopOf="@+id/RoundRect"
         app:layout_constraintEnd_toEndOf="@+id/RoundHeader"
         app:layout_constraintTop_toBottomOf="@+id/RoundHeader"
-        app:srcCompat="@drawable/rounded_corner_button"
+        app:srcCompat="@drawable/rounded_corner_button_white"
         tools:ignore="ImageContrastCheck" />
 
     <TextView
@@ -181,9 +181,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/RoundIconBg3"
         app:layout_constraintEnd_toEndOf="@+id/RoundIconBg3"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/RoundIconBg3"
         app:layout_constraintTop_toBottomOf="@+id/RoundHeader"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="TextContrastCheck" />
 
     <TextView
@@ -215,12 +216,11 @@
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/RoundRect"
         app:layout_constraintEnd_toEndOf="@+id/RoundRect"
         app:layout_constraintStart_toStartOf="@+id/RoundRect"
         app:layout_constraintTop_toTopOf="@+id/RoundRect">
-
-
 
 
     </ScrollView>

@@ -31,7 +31,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/rounded_corner_rectangle"
+        app:srcCompat="@drawable/rounded_corner_rectangle_white"
         app:tint="@color/sandal"
         tools:ignore="ImageContrastCheck" />
 
@@ -43,7 +43,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/RoundRect"
         app:layout_constraintStart_toStartOf="@+id/RoundRect"
         app:layout_constraintTop_toTopOf="@+id/RoundRect"
-        app:srcCompat="@drawable/rounded_corner_rectangle"
+        app:srcCompat="@drawable/rounded_corner_rectangle_white"
         app:tint="@color/red"
         tools:ignore="ImageContrastCheck"
         android:contentDescription="@string/red_line" />
@@ -58,7 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        app:srcCompat="@drawable/rounded_corner_button"
+        app:srcCompat="@drawable/rounded_corner_button_white"
         app:tint="@color/sandal" />
 
     <ImageView
@@ -70,7 +70,7 @@
         app:layout_constraintBottom_toTopOf="@+id/RoundRect"
         app:layout_constraintStart_toStartOf="@+id/RoundRect"
         app:layout_constraintTop_toBottomOf="@+id/RoundHeader"
-        app:srcCompat="@drawable/rounded_corner_button" />
+        app:srcCompat="@drawable/rounded_corner_button_white" />
 
     <ImageView
         android:id="@+id/timer_icon"
@@ -118,7 +118,7 @@
         app:layout_constraintEnd_toStartOf="@+id/RoundIconBg3"
         app:layout_constraintStart_toEndOf="@+id/RoundIconBg1"
         app:layout_constraintTop_toBottomOf="@+id/RoundHeader"
-        app:srcCompat="@drawable/rounded_corner_button"
+        app:srcCompat="@drawable/rounded_corner_button_white"
         tools:ignore="ImageContrastCheck" />
 
     <ImageView
@@ -130,7 +130,7 @@
         app:layout_constraintBottom_toTopOf="@+id/RoundRect"
         app:layout_constraintEnd_toEndOf="@+id/RoundHeader"
         app:layout_constraintTop_toBottomOf="@+id/RoundHeader"
-        app:srcCompat="@drawable/rounded_corner_button"
+        app:srcCompat="@drawable/rounded_corner_button_white"
         tools:ignore="ImageContrastCheck" />
 
     <TextView
@@ -246,7 +246,7 @@
         android:text="+"
         android:textSize="20sp"
         android:textColor="@color/black"
-        android:background="@drawable/rounded_corner_rectangle"
+        android:background="@drawable/rounded_corner_rectangle_white"
         app:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/RoundRect"
         app:layout_constraintTop_toTopOf="@+id/RoundRect" />
