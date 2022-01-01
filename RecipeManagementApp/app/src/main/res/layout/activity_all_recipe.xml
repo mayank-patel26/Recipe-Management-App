@@ -193,7 +193,7 @@
             android:paddingLeft="15dp"
             android:paddingTop="9dp"
             android:text="@string/search_for_recipe"
-            android:textColor="@color/brown"
+            android:textColor="@color/choco"
             android:textStyle="italic"
             app:layout_constraintBottom_toBottomOf="@+id/searchView"
             app:layout_constraintEnd_toEndOf="parent"
