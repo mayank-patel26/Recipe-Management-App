@@ -8,5 +8,6 @@
         <!-- Customize your theme here. -->
         <!--Background image-->
         <item name="android:windowBackground">@drawable/blurry_background</item>
+
     </style>
 </resources>
