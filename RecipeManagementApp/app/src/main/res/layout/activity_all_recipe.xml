@@ -14,6 +14,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/profile_circle"
+            android:text="A"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="@color/green"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/searchView"
+            app:layout_constraintTop_toTopOf="@+id/searchView" />
+
         <ScrollView
             android:id="@+id/scrollView2"
             android:layout_width="match_parent"
@@ -187,24 +202,27 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="380dp"
-            android:layout_height="40dp"
+            android:layout_width="315dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/rounded_corner_rectangle"
             android:paddingLeft="15dp"
-            android:paddingTop="9dp"
+            android:paddingTop="13dp"
             android:text="@string/search_for_recipe"
             android:textColor="@color/choco"
             android:textStyle="italic"
             app:layout_constraintBottom_toBottomOf="@+id/searchView"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/searchView"
             app:layout_constraintTop_toTopOf="@+id/searchView" />
 
         <SearchView
             android:id="@+id/searchView"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="70dp"
             android:paddingLeft="350dp"
+            android:paddingTop="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
