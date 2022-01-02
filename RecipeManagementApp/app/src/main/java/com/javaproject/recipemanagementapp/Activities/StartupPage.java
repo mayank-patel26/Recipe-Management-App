@@ -1,11 +1,10 @@
 package com.javaproject.recipemanagementapp.Activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.javaproject.recipemanagementapp.R;
 
@@ -16,13 +15,11 @@ public class StartupPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startup);
 
-        Button startup_skip_btn = (Button) findViewById(R.id.startup_skip_btn);
-        startup_skip_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(StartupPage.this, login_signup.class);
-                startActivity(intent);
-            }
+        Button startup_skip_btn = findViewById(R.id.startup_skip_btn);
+        startup_skip_btn.setOnClickListener(view -> {
+            Intent intent1 = new Intent(StartupPage.this, login_startup.class);
+            startActivity(intent1);
         });
-    }
+
+        }
     }
