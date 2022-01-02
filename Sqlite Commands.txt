@@ -1,0 +1,38 @@
+Links -
+	Datatypes in sqlite - https://www.sqlite.org/datatype3.html
+	Constraints in sqlite - https://www.tutorialspoint.com/sqlite/sqlite_constraints.htm
+	
+Command Line - type sqlite3 to start a transient in-memory database.
+	.help - all the commands
+	.open FILENAME - (ex: .open Example.db)opens an existing database or creates one in the current directory
+	.save FILENAME - saves the in memory database into a file
+	.tables - lists all the tables
+	write SQL commands normally after executing .open and .save commands.
+
+Android Studio (Java) -
+	Create a new database :
+		SQLiteDatabase <yourDatabaseName> = openOrCreateDatabase("<yourDatabaseName>",MODE_PRIVATE,null);
+		
+	Execute SQL commands
+		<yourDatabaseName>.execSQL("<commands>");
+	
+	Fetch values with cursor class
+		Cursor <nameOfCursorObject> = <yourDatabaseName>.rawQuery("<selectionQuery>",null);
+		<nameOfCursorObject>.moveToFirst();
+		
+		get value by doing:
+		<nameOfCursorObject>.getString(<index>);
+		
+		other methods :
+			getColumnCount()
+			getColumnIndex(String <columnName>) - returns the index number of a column by specifying the name of the column
+			getColumnName(int <columnIndex>) - returns the name of the column by specifying the index of the column
+			getColumnNames() - returns the array of all the column names of the table.
+			getCount() - returns the total number of rows in the cursor object
+			getPosition() - returns the current position of the cursor in the table
+			isClosed() - returns true if the cursor is closed and return false otherwise
+		
+		
+	
+	
+	

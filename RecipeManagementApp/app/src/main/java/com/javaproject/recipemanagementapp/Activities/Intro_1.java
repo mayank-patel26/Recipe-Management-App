@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.javaproject.recipemanagementapp.R;
 
+
 public class Intro_1 extends AppCompatActivity {
 
     @Override
