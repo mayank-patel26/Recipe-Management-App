@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_corner_button_white"
         android:text="@string/sign_up_button"
-        android:textColor="@color/black"
+        android:textColor="#E6EE9C"
         android:textSize="20sp"
         android:textStyle="bold"
         app:backgroundTint="@color/green"

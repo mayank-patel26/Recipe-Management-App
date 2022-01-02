@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".edit_recipe_method">
+    tools:context=".Activities.edit_recipe_method">
 
     <Button
         android:id="@+id/button2"
@@ -34,6 +34,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/RoundHeader"
         app:srcCompat="@drawable/rounded_corner_rectangle_light_yellow" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_corner_rectangle_white"
+        android:paddingTop="3dp"
+        android:paddingBottom="5dp"
+        android:text="+"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/imageView10"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toEndOf="@+id/recipe_name2"
+        app:layout_constraintTop_toTopOf="@+id/imageView10" />
 
     <ScrollView
         android:id="@+id/scrollView3"
@@ -69,7 +87,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:progress="66"
+        android:progress="100"
         android:progressDrawable="@drawable/custom_progress_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -95,6 +113,7 @@
         android:id="@+id/recipe_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
         android:text="@string/recipe_name"
         android:textColor="@color/black"
         android:textSize="34sp"
@@ -108,7 +127,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Method"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/method"
         android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView3"

@@ -14,7 +14,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:progress="33"
+        android:progress="50"
         android:progressDrawable="@drawable/custom_progress_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,8 +74,8 @@
 
     <ImageView
         android:id="@+id/timer_icon"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:contentDescription="@string/timer_icon"
         app:layout_constraintBottom_toBottomOf="@+id/RoundIconBg1"
         app:layout_constraintEnd_toEndOf="@+id/RoundIconBg1"
@@ -149,8 +149,8 @@
 
     <ImageView
         android:id="@+id/hourglass_icon"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:contentDescription="@string/hourglass_icon"
         app:layout_constraintBottom_toBottomOf="@+id/RoundIconBg2"
         app:layout_constraintEnd_toEndOf="@+id/RoundIconBg2"
@@ -162,8 +162,8 @@
 
     <ImageView
         android:id="@+id/serving_icon"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:contentDescription="@string/serving_icon"
         app:layout_constraintBottom_toBottomOf="@+id/RoundIconBg3"
         app:layout_constraintEnd_toEndOf="@+id/RoundIconBg3"
@@ -229,25 +229,26 @@
         android:id="@+id/ingredients_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/mrs_saint_delafield"
         android:text="Ingredients"
         android:textColor="@color/black"
         android:textSize="30sp"
-        app:layout_constraintStart_toEndOf="@+id/red_line"
+        app:layout_constraintStart_toStartOf="@+id/RoundRect"
         app:layout_constraintTop_toTopOf="@+id/RoundRect" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/rounded_corner_rectangle_white"
+        android:paddingTop="3dp"
         android:text="+"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/RoundRect"
         app:layout_constraintTop_toTopOf="@+id/RoundRect" />
