@@ -18,13 +18,13 @@
         app:srcCompat="@drawable/yellow_transparent_rect" />
 
     <Button
-        android:id="@+id/sign_up_button"
+        android:id="@+id/startup_skip_btn"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_corner_button_white"
         android:fontFamily="sans-serif-medium"
         android:text="@string/intro_skip_btn"
-        android:textColor="@color/black"
+        android:textColor="#E6EE9C"
         android:textSize="20sp"
         android:textStyle="bold"
         app:backgroundTint="@color/green"
@@ -43,14 +43,14 @@
         android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/sign_up_button"
+        app:layout_constraintBottom_toTopOf="@+id/startup_skip_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        app:layout_constraintTop_toBottomOf="@+id/startupapplogo"
         app:layout_constraintVertical_bias="0.25" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/startupapplogo"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:background="@drawable/rounded_corner_button_white"

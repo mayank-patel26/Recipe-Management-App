@@ -1,12 +1,11 @@
-
 package com.javaproject.recipemanagementapp.Activities;
 
-import androidx.appcompat.app.AppCompatActivity;
+        import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Rect;
-import android.os.Bundle;
+        import android.graphics.Rect;
+        import android.os.Bundle;
 
-import com.javaproject.recipemanagementapp.R;
+        import com.javaproject.recipemanagementapp.R;
 
 public class all_recipe extends AppCompatActivity {
 

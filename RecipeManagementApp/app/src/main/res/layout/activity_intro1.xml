@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/intro1_constraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:contentDescription="@string/intro_app_logo"
@@ -16,8 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/yellow_transparent_rect"
-        />
+        app:srcCompat="@drawable/yellow_transparent_rect" />
 
     <ProgressBar
         android:id="@+id/progressbarintro1"
@@ -33,39 +33,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/sign_up_button"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corner_button_white"
-        android:text="@string/intro_skip_btn"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/green"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.9" />
-
-    <TextView
-        android:id="@+id/startup_text"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/intro_app_feature1"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/sign_up_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.25" />
-
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/intro1applogo"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:background="@drawable/rounded_corner_button_white"
@@ -76,6 +45,31 @@
         app:layout_constraintTop_toTopOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.25"
         app:srcCompat="@drawable/temp_app_logo" />
+
+    <TextView
+        android:id="@+id/intro1text"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="@string/intro_app_feature1"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/intro1skip_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intro1applogo"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <Button
+        android:id="@+id/intro1skip_btn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_button_white"
+        android:text="@string/intro_skip_btn"
+        app:backgroundTint="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
