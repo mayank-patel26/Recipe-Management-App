@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.javaproject.recipemanagementapp.R;
 
-public class Intro_2 extends AppCompatActivity {
+public class login_signup extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_intro2);
+        setContentView(R.layout.activity_login_signup);
     }
 }
