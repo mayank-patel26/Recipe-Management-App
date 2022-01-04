@@ -18,7 +18,7 @@ public class StartupPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startup);
 
-        confirmDBCreation();
+        //confirmDBCreation();
         Button startup_skip_btn = findViewById(R.id.startup_skip_btn);
         startup_skip_btn.setOnClickListener(view -> {
             Intent intent1 = new Intent(StartupPage.this, login_startup.class);
@@ -27,7 +27,7 @@ public class StartupPage extends AppCompatActivity {
 
         }
     /* create a database and confirm if it has been created by displaying value in a text field*/
-    void confirmDBCreation()
+    /*void confirmDBCreation()
     {
         //create a database if it doesn't exist
         SQLiteDatabase recipeAppDatabase = openOrCreateDatabase("RecipeAppDatabase",MODE_PRIVATE,null);
@@ -48,5 +48,5 @@ public class StartupPage extends AppCompatActivity {
         //get the textView and change the name of the recipe to check(for now)
         TextView textView=findViewById(R.id.startup_text);
         textView.setText(name);
-    }
+    }*/
 }

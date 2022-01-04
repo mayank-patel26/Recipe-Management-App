@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.javaproject.recipemanagementapp.R;
 
-public class edit_recipe_ingredients extends AppCompatActivity {
+public class add_or_edit_recipe extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_recipe_ingredients);
+        setContentView(R.layout.activity_add_or_edit_recipe);
     }
 }
