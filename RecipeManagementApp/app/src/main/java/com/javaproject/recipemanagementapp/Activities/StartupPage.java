@@ -1,11 +1,8 @@
 package com.javaproject.recipemanagementapp.Activities;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,10 +16,10 @@ public class StartupPage extends AppCompatActivity {
         setContentView(R.layout.activity_startup);
 
         //confirmDBCreation();
-        Button startup_skip_btn = findViewById(R.id.startup_skip_btn);
-        startup_skip_btn.setOnClickListener(view -> {
-            Intent intent1 = new Intent(StartupPage.this, login_startup.class);
-            startActivity(intent1);
+        Button get_started = findViewById(R.id.intro_skip);
+        get_started.setOnClickListener(view -> {
+            Intent intent = new Intent(StartupPage.this, intro_scroll.class);
+            startActivity(intent);
         });
 
         }

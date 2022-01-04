@@ -33,4 +33,5 @@
     <string name="red_line">Red Line</string>
     <string name="method">Method</string>
     <string name="recipe_details">Name:\nTime</string>
+    <string name="get_started">Get Started</string>
 </resources>
