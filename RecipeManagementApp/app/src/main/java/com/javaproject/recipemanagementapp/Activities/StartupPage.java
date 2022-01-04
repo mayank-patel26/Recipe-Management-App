@@ -37,7 +37,7 @@ public class StartupPage extends AppCompatActivity {
         recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS Recipe(Name TEXT,id INT PRIMARY KEY);");
 
         //insert values
-        //recipeAppDatabase.execSQL("INSERT INTO Recipe VALUES('TrialYummyRecipe',1);");
+        recipeAppDatabase.execSQL("INSERT INTO Recipe VALUES('TrialYummyRecipe',1);");
 
         //get values
         Cursor result = recipeAppDatabase.rawQuery("Select * from Recipe",null);
