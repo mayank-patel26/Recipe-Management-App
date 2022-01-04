@@ -2,7 +2,10 @@ package com.javaproject.recipemanagementapp.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,15 +16,14 @@ public class StartupPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_startup);
-
+        setContentView(R.layout.activity_add_or_edit_recipe);
         //confirmDBCreation();
-        Button get_started = findViewById(R.id.intro_skip);
+        /*Button get_started = findViewById(R.id.intro_skip);
         get_started.setOnClickListener(view -> {
             Intent intent = new Intent(StartupPage.this, intro_scroll.class);
             startActivity(intent);
         });
-
+*/
         }
     /* create a database and confirm if it has been created by displaying value in a text field*/
     /*void confirmDBCreation()

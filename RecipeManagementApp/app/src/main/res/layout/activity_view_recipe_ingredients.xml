@@ -232,25 +232,10 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/mrs_saint_delafield"
-        android:text="Ingredients"
+        android:text="@string/ingredients"
         android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/RoundRect"
-        app:layout_constraintTop_toTopOf="@+id/RoundRect" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/rounded_corner_rectangle_white"
-        android:paddingTop="3dp"
-        android:text="+"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:backgroundTint="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/RoundRect"
         app:layout_constraintTop_toTopOf="@+id/RoundRect" />
 
 

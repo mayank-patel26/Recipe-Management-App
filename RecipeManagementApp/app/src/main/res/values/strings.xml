@@ -30,8 +30,12 @@
     <string name="servings">Servings</string>
     <string name="recipe_name">Recipe Name</string>
     <string name="search_for_recipe">search for recipe</string>
-    <string name="red_line">Red Line</string>
     <string name="method">Method</string>
-    <string name="recipe_details">Name:\nTime</string>
+    <string name="recipe_details_name">Name :</string>
     <string name="get_started">Get Started</string>
+    <string name="cooking_time_edit_text">Cooking Time :</string>
+    <string name="done">Done</string>
+    <string name="prep_time_edit_text">Prep Time :</string>
+    <string name="ingredients">Ingredients :</string>
+    <string name="red_line">Red line</string>
 </resources>
