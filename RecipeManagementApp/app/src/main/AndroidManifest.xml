@@ -10,8 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecipeManagementApp">
         <activity
-            android:name=".Trial"
-            android:exported="true" />
+            android:name=".Activities.login"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.signup"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.all_recipe"
+            android:exported="false" />
         <activity
             android:name=".Activities.intro_scroll"
             android:exported="false" />

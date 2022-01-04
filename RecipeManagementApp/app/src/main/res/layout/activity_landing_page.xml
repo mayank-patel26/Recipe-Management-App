@@ -18,17 +18,19 @@
             android:id="@+id/profile_button1"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/profile_circle"
             android:text="A"
             android:textColor="@color/black"
             android:textSize="18sp"
             app:backgroundTint="@color/green"
             app:layout_constraintBottom_toTopOf="@+id/landing_page_scroll1"
-            app:layout_constraintEnd_toStartOf="@+id/landing_page_textview"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/searchView2"
-            app:layout_constraintTop_toTopOf="@+id/searchView2" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ScrollView
             android:id="@+id/landing_page_scroll1"
@@ -351,33 +353,20 @@
             </LinearLayout>
         </ScrollView>
 
-        <TextView
-            android:id="@+id/landing_page_textview"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/rounded_corner_rectangle_white"
-            android:paddingLeft="15dp"
-            android:paddingTop="13dp"
-            android:text="@string/search_for_recipe"
-            android:textColor="@color/black"
-            android:textStyle="italic"
-            app:layout_constraintBottom_toBottomOf="@+id/searchView2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/searchView2"
-            app:layout_constraintTop_toTopOf="@+id/searchView2" />
-
         <SearchView
             android:id="@+id/searchView2"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:paddingLeft="350dp"
+            android:layout_width="315dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_corner_rectangle_white"
+            android:paddingLeft="0dp"
             android:paddingTop="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/landing_page_scroll1"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
