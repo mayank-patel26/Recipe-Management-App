@@ -20,7 +20,7 @@ public class landing_page extends AppCompatActivity {
         profile_button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(landing_page.this, login_signup.class);
+                Intent intent = new Intent(landing_page.this, login_startup.class);
                 startActivity(intent);
             }
         });
