@@ -7,6 +7,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.material.tabs.TabLayout;
 import com.javaproject.recipemanagementapp.R;
 
 import java.util.ArrayList;
@@ -15,6 +16,9 @@ import java.util.List;
 public class intro_scroll extends AppCompatActivity {
         private ViewPager screenPager;
         IntroViewPagerAdapter introViewPagerAdapter;
+
+        TabLayout tabIndicator;
+
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,11 @@ public class intro_scroll extends AppCompatActivity {
                         startActivity(intent1);
                 });
 
+                //ini views
+
+                tabIndicator = findViewById(R.id.tab_indicator);
+
+
                 //fill list screen
 
                 List<ScreenItem> mList = new ArrayList<>();
@@ -38,5 +47,9 @@ public class intro_scroll extends AppCompatActivity {
                 ViewPager screenPager = findViewById(R.id.screen_viewpager);
                 introViewPagerAdapter = new IntroViewPagerAdapter(this, mList);
                 screenPager.setAdapter(introViewPagerAdapter);
+
+                //setup tablayout with viewpager
+
+                tabIndicator.setupWithViewPager(screenPager);
         }
 }

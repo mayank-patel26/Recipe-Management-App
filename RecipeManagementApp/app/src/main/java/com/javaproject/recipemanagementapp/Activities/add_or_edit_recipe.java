@@ -20,10 +20,10 @@ public class add_or_edit_recipe extends AppCompatActivity {
         AddBulletPoints.setBulletPoints(findViewById(R.id.ingredients_edit_text));
     }
 
-    void setOnClicks()
-    {
-        Button done=findViewById(R.id.done_button);
-        done.setOnClickListener();
-    }
+//    void setOnClicks()
+//    {
+//        Button done=findViewById(R.id.done_button);
+//        done.setOnClickListener();
+//    }
 
 }

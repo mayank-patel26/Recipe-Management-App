@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecipeManagementApp">
         <activity
+            android:name=".Activities.edit_recipe_method"
+            android:exported="false" />
+        <activity
             android:name=".Activities.login"
             android:exported="false" />
         <activity

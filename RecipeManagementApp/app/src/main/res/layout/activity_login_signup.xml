@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_corner_button_white"
             android:text="@string/login_text"
-            app:backgroundTint="@color/choco"
+            app:backgroundTint="@color/light_brown"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="parent"
