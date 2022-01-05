@@ -18,12 +18,12 @@ public class StartupPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startup);
         //confirmDBCreation();
-        /*Button get_started = findViewById(R.id.intro_skip);
+        Button get_started = findViewById(R.id.intro_skip);
         get_started.setOnClickListener(view -> {
             Intent intent = new Intent(StartupPage.this, intro_scroll.class);
             startActivity(intent);
         });
-*/
+
         }
     /* create a database and confirm if it has been created by displaying value in a text field*/
     /*void confirmDBCreation()
