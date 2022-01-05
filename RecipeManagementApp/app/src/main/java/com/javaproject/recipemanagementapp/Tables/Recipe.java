@@ -15,8 +15,22 @@ public class Recipe
     public String recipeName;
 }*/
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Recipe {
     public int recipeID;
     public String recipeName;
+    ArrayList<String> Ingredients;
+    ArrayList<String> Cuisine;
+    String procedure;
+    int servings;
+    String cookingTime;
+    String prepTime;
+    int spiceLevel;
+    String allergyWarnings;
+    int rating;
+    List<String> tags;
+
 }
 
