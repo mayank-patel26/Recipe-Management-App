@@ -16,7 +16,7 @@ public class StartupPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_or_edit_recipe);
+        setContentView(R.layout.activity_startup);
         //confirmDBCreation();
         /*Button get_started = findViewById(R.id.intro_skip);
         get_started.setOnClickListener(view -> {
