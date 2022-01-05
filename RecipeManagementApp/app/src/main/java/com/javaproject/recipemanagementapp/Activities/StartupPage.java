@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.javaproject.recipemanagementapp.DatabaseHelper;
 import com.javaproject.recipemanagementapp.R;
 
 public class StartupPage extends AppCompatActivity {
@@ -23,5 +24,6 @@ public class StartupPage extends AppCompatActivity {
             Intent intent = new Intent(StartupPage.this, intro_scroll.class);
             startActivity(intent);
         });
+        DatabaseHelper.setDB(this);
     }
 }

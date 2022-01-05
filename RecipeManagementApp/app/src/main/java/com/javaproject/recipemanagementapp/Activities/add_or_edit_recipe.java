@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.javaproject.recipemanagementapp.AddBulletPoints;
+import com.javaproject.recipemanagementapp.DatabaseHelper;
 import com.javaproject.recipemanagementapp.R;
 
 public class add_or_edit_recipe extends AppCompatActivity {

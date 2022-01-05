@@ -9,10 +9,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.javaproject.recipemanagementapp.DatabaseHelper;
 import com.javaproject.recipemanagementapp.R;
+import com.javaproject.recipemanagementapp.Tables.User;
 
 public class login extends AppCompatActivity {
-    DatabaseHelper db;
+    DatabaseHelperM db;
 
     EditText e5, e6;
     Button b2;
@@ -22,7 +24,7 @@ public class login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        db = new DatabaseHelper(this);
+        db = new DatabaseHelperM(this);
 
         e5=(EditText) findViewById(R.id.login_email);
         e6=(EditText) findViewById(R.id.login_password);
@@ -34,7 +36,10 @@ public class login extends AppCompatActivity {
                 String email=e5.getText().toString();
                 String password=e6.getText().toString();
 
-                Boolean Checkemailpassword = db.emailpassword(email, password);
+                User user = DatabaseHelper.getUserByEmail(email);
+                boolean check = user.validatePassword(password);
+                DatabaseHelper.setCurrentUser(user);
+                /*Boolean Checkemailpassword = db.emailpassword(email, password);
 
                 if(Checkemailpassword==true){
 
@@ -46,7 +51,7 @@ public class login extends AppCompatActivity {
                 else{
                     Toast.makeText(getApplicationContext(), "Wrong email or password", Toast.LENGTH_SHORT).show();
                 }
-
+*/
             }
         });
 

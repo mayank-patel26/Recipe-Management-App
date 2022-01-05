@@ -11,9 +11,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.javaproject.recipemanagementapp.R;
 
+import java.util.ArrayList;
+
 public class signup extends AppCompatActivity {
 
-    DatabaseHelper db;
+    DatabaseHelperM db;
 
     EditText e1, e2, e3, e4;
     Button b1;
@@ -23,7 +25,7 @@ public class signup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        db = new DatabaseHelper(this);
+        db = new DatabaseHelperM(this);
 
         e1=(EditText) findViewById(R.id.fullname);
         e2=(EditText) findViewById(R.id.signup_email);
@@ -31,44 +33,44 @@ public class signup extends AppCompatActivity {
         e4=(EditText) findViewById(R.id.reenter_pass);
         b1=(Button) findViewById(R.id.signup_btn1);
 
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String s1 = e1.getText().toString();
-                String s2 = e2.getText().toString();
-                String s3 = e3.getText().toString();
-                String s4 = e4.getText().toString();
+        /*ArrayList n=new ArrayList<Integer>();
+        n.stream().forEach(x->System.out.println(x+3));*/
 
-                if(s1.equals("")||s2.equals("")||s3.equals("")||s4.equals("")) {
-                    Toast.makeText(getApplicationContext(), "Fields are empty", Toast.LENGTH_SHORT).show();
+        b1.setOnClickListener(view -> {
+            String s1 = e1.getText().toString();
+            String s2 = e2.getText().toString();
+            String s3 = e3.getText().toString();
+            String s4 = e4.getText().toString();
 
-                }
+            if(s1.equals("")||s2.equals("")||s3.equals("")||s4.equals("")) {
+                Toast.makeText(getApplicationContext(), "Fields are empty", Toast.LENGTH_SHORT).show();
 
-                else {
-                    if(s3.equals(s4)) {
-                        Boolean checkemail = db.checkemail(s1);
-                        if(checkemail==false){
-                            Boolean insert = db.insert(s1,s2);
-                            if(insert==true){
-                                Toast.makeText(getApplicationContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
+            }
 
-                                Intent intent2 = new Intent(signup.this, login.class);
-                                startActivity(intent2);
-                            }
-                        }
-                        else{
-                            Toast.makeText(getApplicationContext(),"Email Address already exists", Toast.LENGTH_SHORT).show();
+            else {
+                if(s3.equals(s4)) {
+                    Boolean checkemail = db.checkemail(s1);
+                    if(checkemail==false){
+                        Boolean insert = db.insert(s1,s2);
+                        if(insert==true){
+                            Toast.makeText(getApplicationContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
 
                             Intent intent2 = new Intent(signup.this, login.class);
                             startActivity(intent2);
                         }
                     }
                     else{
-                        Toast.makeText(getApplicationContext(),"Passwords do not match",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Email Address already exists", Toast.LENGTH_SHORT).show();
+
+                        Intent intent2 = new Intent(signup.this, login.class);
+                        startActivity(intent2);
                     }
                 }
-
+                else{
+                    Toast.makeText(getApplicationContext(),"Passwords do not match",Toast.LENGTH_SHORT).show();
+                }
             }
+
         });
 
 

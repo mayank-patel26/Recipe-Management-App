@@ -8,14 +8,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class DatabaseHelper extends SQLiteOpenHelper {
-    public DatabaseHelper(@Nullable Context context) {
+public class DatabaseHelperM extends SQLiteOpenHelper {
+    public DatabaseHelperM(@Nullable Context context) {
         super(context, "Login.db", null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE user(email TEXT PRIMARY KEY, password text)");
+        db.execSQL("CREATE TABLE user(email TEXT PRIMARY KEY, password text, username text, dateOfBirth Date)");
     }
 
     @Override
