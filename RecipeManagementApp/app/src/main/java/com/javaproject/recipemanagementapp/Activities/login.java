@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.javaproject.recipemanagementapp.DatabaseHelper;
 import com.javaproject.recipemanagementapp.R;
+import com.javaproject.recipemanagementapp.Tables.User;
 
 public class login extends AppCompatActivity {
     DatabaseHelperM db;
@@ -32,14 +33,28 @@ public class login extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email=e5.getText().toString();
-                String password=e6.getText().toString();
+                String e=e5.getText().toString();
+                String p=e6.getText().toString();
 
-//                User user = DatabaseHelper.getUserByEmail(email);
-//                boolean check = user.validatePassword(password);
+//                User user = DatabaseHelper.getUserByEmail(e);
 //                DatabaseHelper.setCurrentUser(user);
+//                DatabaseHelper.getUserByEmail(e);
 
+                if(e.equals("")||p.equals("")) {
+                    Toast.makeText(getApplicationContext(), "Fields are empty", Toast.LENGTH_SHORT).show();
+                }
 
+                else{
+                    Boolean chk = DatabaseHelper.checklogin(e, p);
+                    if(chk){
+                        Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(login.this, landing_page.class);
+                        startActivity(intent);
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(), "Wrong email or password", Toast.LENGTH_SHORT).show();
+                    }
+                }
 
 
 

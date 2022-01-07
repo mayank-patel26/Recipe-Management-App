@@ -5,16 +5,18 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.javaproject.recipemanagementapp.Tables.User;
+
 
 public class DatabaseHelper extends Exception
 {
     //All DB functions are part of context class hence you can use it without context in AppCompactActivity derived classes
-    //public static User currentUser;
+    public static User currentUser;
     public static SQLiteDatabase recipeAppDatabase;
 
     public static void setDB(Context context)
     {
-        //currentUser=new User();
+        currentUser=new User();
         //create a database if it doesn't exist
         recipeAppDatabase = context.openOrCreateDatabase("RecipeAppDatabase", Context.MODE_PRIVATE,null);
         // create a recipe database table here
@@ -41,22 +43,27 @@ public class DatabaseHelper extends Exception
 //        insert recipe values here and call this method to insert a new recipe
 //    }
 
-//    public static User getUserByEmail(String email)
-//    {
-//        //get a specific user by the ID and return the user
-//        User user=new User();
-//        //get the user from DB and fill up 'user'
-//        Cursor cursor = recipeAppDatabase.rawQuery("Select * from user where email = ?", new String[]{email});
-//        user.ID=cursor.getInt(0);
-//        user.email=cursor.getString(1);
-//        user.password=cursor.getString(2);
-//        return user;
-//    }
+    public static User getUserByEmail(String email)
+    {
+        //get a specific user by the ID and return the user
+        User user=new User();
+        //get the user from DB and fill up 'user'
+        Cursor cursor = recipeAppDatabase.rawQuery("Select * from user where email = ?", new String[]{email});
+        user.ID=cursor.getInt(0);
+        user.email=cursor.getString(1);
+        user.password=cursor.getString(2);
+        return user;
+    }
 
-//    public static void setCurrentUser(User user)
-//    {
-//        currentUser=user;
-//    }
+    public static Boolean checklogin(String e1, String p1){
+        Cursor cursor = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE email = '"+e1+"' AND password = '"+p1+"';", new String[]{});
+        return (cursor.getCount()>0);
+    }
+
+    public static void setCurrentUser(User user)
+    {
+        currentUser=user;
+    }
 
     //Trial example - ignore
     /* create a database and confirm if it has been created by displaying value in a text field*/
