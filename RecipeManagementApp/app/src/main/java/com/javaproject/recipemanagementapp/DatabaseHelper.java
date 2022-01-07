@@ -3,36 +3,35 @@ package com.javaproject.recipemanagementapp;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.media.Image;
 
-import com.javaproject.recipemanagementapp.Tables.Recipe;
-import com.javaproject.recipemanagementapp.Tables.User;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class DatabaseHelper
 {
     //All DB functions are part of context class hence you can use it without context in AppCompactActivity derived classes
-    public static User currentUser;
+//    public static User currentUser;
     public static SQLiteDatabase recipeAppDatabase;
 
     public static void setDB(Context context)
     {
-        currentUser=new User();
+//        currentUser=new User();
         //create a database if it doesn't exist
-        recipeAppDatabase = context.openOrCreateDatabase("RecipeAppDatabase",context.MODE_PRIVATE,null);
+        recipeAppDatabase = context.openOrCreateDatabase("RecipeAppDatabase", Context.MODE_PRIVATE,null);
         // create a recipe database table here
-
+        recipeAppDatabase.execSQL("DROP TABLE user;");
         //create the user table here
-        recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS User(id int PRIMARY KEY AUTOINCREMENT, email TEXT, password text,dateOfBirth text,fullName text, imagePath text)");
+        recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY AUTOINCREMENT, email STRING UNIQUE, password STRING, dateOfBirth STRING, fullName STRING, imagePath STRING)");
     }
 
-    //
     public static void insertUserData(String email,String password)
     {
         //insert user values into the table here
         recipeAppDatabase.execSQL("INSERT INTO User(email,password) VALUES("+email+","+password+");");
+    }
+
+    public static Boolean checkemail(String email)
+    {
+        Cursor cursor = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE email = ?;", new String[]{email});
+        return (cursor.getCount()>0);
     }
 
     static void insertRecipe()
@@ -40,22 +39,22 @@ public class DatabaseHelper
         //insert recipe values here and call this method to insert a new recipe
     }
 
-    public static User getUserByEmail(String email)
-    {
-        //get a specific user by the ID and return the user
-        User user=new User();
-        //get the user from DB and fill up 'user'
-        Cursor cursor = recipeAppDatabase.rawQuery("Select * from user where email = ?", new String[]{email});
-        user.ID=cursor.getInt(0);
-        user.email=cursor.getString(1);
-        user.password=cursor.getString(2);
-        return user;
-    }
+//    public static User getUserByEmail(String email)
+//    {
+//        //get a specific user by the ID and return the user
+//        User user=new User();
+//        //get the user from DB and fill up 'user'
+//        Cursor cursor = recipeAppDatabase.rawQuery("Select * from user where email = ?", new String[]{email});
+//        user.ID=cursor.getInt(0);
+//        user.email=cursor.getString(1);
+//        user.password=cursor.getString(2);
+//        return user;
+//    }
 
-    public static void setCurrentUser(User user)
-    {
-        currentUser=user;
-    }
+//    public static void setCurrentUser(User user)
+//    {
+//        currentUser=user;
+//    }
 
     //Trial example - ignore
     /* create a database and confirm if it has been created by displaying value in a text field*/
