@@ -1,21 +1,20 @@
 package com.javaproject.recipemanagementapp.Activities;
 
+import static com.javaproject.recipemanagementapp.DatabaseHelper.checkemail;
+import static com.javaproject.recipemanagementapp.DatabaseHelper.insertUserData;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.javaproject.recipemanagementapp.DatabaseHelper;
 import com.javaproject.recipemanagementapp.R;
 
-import java.util.ArrayList;
-
 public class signup extends AppCompatActivity {
-
-    DatabaseHelperM db;
 
     EditText e1, e2, e3, e4;
     Button b1;
@@ -25,13 +24,11 @@ public class signup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        db = new DatabaseHelperM(this);
-
-        e1=(EditText) findViewById(R.id.fullname);
-        e2=(EditText) findViewById(R.id.signup_email);
-        e3=(EditText) findViewById(R.id.signup_pass);
-        e4=(EditText) findViewById(R.id.reenter_pass);
-        b1=(Button) findViewById(R.id.signup_btn1);
+        e1=findViewById(R.id.fullname);
+        e2=findViewById(R.id.signup_email);
+        e3=findViewById(R.id.signup_pass);
+        e4=findViewById(R.id.reenter_pass);
+        b1=findViewById(R.id.signup_btn1);
 
         /*ArrayList n=new ArrayList<Integer>();
         n.stream().forEach(x->System.out.println(x+3));*/
@@ -48,29 +45,22 @@ public class signup extends AppCompatActivity {
             }
 
             else {
-                if(s3.equals(s4)) {
-                    Boolean checkemail = db.checkemail(s1);
-                    if(checkemail==false){
-                        Boolean insert = db.insert(s1,s2);
-                        if(insert==true){
-                            Toast.makeText(getApplicationContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
-
-                            Intent intent2 = new Intent(signup.this, login.class);
-                            startActivity(intent2);
-                        }
-                    }
-                    else{
-                        Toast.makeText(getApplicationContext(),"Email Address already exists", Toast.LENGTH_SHORT).show();
-
+                if (s3.equals(s4)) {
+                    Boolean check = checkemail(s1);
+                    if (check == false) {
+                        DatabaseHelper.insertUserData(s2, s3);
+                        Toast.makeText(getApplicationContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
+                        Intent intent2 = new Intent(signup.this, login.class);
+                        startActivity(intent2);
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Email Address already exists", Toast.LENGTH_SHORT).show();
                         Intent intent2 = new Intent(signup.this, login.class);
                         startActivity(intent2);
                     }
-                }
-                else{
-                    Toast.makeText(getApplicationContext(),"Passwords do not match",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Passwords do not match", Toast.LENGTH_SHORT).show();
                 }
             }
-
         });
 
 

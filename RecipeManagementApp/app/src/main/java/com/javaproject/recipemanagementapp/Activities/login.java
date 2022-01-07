@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.javaproject.recipemanagementapp.DatabaseHelper;
 import com.javaproject.recipemanagementapp.R;
-import com.javaproject.recipemanagementapp.Tables.User;
 
 public class login extends AppCompatActivity {
     DatabaseHelperM db;
@@ -26,9 +25,9 @@ public class login extends AppCompatActivity {
 
         db = new DatabaseHelperM(this);
 
-        e5=(EditText) findViewById(R.id.login_email);
-        e6=(EditText) findViewById(R.id.login_password);
-        b2=(Button) findViewById(R.id.login_btn1);
+        e5 = findViewById(R.id.login_email);
+        e6 = findViewById(R.id.login_password);
+        b2 = findViewById(R.id.login_btn1);
 
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,9 +35,21 @@ public class login extends AppCompatActivity {
                 String email=e5.getText().toString();
                 String password=e6.getText().toString();
 
-                User user = DatabaseHelper.getUserByEmail(email);
-                boolean check = user.validatePassword(password);
-                DatabaseHelper.setCurrentUser(user);
+//                User user = DatabaseHelper.getUserByEmail(email);
+//                boolean check = user.validatePassword(password);
+//                DatabaseHelper.setCurrentUser(user);
+
+
+
+
+
+
+
+
+
+
+
+
                 /*Boolean Checkemailpassword = db.emailpassword(email, password);
 
                 if(Checkemailpassword==true){
