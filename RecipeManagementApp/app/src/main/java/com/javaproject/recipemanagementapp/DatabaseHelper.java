@@ -32,7 +32,7 @@ public class DatabaseHelper
     public static void insertUserData(String email,String password)
     {
         //insert user values into the table here
-        recipeAppDatabase.execSQL("INSERT INTO User(email,password) VALUES(email,password);");
+        recipeAppDatabase.execSQL("INSERT INTO User(email,password) VALUES("+email+","+password+");");
     }
 
     static void insertRecipe()
