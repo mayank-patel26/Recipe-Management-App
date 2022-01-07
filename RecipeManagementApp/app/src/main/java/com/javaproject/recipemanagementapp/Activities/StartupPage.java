@@ -16,8 +16,6 @@ import com.javaproject.recipemanagementapp.R;
 public class StartupPage extends AppCompatActivity {
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,10 +24,8 @@ public class StartupPage extends AppCompatActivity {
         get_started.setOnClickListener(view -> {
             Intent intent = new Intent(StartupPage.this, intro_scroll.class);
             startActivity(intent);
-
-            DatabaseHelper.setDB(this);
         });
 
-
+        DatabaseHelper.setDB(this);
     }
 }

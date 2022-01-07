@@ -3,41 +3,43 @@ package com.javaproject.recipemanagementapp;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 
 
-public class DatabaseHelper
+public class DatabaseHelper extends Exception
 {
     //All DB functions are part of context class hence you can use it without context in AppCompactActivity derived classes
-//    public static User currentUser;
+    //public static User currentUser;
     public static SQLiteDatabase recipeAppDatabase;
 
     public static void setDB(Context context)
     {
-//        currentUser=new User();
+        //currentUser=new User();
         //create a database if it doesn't exist
         recipeAppDatabase = context.openOrCreateDatabase("RecipeAppDatabase", Context.MODE_PRIVATE,null);
         // create a recipe database table here
-        recipeAppDatabase.execSQL("DROP TABLE user;");
+        //recipeAppDatabase.execSQL("DROP TABLE user;");
         //create the user table here
-        recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY AUTOINCREMENT, email STRING UNIQUE, password STRING, dateOfBirth STRING, fullName STRING, imagePath STRING)");
+        recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT UNIQUE, password TEXT, dateOfBirth TEXT, fullName TEXT, imagePath TEXT)");
     }
 
-    public static void insertUserData(String email,String password)
+    public static void insertUserData(String email1,String password1)
     {
         //insert user values into the table here
-        recipeAppDatabase.execSQL("INSERT INTO user(email, password) VALUES("+email+","+password+");");
+        recipeAppDatabase.execSQL("INSERT INTO user(email, password) VALUES('"+email1+"','"+password1+"');");
     }
 
-    public static Boolean checkemail(String email)
+    public static Boolean checkemail (String email)
     {
         Cursor cursor = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE email = ?;", new String[]{email});
+
         return (cursor.getCount()>0);
     }
 
-    static void insertRecipe()
-    {
-        //insert recipe values here and call this method to insert a new recipe
-    }
+//    static void insertRecipe()
+//    {
+//        insert recipe values here and call this method to insert a new recipe
+//    }
 
 //    public static User getUserByEmail(String email)
 //    {

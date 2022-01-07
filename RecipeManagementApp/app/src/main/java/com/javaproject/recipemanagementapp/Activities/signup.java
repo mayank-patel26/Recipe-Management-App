@@ -47,7 +47,7 @@ public class signup extends AppCompatActivity {
             else {
                 if (s3.equals(s4)) {
                     Boolean check = checkemail(s1);
-                    if (check == false) {
+                    if (!check) {
                         DatabaseHelper.insertUserData(s2, s3);
                         Toast.makeText(getApplicationContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
                         Intent intent2 = new Intent(signup.this, login.class);
