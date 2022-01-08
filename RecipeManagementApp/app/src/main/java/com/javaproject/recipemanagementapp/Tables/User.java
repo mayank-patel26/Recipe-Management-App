@@ -3,6 +3,7 @@ package com.javaproject.recipemanagementapp.Tables;
 import android.media.Image;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 
 public class User {
 
@@ -13,6 +14,7 @@ public class User {
     public SimpleDateFormat dateOfBirth;
     public String fullName;
     public Image profilePicture;
+    public ArrayList<Recipe> recipeList;
 
     public User()
     {
@@ -22,6 +24,7 @@ public class User {
         this.dateOfBirth = new SimpleDateFormat();
         this.fullName = "";
         this.profilePicture = null;
+        recipeList=new ArrayList<>();
     }
 
     public User(String email, String username, String password, SimpleDateFormat dateOfBirth, String fullName, Image profilePicture) {
@@ -31,6 +34,7 @@ public class User {
         this.dateOfBirth = dateOfBirth;
         this.fullName = fullName;
         this.profilePicture = profilePicture;
+        recipeList=new ArrayList<>();
     }
 
     public boolean validatePassword(String passwordCheck)

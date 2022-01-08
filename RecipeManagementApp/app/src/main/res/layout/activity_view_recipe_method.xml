@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.edit_recipe_method">
+    tools:context=".Activities.view_recipe_method">
 
     <Button
         android:id="@+id/button2"
@@ -23,77 +23,76 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="334dp"
-        android:layout_height="575dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="30dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/RoundHeader"
         app:srcCompat="@drawable/rounded_corner_rectangle_light_yellow" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/rounded_corner_rectangle_white"
-        android:paddingTop="3dp"
-        android:paddingBottom="5dp"
-        android:text="+"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:backgroundTint="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/imageView10"
-        app:layout_constraintHorizontal_bias="0.919"
-        app:layout_constraintStart_toEndOf="@+id/recipe_name2"
-        app:layout_constraintTop_toTopOf="@+id/imageView10" />
-
     <ScrollView
-        android:id="@+id/scrollView3"
-        android:layout_width="300dp"
-        android:layout_height="425dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView10"
-        app:layout_constraintEnd_toEndOf="@+id/imageView10"
-        app:layout_constraintStart_toStartOf="@+id/imageView10"
-        app:layout_constraintTop_toTopOf="@+id/imageView10"
-        app:layout_constraintVertical_bias="0.45">
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/crumpled_paper"
+        android:alpha="0.8"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RoundHeader">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
+
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                <!--I'll change this later when I add ruled stuff-->
+
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:backgroundTint="@color/sandal"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="5dp"
-                    android:text="Method:\nDescription blah blahb dfdhgshdfbsghzxvczhvdfzxcbdvdshdg"
+                    android:fontFamily="@font/mrs_saint_delafield"
+                    android:text="Procedure :"
                     android:textColor="@color/black"
-                    android:textStyle="italic"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+                    android:textSize="40sp"
+                    app:layout_constraintEnd_toEndOf="@+id/recipe_procedure"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/recipe_procedure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-10dp"
+                    android:fontFamily="@font/mrs_saint_delafield"
+                    android:hint="Procedure"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:backgroundTint="#00000000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
 
-    <ProgressBar
+            <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
@@ -136,21 +135,5 @@
         app:layout_constraintEnd_toEndOf="@+id/RoundHeader"
         app:layout_constraintStart_toStartOf="@+id/RoundHeader"
         app:layout_constraintTop_toTopOf="@+id/RoundHeader" />
-
-    <TextView
-        android:id="@+id/recipe_name2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/method"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
-        app:layout_constraintEnd_toEndOf="@+id/RoundHeader"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="@+id/RoundHeader"
-        app:layout_constraintTop_toTopOf="@+id/imageView10"
-        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

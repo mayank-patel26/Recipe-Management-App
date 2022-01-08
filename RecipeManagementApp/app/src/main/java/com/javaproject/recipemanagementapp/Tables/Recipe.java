@@ -16,21 +16,49 @@ public class Recipe
 }*/
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Recipe {
     public int recipeID;
     public String recipeName;
-    ArrayList<String> Ingredients;
-    ArrayList<String> Cuisine;
-    String procedure;
-    int servings;
-    String cookingTime;
-    String prepTime;
-    int spiceLevel;
-    String allergyWarnings;
-    int rating;
-    List<String> tags;
+    public ArrayList<String> Ingredients;
+    public ArrayList<String> Cuisine;
+    public String procedure;
+    public int servings;
+    public String cookingTime;
+    public String prepTime;
+    public int spiceLevel;
+    public String allergyWarnings;
+    public int rating;
+    public List<String> tags;
 
+    public Recipe()
+    {
+        Ingredients=new ArrayList<>();
+        Cuisine=new ArrayList<>();
+        tags=new ArrayList<>();
+    }
+
+    public Recipe(int recipeID, String recipeName, ArrayList<String> ingredients, ArrayList<String> cuisine, String procedure, int servings, String cookingTime, String prepTime, int spiceLevel, String allergyWarnings, int rating, List<String> tags) {
+        this.recipeID = recipeID;
+        this.recipeName = recipeName;
+        Ingredients = ingredients;
+        Cuisine = cuisine;
+        this.procedure = procedure;
+        this.servings = servings;
+        this.cookingTime = cookingTime;
+        this.prepTime = prepTime;
+        this.spiceLevel = spiceLevel;
+        this.allergyWarnings = allergyWarnings;
+        this.rating = rating;
+        this.tags = tags;
+    }
+
+    public void addStringToIngredients(String ingredients)
+    {
+        Ingredients.addAll(Arrays.asList(ingredients.split(",")));
+    }
 }
+
 

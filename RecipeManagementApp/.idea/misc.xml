@@ -10,12 +10,13 @@
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/rounded_corner_button.xml" value="0.2140625" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/rounded_corner_button_white.xml" value="0.16197916666666667" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/rounded_corner_rectangle.xml" value="0.2140625" />
+        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/rounded_corner_rectangle_light_yellow.xml" value="0.19814814814814816" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/rounded_corner_rectangle_white.xml" value="0.23425925925925925" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/ruled_paper_repeat.xml" value="0.23703703703703705" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/transparent_rounded.xml" value="0.16197916666666667" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/yellow_transparent_rect.xml" value="0.1" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/font/mrs_saint_delafield_fontfamily.xml" value="0.1" />
-        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_add_or_edit_recipe.xml" value="0.4" />
+        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_add_or_edit_recipe.xml" value="0.264" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_all_recipe.xml" value="0.264" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_edit_recipe_ingredients.xml" value="0.4" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_edit_recipe_method.xml" value="0.2" />
@@ -33,6 +34,7 @@
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_startup.xml" value="0.19791666666666666" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_trial.xml" value="0.25416666666666665" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_view_recipe_ingredients.xml" value="0.264" />
+        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_view_recipe_method.xml" value="0.4" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/cuisine.xml" value="0.17300724637681159" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/fragment_cuisine.xml" value="0.4" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.24537037037037038" />
@@ -63,7 +65,6 @@
         <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_recipe_with_paper.xml" value="0.264" />
         <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_signup.xml" value="0.25416666666666665" />
-        <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_startup.xml" value="0.2" />
         <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_startup.xml" value="0.25416666666666665" />
         <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_view_recipe_ingredients.xml" value="0.20380434782608695" />
         <entry key="..\:/DJSCE/SE Sem 3/JPL DBMS/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_view_recipe_method.xml" value="0.264" />

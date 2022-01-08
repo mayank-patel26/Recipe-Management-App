@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.edit_recipe_ingredients">
+    tools:context=".Activities.view_recipe_ingredients">
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -20,33 +20,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <ImageView
-        android:id="@+id/RoundRect"
-        android:layout_width="334dp"
-        android:layout_height="487dp"
-        android:layout_marginBottom="30dp"
-        android:alpha="0.8"
-        android:contentDescription="@string/sandal_image1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/rounded_corner_rectangle_white"
-        app:tint="@color/sandal"
-        tools:ignore="ImageContrastCheck" />
-
-    <ImageView
-        android:id="@+id/red_line"
-        android:layout_width="1dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/RoundRect"
-        app:layout_constraintStart_toStartOf="@+id/RoundRect"
-        app:layout_constraintTop_toTopOf="@+id/RoundRect"
-        app:srcCompat="@drawable/rounded_corner_rectangle_white"
-        app:tint="@color/red"
-        tools:ignore="ImageContrastCheck"
-        android:contentDescription="@string/red_line" />
 
     <ImageView
         android:id="@+id/RoundHeader"
@@ -65,11 +38,10 @@
         android:id="@+id/RoundIconBg1"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
         android:contentDescription="@string/sandal_image1"
-        app:layout_constraintBottom_toTopOf="@+id/RoundRect"
-        app:layout_constraintStart_toStartOf="@+id/RoundRect"
-        app:layout_constraintTop_toBottomOf="@+id/RoundHeader"
+        app:layout_constraintStart_toStartOf="@+id/RoundHeader"
+        app:layout_constraintTop_toBottomOf="@+id/cooking_time_text"
         app:srcCompat="@drawable/rounded_corner_button_white" />
 
     <ImageView
@@ -89,10 +61,10 @@
         android:id="@+id/cooking_time_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="@string/cooking_time"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/RoundIconBg1"
         app:layout_constraintEnd_toEndOf="@+id/RoundIconBg1"
         app:layout_constraintStart_toStartOf="@+id/RoundIconBg1"
         app:layout_constraintTop_toBottomOf="@+id/RoundHeader" />
@@ -104,7 +76,6 @@
         android:text="@string/cooking_time_value"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/RoundRect"
         app:layout_constraintEnd_toEndOf="@+id/RoundIconBg1"
         app:layout_constraintStart_toStartOf="@+id/RoundIconBg1"
         app:layout_constraintTop_toBottomOf="@+id/RoundIconBg1" />
@@ -113,11 +84,11 @@
         android:id="@+id/RoundIconBg2"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:layout_marginTop="5dp"
         android:contentDescription="@string/sandal_image1"
-        app:layout_constraintBottom_toTopOf="@+id/RoundRect"
         app:layout_constraintEnd_toStartOf="@+id/RoundIconBg3"
         app:layout_constraintStart_toEndOf="@+id/RoundIconBg1"
-        app:layout_constraintTop_toBottomOf="@+id/RoundHeader"
+        app:layout_constraintTop_toBottomOf="@+id/prep_time_text"
         app:srcCompat="@drawable/rounded_corner_button_white"
         tools:ignore="ImageContrastCheck" />
 
@@ -125,11 +96,11 @@
         android:id="@+id/RoundIconBg3"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="20dp"
         android:contentDescription="@string/sandal_image1"
-        app:layout_constraintBottom_toTopOf="@+id/RoundRect"
         app:layout_constraintEnd_toEndOf="@+id/RoundHeader"
-        app:layout_constraintTop_toBottomOf="@+id/RoundHeader"
+        app:layout_constraintTop_toBottomOf="@+id/servings_text"
         app:srcCompat="@drawable/rounded_corner_button_white"
         tools:ignore="ImageContrastCheck" />
 
@@ -137,11 +108,11 @@
         android:id="@+id/prep_time_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:fontFamily="sans-serif"
         android:text="@string/prep_time"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/RoundIconBg2"
         app:layout_constraintEnd_toEndOf="@+id/RoundIconBg2"
         app:layout_constraintStart_toStartOf="@+id/RoundIconBg2"
         app:layout_constraintTop_toBottomOf="@+id/RoundHeader"
@@ -180,7 +151,6 @@
         android:text="@string/prep_time_value"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/RoundRect"
         app:layout_constraintEnd_toEndOf="@+id/RoundIconBg2"
         app:layout_constraintStart_toStartOf="@+id/RoundIconBg2"
         app:layout_constraintTop_toBottomOf="@+id/RoundIconBg2"
@@ -190,10 +160,10 @@
         android:id="@+id/servings_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="@string/servings"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/RoundIconBg3"
         app:layout_constraintEnd_toEndOf="@+id/RoundIconBg3"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/RoundIconBg3"
@@ -207,7 +177,6 @@
         android:text="@string/servings_value"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/RoundRect"
         app:layout_constraintEnd_toEndOf="@+id/RoundIconBg3"
         app:layout_constraintStart_toStartOf="@+id/RoundIconBg3"
         app:layout_constraintTop_toBottomOf="@+id/RoundIconBg3"
@@ -225,18 +194,70 @@
         app:layout_constraintStart_toStartOf="@+id/RoundHeader"
         app:layout_constraintTop_toTopOf="@+id/RoundHeader" />
 
-    <TextView
-        android:id="@+id/ingredients_text"
+    <Button
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/mrs_saint_delafield"
-        android:text="@string/ingredients"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="@+id/RoundRect"
-        app:layout_constraintTop_toTopOf="@+id/RoundRect" />
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/rounded_corner_button_white"
+        android:text="EDIT"
+        app:backgroundTint="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/crumpled_paper"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prep_time_value">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/ingredients_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mrs_saint_delafield"
+                    android:text="@string/ingredients"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/mrs_saint_delafield"
+                    android:text="@string/ingredients"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ingredients_text" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

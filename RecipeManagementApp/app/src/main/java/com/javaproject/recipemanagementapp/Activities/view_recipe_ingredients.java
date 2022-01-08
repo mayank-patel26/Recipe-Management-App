@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.javaproject.recipemanagementapp.R;
 
-public class edit_recipe_ingredients extends AppCompatActivity {
+public class view_recipe_ingredients extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
