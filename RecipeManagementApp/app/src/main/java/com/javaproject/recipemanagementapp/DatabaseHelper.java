@@ -20,7 +20,7 @@ public class DatabaseHelper extends Exception
         //create a database if it doesn't exist
         recipeAppDatabase = context.openOrCreateDatabase("RecipeAppDatabase", Context.MODE_PRIVATE,null);
         // create a recipe database table here
-        recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS recipe(id INTEGER PRIMARY KEY AUTOINCREMENT, recipeName TEXT UNIQUE, ingredients TEXT, cuisine TEXT, procedure TEXT, servings INTEGER, cookingTime INTEGER, prepTime INTEGER, spiceLevel INTEGER, allergyWarning TEXT, rating INTEGER, tags TEXT)");
+        recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS recipe(id INTEGER PRIMARY KEY AUTOINCREMENT, recipeName TEXT UNIQUE, ingredients TEXT, cuisine TEXT, procedure TEXT, servings INTEGER, cookingTime INTEGER, prepTime INTEGER, spiceLevel INTEGER, allergyWarning TEXT, rating INTEGER, tags TEXT,userID INTEGER)");
         //create the user table here
         recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT UNIQUE, password TEXT, dateOfBirth TEXT, fullName TEXT, imagePath TEXT)");
     }
