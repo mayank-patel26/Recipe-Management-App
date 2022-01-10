@@ -3,22 +3,34 @@ package com.javaproject.recipemanagementapp;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 
+import com.javaproject.recipemanagementapp.Tables.Recipe;
 import com.javaproject.recipemanagementapp.Tables.User;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
 
-public class DatabaseHelper extends Exception
+public class DatabaseHelper
 {
     //All DB functions are part of context class hence you can use it without context in AppCompactActivity derived classes
     public static User currentUser;
     public static SQLiteDatabase recipeAppDatabase;
+    public static Recipe currentEditRecipe;
 
     public static void setDB(Context context)
     {
         currentUser=new User();
         //create a database if it doesn't exist
         recipeAppDatabase = context.openOrCreateDatabase("RecipeAppDatabase", Context.MODE_PRIVATE,null);
+        setInitialValues(context);
         // create a recipe database table here
         recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS recipe(id INTEGER PRIMARY KEY AUTOINCREMENT, recipeName TEXT UNIQUE, ingredients TEXT, cuisine TEXT, procedure TEXT, servings INTEGER, cookingTime INTEGER, prepTime INTEGER, spiceLevel INTEGER, allergyWarning TEXT, rating INTEGER, tags TEXT,userID INTEGER)");
         //create the user table here
@@ -38,10 +50,11 @@ public class DatabaseHelper extends Exception
         return (cursor.getCount()>0);
     }
 
-    static void insertRecipeData()
+    static void insertRecipeData(Recipe recipe)
     {
-//        insert recipe values here and call this method to insert a new recipe
-
+        //insert recipe values here and call this method to insert a new recipe
+        String recipeToString=recipe.toString();
+        recipeAppDatabase.execSQL("INSERT INTO recipe VALUES(null,"+recipeToString+");");
     }
 
     public static User getUserByEmail(String email)
@@ -54,6 +67,9 @@ public class DatabaseHelper extends Exception
         user.email=cursor.getString(1);
         user.password=cursor.getString(2);
         return user;
+        //call method
+        //User user=getUserByEmail(email)
+        //DatabaseHelper.currentUser=user;
     }
 
     public static Boolean checklogin(String e1, String p1){
@@ -66,6 +82,53 @@ public class DatabaseHelper extends Exception
         currentUser=user;
     }
 
+    public static void setInitialValues(Context context)
+    {
+        Cursor cursor = recipeAppDatabase.rawQuery("SELECT * FROM recipe",new String[]{});
+        if(cursor.getCount()==0)
+        {
+            try {
+                InputStream is = context.getAssets().open("file.xml");
+
+                DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+                DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+                Document doc = dBuilder.parse(is);
+
+                Element element=doc.getDocumentElement();
+                element.normalize();
+
+                NodeList nList = doc.getElementsByTagName("recipe");
+
+                for (int i=0; i<nList.getLength(); i++) {
+                    Node node = nList.item(i);
+                    if (node.getNodeType() == Node.ELEMENT_NODE) {
+                        Element element2 = (Element) node;
+                        String recipeName=getValue("name",element2);
+                        ArrayList<String> ingredients= new ArrayList<>(Arrays.asList(getValue("ingredients",element2).split(",")));
+                        ArrayList<String> cuisine = new ArrayList<>(Arrays.asList(getValue("cuisine",element2).split(",")));
+                        String procedure=getValue("procedure",element2);
+                        int servings=Integer.parseInt(getValue("servings",element2));
+                        String cooking_time=getValue("cooking_time",element2);
+                        String prep_time=getValue("prep_time",element2);
+                        int spice_level=Integer.parseInt(getValue("spice_level",element2));
+                        String allergens=getValue("allergens",element2);
+                        int rating=Integer.parseInt(getValue("rating",element2));
+                        ArrayList<String> tags= new ArrayList<>(Arrays.asList(getValue("tags",element2).split(",")));
+                        Recipe recipe=new Recipe(0,recipeName,ingredients,cuisine,procedure,servings,cooking_time,prep_time,spice_level,allergens,rating,tags);
+                        insertRecipeData(recipe);
+                    }
+                }
+
+            } catch (Exception e) {e.printStackTrace();}
+
+        }
+        }
+        private static String getValue(String tag, Element element) {
+        NodeList nodeList = element.getElementsByTagName(tag).item(0).getChildNodes();
+        Node node = nodeList.item(0);
+        return node.getNodeValue();
+    }
+}
     //Trial example - ignore
     /* create a database and confirm if it has been created by displaying value in a text field*/
     /*void confirmDBCreation(Context context)
@@ -90,4 +153,3 @@ public class DatabaseHelper extends Exception
         //TextView textView=findViewById(R.id.startup_text);
         //textView.setText(name);
     }*/
-}

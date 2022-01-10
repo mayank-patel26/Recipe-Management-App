@@ -7,7 +7,7 @@
     tools:context=".Activities.view_recipe_method">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/next_button_method"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -36,7 +36,7 @@
         app:srcCompat="@drawable/rounded_corner_rectangle_light_yellow" />
 
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/tags_scroll_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
@@ -63,7 +63,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/allergen_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/mrs_saint_delafield"
@@ -87,7 +87,7 @@
                     app:backgroundTint="#00000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                    app:layout_constraintTop_toBottomOf="@+id/allergen_text" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>

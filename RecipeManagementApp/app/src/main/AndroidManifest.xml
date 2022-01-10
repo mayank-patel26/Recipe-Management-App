@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecipeManagementApp">
         <activity
+            android:name=".tags_allergen"
+            android:exported="true" />
+        <activity
             android:name=".Activities.view_recipe_method"
             android:exported="false" />
         <activity

@@ -31,7 +31,7 @@ public class Recipe {
     public int spiceLevel;
     public String allergyWarnings;
     public int rating;
-    public List<String> tags;
+    public ArrayList<String> tags;
 
     public Recipe()
     {
@@ -40,7 +40,7 @@ public class Recipe {
         tags=new ArrayList<>();
     }
 
-    public Recipe(int recipeID, String recipeName, ArrayList<String> ingredients, ArrayList<String> cuisine, String procedure, int servings, String cookingTime, String prepTime, int spiceLevel, String allergyWarnings, int rating, List<String> tags) {
+    public Recipe(int recipeID, String recipeName, ArrayList<String> ingredients, ArrayList<String> cuisine, String procedure, int servings, String cookingTime, String prepTime, int spiceLevel, String allergyWarnings, int rating, ArrayList<String> tags) {
         this.recipeID = recipeID;
         this.recipeName = recipeName;
         Ingredients = ingredients;
@@ -58,6 +58,26 @@ public class Recipe {
     public void addStringToIngredients(String ingredients)
     {
         Ingredients.addAll(Arrays.asList(ingredients.split(",")));
+    }
+
+    public String ListtoString(ArrayList list) {
+        String string=list.toString();
+        return string.substring(1,string.length()-1);
+    }
+
+    @Override
+    public String toString() {
+        return  "'" + recipeName + "'," +
+                "'" + ListtoString(Ingredients) +
+                "','" + ListtoString(Cuisine) +
+                "','" + procedure +
+                "'," + servings +
+                ",'" + cookingTime +
+                "','" + prepTime +
+                "'," + spiceLevel +
+                ",'" + allergyWarnings +
+                "'," + rating +
+                ",'" + ListtoString(tags)+"'";
     }
 }
 
