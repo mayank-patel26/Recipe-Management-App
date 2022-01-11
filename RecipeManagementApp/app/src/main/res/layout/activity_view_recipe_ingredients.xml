@@ -195,16 +195,28 @@
         app:layout_constraintTop_toTopOf="@+id/RoundHeader" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/edit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginBottom="25dp"
         android:background="@drawable/rounded_corner_button_white"
-        android:text="EDIT"
+        android:text="edit"
         app:backgroundTint="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/next_button_ingredients_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/rounded_corner_button_white"
+        android:text="@string/next"
+        app:backgroundTint="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ScrollView
         android:id="@+id/tags_scroll_view"

@@ -28,6 +28,7 @@ public class DatabaseHelper
     public static void setDB(Context context)
     {
         currentUser=new User();
+        currentEditRecipe=new Recipe();
         //create a database if it doesn't exist
         recipeAppDatabase = context.openOrCreateDatabase("RecipeAppDatabase", Context.MODE_PRIVATE,null);
         setInitialValues(context);
@@ -56,7 +57,27 @@ public class DatabaseHelper
         String recipeToString=recipe.toString();
         recipeAppDatabase.execSQL("INSERT INTO recipe VALUES(null,"+recipeToString+");");
     }
-
+    public static Recipe getRecipeByName(String name)
+    {
+        Cursor cursor = recipeAppDatabase.rawQuery("Select * from recipe where recipeName = ?", new String[]{name});
+        Recipe recipe=new Recipe();
+        if(cursor.getCount()>0)
+        {
+            recipe.recipeID=cursor.getInt(0);
+            recipe.recipeName=cursor.getString(1);
+            recipe.Ingredients=Recipe.StringToList(cursor.getString(2),recipe.Ingredients,"~");
+            recipe.Cuisine=Recipe.StringToList(cursor.getString(3),recipe.Cuisine,"~");
+            recipe.procedure=cursor.getString(4);
+            recipe.servings=cursor.getInt(5);
+            recipe.cookingTime=cursor.getString(6);
+            recipe.prepTime=cursor.getString(7);
+            recipe.spiceLevel=cursor.getInt(8);
+            recipe.allergyWarnings=cursor.getString(9);
+            recipe.rating=cursor.getInt(10);
+            recipe.tags=Recipe.StringToList(cursor.getString(11),recipe.tags,"~");
+        }
+        return  recipe;
+    }
     public static User getUserByEmail(String email)
     {
         //get a specific user by the ID and return the user

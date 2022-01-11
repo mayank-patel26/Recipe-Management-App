@@ -1,8 +1,10 @@
-package com.javaproject.recipemanagementapp;
+package com.javaproject.recipemanagementapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.javaproject.recipemanagementapp.R;
 
 public class tags_allergen extends AppCompatActivity {
 

@@ -15,6 +15,8 @@ public class Recipe
     public String recipeName;
 }*/
 
+import android.widget.ArrayAdapter;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -55,13 +57,15 @@ public class Recipe {
         this.tags = tags;
     }
 
-    public void addStringToIngredients(String ingredients)
+    public static ArrayList StringToList(String string, ArrayList list,String character)
     {
-        Ingredients.addAll(Arrays.asList(ingredients.split(",")));
+        list.addAll(Arrays.asList(string.split(character)));
+        return list;
     }
 
-    public String ListtoString(ArrayList list) {
+    public static String ListtoString(ArrayList list) {
         String string=list.toString();
+        string.replaceAll(",","~");
         return string.substring(1,string.length()-1);
     }
 
