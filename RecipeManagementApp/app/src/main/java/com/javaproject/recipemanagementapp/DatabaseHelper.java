@@ -51,7 +51,7 @@ public class DatabaseHelper
         return (cursor.getCount()>0);
     }
 
-    static void insertRecipeData(Recipe recipe)
+    public static void insertRecipeData(Recipe recipe)
     {
         //insert recipe values here and call this method to insert a new recipe
         String recipeToString=recipe.toString();

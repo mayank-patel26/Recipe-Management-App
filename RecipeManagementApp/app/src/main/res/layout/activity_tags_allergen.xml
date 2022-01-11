@@ -7,13 +7,13 @@
     tools:context=".Activities.view_recipe_method">
 
     <Button
-        android:id="@+id/next_button_method"
+        android:id="@+id/done_button_tags_allergen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/rounded_corner_button_white"
-        android:text="NEXT"
+        android:text="@string/done"
         app:backgroundTint="@color/green"
         app:iconTint="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"

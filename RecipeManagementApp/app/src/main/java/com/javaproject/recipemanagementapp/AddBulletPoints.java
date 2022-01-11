@@ -11,7 +11,7 @@ import java.sql.SQLWarning;
 
 public class AddBulletPoints
 {
-    public static void setBulletPoints(EditText editText)
+    public static void setBulletPoints(EditText editText, String bullet)
     {
         editText.addTextChangedListener(new TextWatcher(){
             @Override
@@ -26,13 +26,13 @@ public class AddBulletPoints
                 if(text!=null) {
                     if (lengthAfter > lengthBefore) {
                         if (text.toString().length() == 1) {
-                            text = "• " + text;
+                            text = bullet+" " + text;
                             editText.setText(text);
                             editText.setSelection(editText.getText().length());
                         }
                         if (text.toString().endsWith("\n")) {
-                            text = text.toString().replace("\n", "\n• ");
-                            text = text.toString().replace("• •", "•");
+                            text = text.toString().replace("\n", "\n"+bullet+" ");
+                            text = text.toString().replace(bullet+" "+bullet, bullet);
                             editText.setText(text);
                             editText.setSelection(editText.getText().length());
                         }
@@ -42,11 +42,11 @@ public class AddBulletPoints
         });
     }
 
-    public static void setBulletPoints(TextView text)
+    public static void setBulletPoints(TextView text,String bullet)
     {
         if(text.getText().toString().contains("\n"))
         {
-            text.getText().toString().replaceAll("\n","\n• ");
+            text.getText().toString().replaceAll("\n","\n"+bullet+" ");
         }
     }
 }

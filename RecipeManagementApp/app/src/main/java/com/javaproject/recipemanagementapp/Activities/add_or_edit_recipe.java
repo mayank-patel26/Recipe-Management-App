@@ -20,7 +20,7 @@ public class add_or_edit_recipe extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_or_edit_recipe);
-        AddBulletPoints.setBulletPoints(findViewById(R.id.ingredients_edit_text));
+        AddBulletPoints.setBulletPoints(findViewById(R.id.ingredients_edit_text),"•");
         addOnButtonClicks();
         populateRecipe();
     }
