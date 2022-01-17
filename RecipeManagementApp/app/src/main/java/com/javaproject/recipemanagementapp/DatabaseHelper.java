@@ -3,16 +3,20 @@ package com.javaproject.recipemanagementapp;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.javaproject.recipemanagementapp.Tables.Recipe;
 import com.javaproject.recipemanagementapp.Tables.User;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -24,6 +28,8 @@ public class DatabaseHelper
     public static User currentUser;
     public static SQLiteDatabase recipeAppDatabase;
     public static Recipe currentEditRecipe;
+    public static List<Recipe> recipeList = new ArrayList<>();
+
 
     public static void setDB(Context context)
     {
@@ -31,11 +37,12 @@ public class DatabaseHelper
         currentEditRecipe=new Recipe();
         //create a database if it doesn't exist
         recipeAppDatabase = context.openOrCreateDatabase("RecipeAppDatabase", Context.MODE_PRIVATE,null);
-        setInitialValues(context);
+
         // create a recipe database table here
         recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS recipe(id INTEGER PRIMARY KEY AUTOINCREMENT, recipeName TEXT UNIQUE, ingredients TEXT, cuisine TEXT, procedure TEXT, servings INTEGER, cookingTime INTEGER, prepTime INTEGER, spiceLevel INTEGER, allergyWarning TEXT, rating INTEGER, tags TEXT,userID INTEGER)");
         //create the user table here
         recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT UNIQUE, password TEXT, dateOfBirth TEXT, fullName TEXT, imagePath TEXT)");
+        setInitialValues(context);
     }
 
     public static void insertUserData(String email1,String password1)
@@ -51,11 +58,13 @@ public class DatabaseHelper
         return (cursor.getCount()>0);
     }
 
+
+
     public static void insertRecipeData(Recipe recipe)
     {
         //insert recipe values here and call this method to insert a new recipe
         String recipeToString=recipe.toString();
-        recipeAppDatabase.execSQL("INSERT INTO recipe VALUES(null,"+recipeToString+");");
+        recipeAppDatabase.execSQL("INSERT INTO recipe(recipeName,ingredients,cuisine, procedure, servings, cookingTime, prepTime, spiceLevel, allergyWarning, rating, tags) VALUES("+recipeToString+");");
     }
     public static Recipe getRecipeByName(String name)
     {
@@ -109,7 +118,7 @@ public class DatabaseHelper
         if(cursor.getCount()==0)
         {
             try {
-                InputStream is = context.getAssets().open("file.xml");
+                InputStream is = context.getAssets().open("initial_recipes.xml");
 
                 DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
                 DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -135,7 +144,7 @@ public class DatabaseHelper
                         String allergens=getValue("allergens",element2);
                         int rating=Integer.parseInt(getValue("rating",element2));
                         ArrayList<String> tags= new ArrayList<>(Arrays.asList(getValue("tags",element2).split(",")));
-                        Recipe recipe=new Recipe(0,recipeName,ingredients,cuisine,procedure,servings,cooking_time,prep_time,spice_level,allergens,rating,tags);
+                        Recipe recipe = new Recipe(0,recipeName,ingredients,cuisine,procedure,servings,cooking_time,prep_time,spice_level,allergens,rating,tags);
                         insertRecipeData(recipe);
                     }
                 }
@@ -149,6 +158,26 @@ public class DatabaseHelper
         Node node = nodeList.item(0);
         return node.getNodeValue();
     }
+
+    public static void getAllRecipe(){
+        String[] columns = {"id", "recipeName", "servings"};
+        Cursor cursor = recipeAppDatabase.query("recipe", columns, null, null, null, null, null);
+
+        while(cursor.moveToNext()){
+            int index1 = cursor.getColumnIndex("id");
+            int recipeid = cursor.getInt(index1);
+            int index2 = cursor.getColumnIndex("recipeName");
+            String name = cursor.getString(index2);
+            int index3 = cursor.getColumnIndex("servings");
+            int serving = cursor.getInt(index3);
+            Recipe recipe = new Recipe();
+            recipe.recipeID=recipeid;
+            recipe.recipeName=name;
+            recipe.servings=serving;
+            recipeList.add(recipe);
+        }
+    }
+
 }
     //Trial example - ignore
     /* create a database and confirm if it has been created by displaying value in a text field*/

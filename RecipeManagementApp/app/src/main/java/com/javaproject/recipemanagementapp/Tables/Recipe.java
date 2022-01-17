@@ -15,11 +15,8 @@ public class Recipe
     public String recipeName;
 }*/
 
-import android.widget.ArrayAdapter;
-
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Recipe {
     public int recipeID;
@@ -31,15 +28,42 @@ public class Recipe {
     public String cookingTime;
     public String prepTime;
     public int spiceLevel;
+
+//    public Recipe(int recipeID, String recipeName, int servings) {
+//        this.recipeID = recipeID;
+//        this.recipeName = recipeName;
+//        this.servings = servings;
+//    }
+
+    public int getRecipeID() {
+        return this.recipeID;
+    }
+
+    public String getRecipeName() {
+        return this.recipeName;
+    }
+
+    public int getServings() {
+        return this.servings;
+    }
+
     public String allergyWarnings;
     public int rating;
     public ArrayList<String> tags;
 
-    public Recipe()
-    {
-        Ingredients=new ArrayList<>();
-        Cuisine=new ArrayList<>();
-        tags=new ArrayList<>();
+    public Recipe() {
+        this.recipeID = 0;
+        this.recipeName = "";
+        Ingredients = new ArrayList<>();
+        Cuisine = new ArrayList<>();
+        this.procedure = "";
+        this.servings = 0;
+        this.cookingTime = "";
+        this.prepTime = "";
+        this.spiceLevel = 0;
+        this.allergyWarnings = "";
+        this.rating = 0;
+        this.tags = new ArrayList<>();
     }
 
     public Recipe(int recipeID, String recipeName, ArrayList<String> ingredients, ArrayList<String> cuisine, String procedure, int servings, String cookingTime, String prepTime, int spiceLevel, String allergyWarnings, int rating, ArrayList<String> tags) {

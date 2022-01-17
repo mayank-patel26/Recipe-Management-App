@@ -34,207 +34,28 @@
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
             android:background="@drawable/profile_circle"
             android:text="A"
             android:textColor="@color/black"
             android:textSize="18sp"
             app:backgroundTint="@color/green"
-            app:layout_constraintBottom_toTopOf="@+id/landing_page_scroll1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ScrollView
-            android:id="@+id/landing_page_scroll1"
-            android:layout_width="match_parent"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPrograms"
+            android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/searchView2"
-            app:layout_constraintVertical_bias="1.0">
-
-            <LinearLayout
-                android:id="@+id/landing_page_linearlayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/all_recipe_txt"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginBottom="8dp"
-                        android:background="@drawable/rounded_corner_rectangle_light_yellow"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="5dp"
-                        android:text="TextView"
-                        android:textColor="@color/black"
-                        android:textStyle="italic"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.0" />
-
-                    <TextView
-                        android:id="@+id/textView15"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:background="@drawable/rounded_corner_rectangle_light_yellow"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="5dp"
-                        android:text="TextView"
-                        android:textColor="@color/black"
-                        android:textStyle="italic"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.516"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/all_recipe_txt" />
-
-                    <TextView
-                        android:id="@+id/textView19"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:background="@drawable/rounded_corner_rectangle_light_yellow"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="5dp"
-                        android:text="TextView"
-                        android:textColor="@color/black"
-                        android:textStyle="italic"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.516"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-                    <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:background="@drawable/rounded_corner_rectangle_light_yellow"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="5dp"
-                        android:text="TextView"
-                        android:textColor="@color/black"
-                        android:textStyle="italic"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.516"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView21" />
-
-                    <TextView
-                        android:id="@+id/textView23"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:background="@drawable/rounded_corner_rectangle_light_yellow"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="5dp"
-                        android:text="TextView"
-                        android:textColor="@color/black"
-                        android:textStyle="italic"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.483"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView20" />
-
-                    <TextView
-                        android:id="@+id/textView24"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:background="@drawable/rounded_corner_rectangle_light_yellow"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="5dp"
-                        android:text="TextView"
-                        android:textColor="@color/black"
-                        android:textStyle="italic"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.483"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView23" />
-
-                    <TextView
-                        android:id="@+id/textView25"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:background="@drawable/rounded_corner_rectangle_light_yellow"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="5dp"
-                        android:text="TextView"
-                        android:textColor="@color/black"
-                        android:textStyle="italic"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.483"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView24" />
-
-                    <TextView
-                        android:id="@+id/textView27"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:background="@drawable/rounded_corner_rectangle_light_yellow"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="5dp"
-                        android:text="TextView"
-                        android:textColor="@color/black"
-                        android:textStyle="italic"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.483"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView25" />
-
-                    <TextView
-                        android:id="@+id/textView21"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:background="@drawable/rounded_corner_rectangle_light_yellow"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="5dp"
-                        android:text="TextView"
-                        android:textColor="@color/black"
-                        android:textStyle="italic"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.516"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView19" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </LinearLayout>
-        </ScrollView>
+            app:layout_constraintTop_toBottomOf="@+id/searchView2" />
 
         <SearchView
             android:id="@+id/searchView2"
@@ -243,12 +64,10 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
             android:background="@drawable/rounded_corner_rectangle_white"
             android:clickable="false"
             android:paddingTop="0dp"
             android:paddingBottom="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/landing_page_scroll1"
             app:layout_constraintEnd_toStartOf="@+id/profile_button1"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
