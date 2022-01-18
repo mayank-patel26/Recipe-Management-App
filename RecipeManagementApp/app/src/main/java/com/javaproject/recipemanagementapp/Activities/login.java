@@ -2,25 +2,15 @@ package com.javaproject.recipemanagementapp.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.room.Database;
 
 import com.javaproject.recipemanagementapp.DatabaseHelper;
 import com.javaproject.recipemanagementapp.R;
-import com.javaproject.recipemanagementapp.Tables.Recipe;
-import com.javaproject.recipemanagementapp.Tables.User;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class login extends AppCompatActivity {
     TextView forgot;

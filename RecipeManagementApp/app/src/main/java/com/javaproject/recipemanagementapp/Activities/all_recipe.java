@@ -2,7 +2,6 @@ package com.javaproject.recipemanagementapp.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,10 +12,9 @@ import com.javaproject.recipemanagementapp.DatabaseHelper;
 import com.javaproject.recipemanagementapp.R;
 import com.javaproject.recipemanagementapp.Tables.Recipe;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class all_recipe extends AppCompatActivity {
+public class all_recipe extends AppCompatActivity{
 
     RecyclerView rvPrograms;
     RecipeAdapter recipeAdapter;
@@ -46,4 +44,14 @@ public class all_recipe extends AppCompatActivity {
             startActivity(intent);
         });
     }
+
+
+    @Override
+    public void onBackPressed() {
+        recipeList.clear();
+        recipeAdapter.notifyDataSetChanged();
+        super.onBackPressed();
+    }
+
+
 }

@@ -37,18 +37,19 @@ public class DatabaseHelper
         currentEditRecipe=new Recipe();
         //create a database if it doesn't exist
         recipeAppDatabase = context.openOrCreateDatabase("RecipeAppDatabase", Context.MODE_PRIVATE,null);
-
+        recipeAppDatabase.execSQL("DROP TABLE recipe;");
         // create a recipe database table here
         recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS recipe(id INTEGER PRIMARY KEY AUTOINCREMENT, recipeName TEXT UNIQUE, ingredients TEXT, cuisine TEXT, procedure TEXT, servings INTEGER, cookingTime INTEGER, prepTime INTEGER, spiceLevel INTEGER, allergyWarning TEXT, rating INTEGER, tags TEXT,userID INTEGER)");
         //create the user table here
         recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT UNIQUE, password TEXT, dateOfBirth TEXT, fullName TEXT, imagePath TEXT)");
         setInitialValues(context);
+
     }
 
-    public static void insertUserData(String email1,String password1)
+    public static void insertUserData(String email1,String password1, String full_name)
     {
         //insert user values into the table here
-        recipeAppDatabase.execSQL("INSERT INTO user(email, password) VALUES('"+email1+"','"+password1+"');");
+        recipeAppDatabase.execSQL("INSERT INTO user(email, password, fullName) VALUES('"+email1+"','"+password1+"', '"+full_name+"');");
     }
 
     public static Boolean checkemail (String email)

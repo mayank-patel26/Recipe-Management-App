@@ -9,8 +9,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.javaproject.recipemanagementapp.R;
+import com.javaproject.recipemanagementapp.Tables.Recipe;
+
+import java.util.List;
 
 public class landing_page extends AppCompatActivity {
+    List<Recipe> recipeList;
+    RecipeAdapter recipeAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
