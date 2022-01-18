@@ -29,8 +29,8 @@ public class forgot_password extends AppCompatActivity {
         Button reset_password = findViewById(R.id.reset_password);
         reset_password.setOnClickListener(view -> {
 
-            String e1 = email.getText().toString();
-            String password = password_field.getText().toString();
+            String e1 = email.getText().toString().trim();
+            String password = password_field.getText().toString().trim();
 
             DatabaseHelper.setNewPassword(e1, password);
             Toast.makeText(getApplicationContext(), "Password reset successful", Toast.LENGTH_SHORT).show();
@@ -44,7 +44,7 @@ public class forgot_password extends AppCompatActivity {
         Button forgotpassword_next_btn = findViewById(R.id.forgotpassword_next_btn);
         forgotpassword_next_btn.setOnClickListener(view -> {
 
-            String find_email=email.getText().toString();
+            String find_email = email.getText().toString().trim();
 
             if(find_email.equals(""))
             {

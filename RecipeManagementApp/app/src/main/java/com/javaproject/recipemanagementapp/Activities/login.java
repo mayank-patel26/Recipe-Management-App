@@ -44,8 +44,8 @@ public class login extends AppCompatActivity {
 
 
         b2.setOnClickListener(view -> {
-            String e=e5.getText().toString();
-            String p=e6.getText().toString();
+            String e=e5.getText().toString().trim();
+            String p=e6.getText().toString().trim();
 
 //                User user = DatabaseHelper.getUserByEmail(e);
 //                DatabaseHelper.setCurrentUser(user);
