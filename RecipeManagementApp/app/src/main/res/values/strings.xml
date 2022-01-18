@@ -40,4 +40,5 @@
     <string name="red_line">Red line</string>
     <string name="all_recipe">All Recipe</string>
     <string name="next">next</string>
+    <string name="reset_password">Reset Password</string>
 </resources>

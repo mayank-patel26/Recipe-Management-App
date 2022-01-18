@@ -3,7 +3,6 @@ package com.javaproject.recipemanagementapp;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 
 import com.javaproject.recipemanagementapp.Tables.Recipe;
 import com.javaproject.recipemanagementapp.Tables.User;
@@ -105,6 +104,15 @@ public class DatabaseHelper
     public static Boolean checklogin(String e1, String p1){
         Cursor cursor = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE email = '"+e1+"' AND password = '"+p1+"';", new String[]{});
         return (cursor.getCount()>0);
+    }
+
+    public static boolean findEmail(String eml){
+        Cursor cursor = recipeAppDatabase.rawQuery("SELECT email FROM user WHERE email = '"+eml+"';", new String[]{});
+        return (cursor.getCount()>0);
+    }
+
+    public static void setNewPassword(String eml1, String new_password){
+        recipeAppDatabase.execSQL("INSERT INTO user(password) VALUES("+new_password+") WHERE email = '"+eml1+"'");
     }
 
     public static void setCurrentUser(User user)
