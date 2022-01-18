@@ -3,6 +3,7 @@ package com.javaproject.recipemanagementapp;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.widget.Toast;
 
 import com.javaproject.recipemanagementapp.Tables.Recipe;
 import com.javaproject.recipemanagementapp.Tables.User;
@@ -112,7 +113,7 @@ public class DatabaseHelper
     }
 
     public static void setNewPassword(String eml1, String new_password){
-        recipeAppDatabase.execSQL("INSERT INTO user(password) VALUES("+new_password+") WHERE email = '"+eml1+"'");
+        recipeAppDatabase.execSQL("UPDATE user SET password = '"+new_password+"' WHERE email = '"+eml1+"';");
     }
 
     public static void setCurrentUser(User user)
