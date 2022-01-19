@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.javaproject.recipemanagementapp">
+    package="com.javaproject.recipemanagementapp" >
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.RecipeManagementApp">
+        android:theme="@style/Theme.RecipeManagementApp" >
         <activity
             android:name=".options"
             android:exported="false" />
@@ -16,7 +16,10 @@
             android:name=".Activities.tags_allergen"
             android:exported="true" />
         <activity
-            android:name=".Activities.view_recipe_method"
+            android:name=".Activities.edit_recipe_method"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.forgot_password"
             android:exported="false" />
         <activity
             android:name=".Activities.login"
@@ -31,7 +34,7 @@
             android:name=".Activities.intro_scroll"
             android:exported="false" />
         <activity
-            android:name=".Activities.add_or_edit_recipe"
+            android:name=".Activities.edit_recipe_ingredients"
             android:exported="true" />
         <activity
             android:name=".Activities.login_signup"
@@ -40,17 +43,14 @@
             android:name=".Activities.landing_page"
             android:exported="false" />
         <activity
-            android:name=".Activities.view_recipe_ingredients"
-            android:exported="true" />
-        <activity
-            android:name=".Activities.Recipe_with_paper"
+            android:name=".Activities.view_recipe"
             android:exported="true" />
         <activity
             android:name=".Activities.ExitPage"
             android:exported="true" />
         <activity
             android:name=".Activities.StartupPage"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

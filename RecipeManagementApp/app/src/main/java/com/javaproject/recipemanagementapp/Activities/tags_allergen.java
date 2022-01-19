@@ -30,7 +30,7 @@ public class tags_allergen extends AppCompatActivity {
         done.setOnClickListener(view -> {
             saveTagsAllergen();
             DatabaseHelper.insertRecipeData(DatabaseHelper.currentEditRecipe);
-            Intent intent = new Intent(this, all_recipe.class);
+            Intent intent = new Intent(this, landing_page.class);
             startActivity(intent);
         });
     }
@@ -42,6 +42,6 @@ public class tags_allergen extends AppCompatActivity {
         DatabaseHelper.currentEditRecipe.allergyWarnings=allergens;
         String tags=((EditText)findViewById(R.id.tags_edit_text)).getText().toString();
         tags.replaceAll("#","~");
-        DatabaseHelper.currentEditRecipe.tags= Recipe.StringToList(tags,DatabaseHelper.currentEditRecipe.tags,"~");
+        DatabaseHelper.currentEditRecipe.tags= Recipe.StringToList(tags,"~");
     }
 }

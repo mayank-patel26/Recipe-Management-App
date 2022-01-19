@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.view_recipe">
+
+
+    <Button
+        android:id="@+id/edit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_corner_button_white"
+        app:backgroundTint="@color/green"
+        android:text="edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/recipe_name_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="40dp"
+                    android:background="@drawable/bordered_rect"
+                    android:fontFamily="@font/mrs_saint_delafield"
+                    android:paddingTop="10dp"
+                    android:text="Recipe Name"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="45sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tags_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shadow_left"
+                    android:fontFamily="@font/mrs_saint_delafield"
+                    android:lineSpacingExtra="-20sp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"
+                    android:text="Tags :"
+                    android:textColor="@color/black"
+                    android:textSize="35sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/procedure_txt" />
+
+                <TextView
+                    android:id="@+id/procedure_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="40dp"
+                    android:background="@drawable/shadow_right"
+                    android:fontFamily="@font/mrs_saint_delafield"
+                    android:lineSpacingExtra="-20sp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="20dp"
+                    android:text="Procedure :"
+                    android:textColor="@color/black"
+                    android:textSize="35sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cuisine_txt" />
+
+                <ImageView
+                    android:id="@+id/RoundIconBg1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="60dp"
+                    android:contentDescription="@string/sandal_image1"
+                    app:layout_constraintEnd_toStartOf="@+id/RoundIconBg2"
+                    app:layout_constraintTop_toBottomOf="@+id/cooking_time_text"
+                    app:srcCompat="@drawable/rounded_corner_button_white" />
+
+                <TextView
+                    android:id="@+id/prep_time_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/prep_time_value"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/RoundIconBg2"
+                    app:layout_constraintStart_toStartOf="@+id/RoundIconBg2"
+                    app:layout_constraintTop_toBottomOf="@+id/hourglass_icon"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/cooking_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/cooking_time"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/RoundIconBg1"
+                    app:layout_constraintStart_toStartOf="@+id/RoundIconBg1"
+                    app:layout_constraintTop_toBottomOf="@+id/recipe_name_txt" />
+
+                <ImageView
+                    android:id="@+id/timer_icon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:contentDescription="@string/timer_icon"
+                    app:layout_constraintBottom_toBottomOf="@+id/RoundIconBg1"
+                    app:layout_constraintEnd_toEndOf="@+id/RoundIconBg1"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/RoundIconBg1"
+                    app:layout_constraintTop_toTopOf="@+id/RoundIconBg1"
+                    app:srcCompat="@drawable/ic_baseline_timer_24"
+                    app:tint="@color/black"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <ImageView
+                    android:id="@+id/RoundIconBg2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="5dp"
+                    android:contentDescription="@string/sandal_image1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/prep_time_text"
+                    app:srcCompat="@drawable/rounded_corner_button_white"
+                    tools:ignore="ImageContrastCheck" />
+
+                <TextView
+                    android:id="@+id/servings_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/servings"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/RoundIconBg3"
+                    app:layout_constraintStart_toStartOf="@+id/RoundIconBg3"
+                    app:layout_constraintTop_toBottomOf="@+id/recipe_name_txt"
+                    tools:ignore="TextContrastCheck" />
+
+                <ImageView
+                    android:id="@+id/RoundIconBg3"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="5dp"
+                    android:contentDescription="@string/sandal_image1"
+                    app:layout_constraintStart_toEndOf="@+id/RoundIconBg2"
+                    app:layout_constraintTop_toBottomOf="@+id/servings_text"
+                    app:srcCompat="@drawable/rounded_corner_button_white"
+                    tools:ignore="ImageContrastCheck" />
+
+                <ImageView
+                    android:id="@+id/serving_icon"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:contentDescription="@string/serving_icon"
+                    app:layout_constraintBottom_toBottomOf="@+id/RoundIconBg3"
+                    app:layout_constraintEnd_toEndOf="@+id/RoundIconBg3"
+                    app:layout_constraintStart_toStartOf="@+id/RoundIconBg3"
+                    app:layout_constraintTop_toBottomOf="@+id/servings_text"
+                    app:srcCompat="@drawable/ic_baseline_rice_bowl_24"
+                    app:tint="@color/black"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <ImageView
+                    android:id="@+id/hourglass_icon"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:contentDescription="@string/hourglass_icon"
+                    app:layout_constraintBottom_toBottomOf="@+id/RoundIconBg2"
+                    app:layout_constraintEnd_toEndOf="@+id/RoundIconBg2"
+                    app:layout_constraintStart_toStartOf="@+id/RoundIconBg2"
+                    app:layout_constraintTop_toTopOf="@+id/RoundIconBg2"
+                    app:srcCompat="@drawable/ic_baseline_hourglass_bottom_24"
+                    app:tint="@color/black"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/prep_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/prep_time"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/RoundIconBg2"
+                    app:layout_constraintStart_toStartOf="@+id/RoundIconBg2"
+                    app:layout_constraintTop_toBottomOf="@+id/recipe_name_txt"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/cooking_time_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/cooking_time_value"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/RoundIconBg1"
+                    app:layout_constraintStart_toStartOf="@+id/RoundIconBg1"
+                    app:layout_constraintTop_toBottomOf="@+id/RoundIconBg1" />
+
+                <TextView
+                    android:id="@+id/servings_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/servings_value"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/RoundIconBg3"
+                    app:layout_constraintStart_toStartOf="@+id/RoundIconBg3"
+                    app:layout_constraintTop_toBottomOf="@+id/RoundIconBg3"
+                    tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/ingredients_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:background="@drawable/shadow_right"
+                    android:fontFamily="@font/mrs_saint_delafield"
+                    android:lineSpacingExtra="-20sp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="20dp"
+                    android:text="@string/ingredients"
+                    android:textColor="@color/black"
+                    android:textSize="35sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/prep_time_value" />
+
+                <TextView
+                    android:id="@+id/cuisine_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shadow_left"
+                    android:fontFamily="@font/mrs_saint_delafield"
+                    android:lineSpacingExtra="-20sp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"
+                    android:text="Cuisine :"
+                    android:textColor="@color/black"
+                    android:textSize="35sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ingredients_text" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

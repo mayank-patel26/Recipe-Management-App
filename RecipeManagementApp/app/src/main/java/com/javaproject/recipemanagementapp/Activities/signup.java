@@ -34,23 +34,23 @@ public class signup extends AppCompatActivity {
         n.stream().forEach(x->System.out.println(x+3));*/
 
         b1.setOnClickListener(view -> {
-            String s1 = e1.getText().toString();
-            String s2 = e2.getText().toString();
-            String s3 = e3.getText().toString();
-            String s4 = e4.getText().toString();
+            String s1 = e1.getText().toString().trim();
+            String s2 = e2.getText().toString().trim();
+            String s3 = e3.getText().toString().trim();
+            String s4 = e4.getText().toString().trim();
 
             if(s1.equals("")||s2.equals("")||s3.equals("")||s4.equals("")) {
                 Toast.makeText(getApplicationContext(), "Fields are empty", Toast.LENGTH_SHORT).show();
-
             }
 
             else {
                 if (s3.equals(s4)) {
                     Boolean check = checkemail(s1);
                     if (!check) {
-                        DatabaseHelper.insertUserData(s2, s3);
+                        DatabaseHelper.insertUserData(s2, s3, s1);
+                        DatabaseHelper.getAllRecipe();
                         Toast.makeText(getApplicationContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
-                        Intent intent2 = new Intent(signup.this, login.class);
+                        Intent intent2 = new Intent(signup.this, landing_page.class);
                         startActivity(intent2);
                     } else {
                         Toast.makeText(getApplicationContext(), "Email Address already exists", Toast.LENGTH_SHORT).show();

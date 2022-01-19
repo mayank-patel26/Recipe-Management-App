@@ -12,12 +12,12 @@ import com.javaproject.recipemanagementapp.AddBulletPoints;
 import com.javaproject.recipemanagementapp.DatabaseHelper;
 import com.javaproject.recipemanagementapp.R;
 
-public class view_recipe_method extends AppCompatActivity {
+public class edit_recipe_method extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_recipe_method);
+        setContentView(R.layout.activity_edit_recipe_method);
         AddBulletPoints.setBulletPoints(findViewById(R.id.recipe_procedure),"•");
         addButtonOnClicks();
     }

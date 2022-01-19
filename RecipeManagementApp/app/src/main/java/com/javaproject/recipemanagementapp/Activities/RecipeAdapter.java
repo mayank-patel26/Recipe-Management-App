@@ -1,6 +1,7 @@
 package com.javaproject.recipemanagementapp.Activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,23 +11,24 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.javaproject.recipemanagementapp.DatabaseHelper;
 import com.javaproject.recipemanagementapp.R;
 import com.javaproject.recipemanagementapp.Tables.Recipe;
 
 import java.util.List;
 
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder> {
-
     Context context;
     List<Recipe> recipeList;
     RecyclerView rvPrograms;
-//    final View.OnClickListener onClickListener = new MyOnClickListener();
+    RecipeAdapter recipeAdapter;
+
+    final View.OnClickListener onClickListener = new MyOnClickListener();
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView recipeId;
         TextView recipe_name;
         TextView recipeServing;
-
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -50,7 +52,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
     public RecipeAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.single_recipe, viewGroup, false);
-//        view.setOnClickListener(onClickListener);
+        view.setOnClickListener(onClickListener);
         return new ViewHolder(view);
     }
 
@@ -71,8 +73,11 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
         @Override
         public void onClick(View v) {
             int itemPosition = rvPrograms.getChildAdapterPosition(v);
-            String item = recipeList.get(itemPosition).getRecipeName();
-            Toast.makeText(context, item, Toast.LENGTH_SHORT).show();
+            DatabaseHelper.currentEditRecipe = recipeList.get(itemPosition);
+            Intent intent = new Intent(context, view_recipe.class);
+            context.startActivity(intent);
+            Toast.makeText(context, DatabaseHelper.currentEditRecipe.recipeName, Toast.LENGTH_SHORT).show();
+
         }
     }
 }
