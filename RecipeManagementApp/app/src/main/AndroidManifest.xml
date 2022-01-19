@@ -16,6 +16,9 @@
             android:name=".Activities.view_recipe_method"
             android:exported="false" />
         <activity
+            android:name=".Activities.forgot_password"
+            android:exported="false" />
+        <activity
             android:name=".Activities.login"
             android:exported="false" />
         <activity

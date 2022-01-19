@@ -3,7 +3,7 @@ package com.javaproject.recipemanagementapp;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
+import android.widget.Toast;
 
 import com.javaproject.recipemanagementapp.Tables.Recipe;
 import com.javaproject.recipemanagementapp.Tables.User;
@@ -37,7 +37,7 @@ public class DatabaseHelper
         currentEditRecipe=new Recipe();
         //create a database if it doesn't exist
         recipeAppDatabase = context.openOrCreateDatabase("RecipeAppDatabase", Context.MODE_PRIVATE,null);
-
+        recipeAppDatabase.execSQL("DROP TABLE recipe;");
         // create a recipe database table here
         recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS recipe(id INTEGER PRIMARY KEY AUTOINCREMENT, recipeName TEXT UNIQUE, ingredients TEXT, cuisine TEXT, procedure TEXT, servings INTEGER, cookingTime INTEGER, prepTime INTEGER, spiceLevel INTEGER, allergyWarning TEXT, rating INTEGER, tags TEXT,userID INTEGER)");
         //create the user table here
@@ -46,10 +46,10 @@ public class DatabaseHelper
         getAllRecipe();
     }
 
-    public static void insertUserData(String email1,String password1)
+    public static void insertUserData(String email1,String password1, String full_name)
     {
         //insert user values into the table here
-        recipeAppDatabase.execSQL("INSERT INTO user(email, password) VALUES('"+email1+"','"+password1+"');");
+        recipeAppDatabase.execSQL("INSERT INTO user(email, password, fullName) VALUES('"+email1+"','"+password1+"', '"+full_name+"');");
     }
 
     public static Boolean checkemail (String email)
@@ -106,6 +106,15 @@ public class DatabaseHelper
     public static Boolean checklogin(String e1, String p1){
         Cursor cursor = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE email = '"+e1+"' AND password = '"+p1+"';", new String[]{});
         return (cursor.getCount()>0);
+    }
+
+    public static boolean findEmail(String eml){
+        Cursor cursor = recipeAppDatabase.rawQuery("SELECT email FROM user WHERE email = '"+eml+"';", new String[]{});
+        return (cursor.getCount()>0);
+    }
+
+    public static void setNewPassword(String eml1, String new_password){
+        recipeAppDatabase.execSQL("UPDATE user SET password = '"+new_password+"' WHERE email = '"+eml1+"';");
     }
 
     public static void setCurrentUser(User user)

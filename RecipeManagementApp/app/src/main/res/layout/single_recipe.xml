@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/single_item_linear_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginLeft="16dp"
     android:layout_marginTop="16dp"
     android:layout_marginRight="16dp"
+    android:background="@drawable/rounded_corner_rectangle_light_yellow"
     android:orientation="vertical"
     android:padding="12dp">
 
@@ -15,13 +17,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ConstantId" />
+            android:text="ConstantId"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/item_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Id" />
+            android:text="Id"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <TextView
@@ -29,11 +33,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/servings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Servings" />
+        android:text="Servings"
+        android:textStyle="bold" />
 </LinearLayout>

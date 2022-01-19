@@ -16,17 +16,17 @@ import com.javaproject.recipemanagementapp.Tables.Recipe;
 import java.util.List;
 
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder> {
-
     Context context;
     List<Recipe> recipeList;
     RecyclerView rvPrograms;
-//    final View.OnClickListener onClickListener = new MyOnClickListener();
+    RecipeAdapter recipeAdapter;
+
+    final View.OnClickListener onClickListener = new MyOnClickListener();
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView recipeId;
         TextView recipe_name;
         TextView recipeServing;
-
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -50,7 +50,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
     public RecipeAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.single_recipe, viewGroup, false);
-//        view.setOnClickListener(onClickListener);
+        view.setOnClickListener(onClickListener);
         return new ViewHolder(view);
     }
 
