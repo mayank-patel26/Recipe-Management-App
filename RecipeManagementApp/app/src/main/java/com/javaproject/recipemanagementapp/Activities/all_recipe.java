@@ -18,6 +18,7 @@ import java.util.List;
 
 public class all_recipe extends AppCompatActivity {
 
+    public static String recipeType;
     RecyclerView rvPrograms;
     RecipeAdapter recipeAdapter;
     RecyclerView.LayoutManager layoutManager;
@@ -27,8 +28,7 @@ public class all_recipe extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_recipe);
-        DatabaseHelper.getAllRecipe();
-        recipeList = DatabaseHelper.recipeList;
+        setRecipeList();
         rvPrograms = findViewById(R.id.rvPrograms);
         rvPrograms.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
@@ -45,5 +45,18 @@ public class all_recipe extends AppCompatActivity {
             Intent intent =new Intent(this,add_or_edit_recipe.class);
             startActivity(intent);
         });
+    }
+
+    void setRecipeList()
+    {
+        if(recipeType.equals("All Recipes"))
+            recipeList=DatabaseHelper.recipeList;
+        else
+        {
+            for (Recipe recipe:DatabaseHelper.recipeList) {
+                if(recipe.Cuisine.contains(recipeType))
+                    recipeList.add(recipe);
+            }
+        }
     }
 }

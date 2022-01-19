@@ -29,12 +29,6 @@ public class Recipe {
     public String prepTime;
     public int spiceLevel;
 
-//    public Recipe(int recipeID, String recipeName, int servings) {
-//        this.recipeID = recipeID;
-//        this.recipeName = recipeName;
-//        this.servings = servings;
-//    }
-
     public int getRecipeID() {
         return this.recipeID;
     }

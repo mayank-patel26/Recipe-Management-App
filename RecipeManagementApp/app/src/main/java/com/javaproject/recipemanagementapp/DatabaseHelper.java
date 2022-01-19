@@ -24,7 +24,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 public class DatabaseHelper
 {
-    //All DB functions are part of context class hence you can use it without context in AppCompactActivity derived classes
+    //All DB functions are part of context class hence you can't use it without context in AppCompactActivity derived classes
     public static User currentUser;
     public static SQLiteDatabase recipeAppDatabase;
     public static Recipe currentEditRecipe;
@@ -43,6 +43,7 @@ public class DatabaseHelper
         //create the user table here
         recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT UNIQUE, password TEXT, dateOfBirth TEXT, fullName TEXT, imagePath TEXT)");
         setInitialValues(context);
+        getAllRecipe();
     }
 
     public static void insertUserData(String email1,String password1)
@@ -112,7 +113,7 @@ public class DatabaseHelper
         currentUser=user;
     }
 
-    public static void setInitialValues(Context context)
+    private static void setInitialValues(Context context)
     {
         Cursor cursor = recipeAppDatabase.rawQuery("SELECT * FROM recipe",new String[]{});
         if(cursor.getCount()==0)
@@ -159,7 +160,7 @@ public class DatabaseHelper
         return node.getNodeValue();
     }
 
-    public static void getAllRecipe(){
+    private static void getAllRecipe(){
         String[] columns = {"id", "recipeName", "servings"};
         Cursor cursor = recipeAppDatabase.query("recipe", columns, null, null, null, null, null);
 
@@ -179,27 +180,3 @@ public class DatabaseHelper
     }
 
 }
-    //Trial example - ignore
-    /* create a database and confirm if it has been created by displaying value in a text field*/
-    /*void confirmDBCreation(Context context)
-    {
-        //create a database if it doesn't exist
-        SQLiteDatabase recipeAppDatabase = context.openOrCreateDatabase("RecipeAppDatabase",context.MODE_PRIVATE,null);
-
-        //User dbName.execSQL to execute any SQL command
-        // create a table if it doesn't exist
-        recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS Recipe(Name TEXT,id INT PRIMARY KEY);");
-
-        //insert values
-        //recipeAppDatabase.execSQL("INSERT INTO Recipe VALUES('TrialYummyRecipe',1);");
-
-        //get values
-        Cursor result = recipeAppDatabase.rawQuery("Select * from Recipe",null);
-        result.moveToFirst();
-        String name = result.getString(0); //get first value from result set
-        String id = result.getString(1); // get second value from result set
-
-        //get the textView and change the name of the recipe to check(for now)
-        //TextView textView=findViewById(R.id.startup_text);
-        //textView.setText(name);
-    }*/

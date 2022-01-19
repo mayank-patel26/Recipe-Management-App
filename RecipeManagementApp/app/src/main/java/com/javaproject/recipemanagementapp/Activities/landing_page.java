@@ -1,14 +1,22 @@
 package com.javaproject.recipemanagementapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.javaproject.recipemanagementapp.DatabaseHelper;
 import com.javaproject.recipemanagementapp.R;
+import com.javaproject.recipemanagementapp.Tables.Recipe;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class landing_page extends AppCompatActivity {
 
@@ -25,11 +33,20 @@ public class landing_page extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        TextView all_recipe_txt = findViewById(R.id.all_recipe_txt);
-        all_recipe_txt.setOnClickListener(view -> {
-            Intent in = new Intent(this, all_recipe.class);
-            startActivity(in);
-        });
+        setOnClicks();
     }
+
+    void setOnClicks()
+    {
+        ConstraintLayout cl= (ConstraintLayout) ((LinearLayout)findViewById(R.id.landing_page_linearlayout)).getChildAt(0);
+        int childCount=cl.getChildCount();
+        for (int i = 0; i < childCount; i++) {
+            TextView txt_v = (TextView) cl.getChildAt(i);
+            txt_v.setOnClickListener(view -> {
+                Intent in = new Intent(this, all_recipe.class);
+                startActivity(in);
+            });
+        }
+    }
+
 }

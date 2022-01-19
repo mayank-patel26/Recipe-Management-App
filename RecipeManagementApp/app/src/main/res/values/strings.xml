@@ -38,6 +38,6 @@
     <string name="prep_time_edit_text">Prep Time : </string>
     <string name="ingredients">Ingredients :</string>
     <string name="red_line">Red line</string>
-    <string name="all_recipe">All Recipe</string>
+    <string name="all_recipe">All Recipes</string>
     <string name="next">next</string>
 </resources>
