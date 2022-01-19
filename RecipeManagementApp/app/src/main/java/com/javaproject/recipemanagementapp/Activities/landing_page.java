@@ -19,8 +19,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class landing_page extends AppCompatActivity {
-    List<Recipe> recipeList;
-    RecipeAdapter recipeAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -30,10 +30,6 @@ public class Recipe {
     public String prepTime;
 
 
-    public int getRecipeID() {
-        return this.recipeID;
-    }
-
     public String getRecipeName() {
         return this.recipeName;
     }

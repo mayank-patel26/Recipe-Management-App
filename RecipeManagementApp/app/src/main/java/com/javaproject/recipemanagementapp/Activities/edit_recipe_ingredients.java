@@ -22,12 +22,13 @@ public class edit_recipe_ingredients extends AppCompatActivity {
         AddBulletPoints.setBulletPoints(findViewById(R.id.ingredients_edit_text),"•");
         AddBulletPoints.setBulletPoints(findViewById(R.id.cuisine_edit_text),"•");
         addOnButtonClicks();
-        populateRecipe();
+
     }
     void addOnButtonClicks()
     {
         Button next = findViewById(R.id.next_button);
         next.setOnClickListener(view -> {
+            populateRecipe();
             saveRecipe();
             Intent intent = new Intent(this, edit_recipe_method.class);
             startActivity(intent);
