@@ -16,19 +16,12 @@ public class StartupPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startup);
+        DatabaseHelper.setDB(this);
         Button get_started = findViewById(R.id.intro_skip);
         get_started.setOnClickListener(view -> {
             Intent intent = new Intent(StartupPage.this, intro_scroll.class);
             startActivity(intent);
         });
-
-//        Button get_started = findViewById(R.id.intro_skip);
-//        get_started.setOnClickListener(view -> {
-//            Intent intent = new Intent(StartupPage.this, add_or_edit_recipe.class);
-//            startActivity(intent);
-//        });
-        DatabaseHelper.setDB(this);
-
 
     }
 }

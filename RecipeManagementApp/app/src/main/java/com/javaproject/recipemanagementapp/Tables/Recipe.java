@@ -20,6 +20,7 @@ import java.util.Arrays;
 
 public class Recipe {
     public int recipeID;
+    public int userID;
     public String recipeName;
     public ArrayList<String> Ingredients;
     public ArrayList<String> Cuisine;
@@ -27,7 +28,7 @@ public class Recipe {
     public int servings;
     public String cookingTime;
     public String prepTime;
-    public int spiceLevel;
+
 
     public int getRecipeID() {
         return this.recipeID;
@@ -42,7 +43,6 @@ public class Recipe {
     }
 
     public String allergyWarnings;
-    public int rating;
     public ArrayList<String> tags;
 
     public Recipe() {
@@ -54,13 +54,12 @@ public class Recipe {
         this.servings = 0;
         this.cookingTime = "";
         this.prepTime = "";
-        this.spiceLevel = 0;
+        this.userID = 0;
         this.allergyWarnings = "";
-        this.rating = 0;
         this.tags = new ArrayList<>();
     }
 
-    public Recipe(int recipeID, String recipeName, ArrayList<String> ingredients, ArrayList<String> cuisine, String procedure, int servings, String cookingTime, String prepTime, int spiceLevel, String allergyWarnings, int rating, ArrayList<String> tags) {
+    public Recipe(int recipeID, String recipeName, ArrayList<String> ingredients, ArrayList<String> cuisine, String procedure, int servings, String cookingTime, String prepTime, int userID, String allergyWarnings, ArrayList<String> tags) {
         this.recipeID = recipeID;
         this.recipeName = recipeName;
         Ingredients = ingredients;
@@ -69,14 +68,14 @@ public class Recipe {
         this.servings = servings;
         this.cookingTime = cookingTime;
         this.prepTime = prepTime;
-        this.spiceLevel = spiceLevel;
         this.allergyWarnings = allergyWarnings;
-        this.rating = rating;
         this.tags = tags;
+        this.userID = userID;
     }
 
-    public static ArrayList StringToList(String string, ArrayList list,String character)
+    public static ArrayList StringToList(String string, String character)
     {
+        ArrayList<String> list=new ArrayList<>();
         list.addAll(Arrays.asList(string.split(character)));
         return list;
     }
@@ -84,6 +83,12 @@ public class Recipe {
     public static String ListtoString(ArrayList list) {
         String string=list.toString();
         string.replaceAll(",","~");
+        return string.substring(1,string.length()-1);
+    }
+
+    public static String ListtoString(ArrayList list,String replacement) {
+        String string=list.toString();
+        string.replaceAll(",",replacement);
         return string.substring(1,string.length()-1);
     }
 
@@ -96,10 +101,9 @@ public class Recipe {
                 "'," + servings +
                 ",'" + cookingTime +
                 "','" + prepTime +
-                "'," + spiceLevel +
-                ",'" + allergyWarnings +
-                "'," + rating +
-                ",'" + ListtoString(tags)+"'";
+                "','" + allergyWarnings +
+                "','" + ListtoString(tags) +
+                "',"+userID;
     }
 }
 

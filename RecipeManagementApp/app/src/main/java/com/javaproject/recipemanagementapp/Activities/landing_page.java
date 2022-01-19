@@ -45,6 +45,7 @@ public class landing_page extends AppCompatActivity {
         for (int i = 0; i < childCount; i++) {
             TextView txt_v = (TextView) cl.getChildAt(i);
             txt_v.setOnClickListener(view -> {
+                all_recipe.recipeType=txt_v.getText().toString();
                 Intent in = new Intent(this, all_recipe.class);
                 startActivity(in);
             });

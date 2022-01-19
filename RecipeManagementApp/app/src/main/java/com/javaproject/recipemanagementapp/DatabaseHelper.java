@@ -1,5 +1,6 @@
 package com.javaproject.recipemanagementapp;
 
+import android.app.Application;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -17,6 +18,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Vector;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -37,13 +39,11 @@ public class DatabaseHelper
         currentEditRecipe=new Recipe();
         //create a database if it doesn't exist
         recipeAppDatabase = context.openOrCreateDatabase("RecipeAppDatabase", Context.MODE_PRIVATE,null);
-        recipeAppDatabase.execSQL("DROP TABLE recipe;");
         // create a recipe database table here
-        recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS recipe(id INTEGER PRIMARY KEY AUTOINCREMENT, recipeName TEXT UNIQUE, ingredients TEXT, cuisine TEXT, procedure TEXT, servings INTEGER, cookingTime INTEGER, prepTime INTEGER, spiceLevel INTEGER, allergyWarning TEXT, rating INTEGER, tags TEXT,userID INTEGER)");
+        recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS recipe(id INTEGER PRIMARY KEY AUTOINCREMENT, recipeName TEXT UNIQUE, ingredients TEXT, cuisine TEXT, procedure TEXT, servings INTEGER, cookingTime INTEGER, prepTime INTEGER, allergyWarning TEXT, tags TEXT,userID INTEGER)");
         //create the user table here
         recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT UNIQUE, password TEXT, dateOfBirth TEXT, fullName TEXT, imagePath TEXT)");
         setInitialValues(context);
-        getAllRecipe();
     }
 
     public static void insertUserData(String email1,String password1, String full_name)
@@ -55,8 +55,12 @@ public class DatabaseHelper
     public static Boolean checkemail (String email)
     {
         Cursor cursor = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE email = ?;", new String[]{email});
-
-        return (cursor.getCount()>0);
+        if(cursor.getCount()>0)
+        {
+            setCurrentUser(cursor);
+            return true;
+        }
+        return true;
     }
 
 
@@ -65,42 +69,16 @@ public class DatabaseHelper
     {
         //insert recipe values here and call this method to insert a new recipe
         String recipeToString=recipe.toString();
-        recipeAppDatabase.execSQL("INSERT INTO recipe(recipeName,ingredients,cuisine, procedure, servings, cookingTime, prepTime, spiceLevel, allergyWarning, rating, tags) VALUES("+recipeToString+");");
+        recipeAppDatabase.execSQL("INSERT INTO recipe(recipeName,ingredients,cuisine, procedure, servings, cookingTime, prepTime, allergyWarning, tags, userID) VALUES("+recipeToString+");");
+        recipeList.add(recipe);
     }
     public static Recipe getRecipeByName(String name)
     {
-        Cursor cursor = recipeAppDatabase.rawQuery("Select * from recipe where recipeName = ?", new String[]{name});
-        Recipe recipe=new Recipe();
-        if(cursor.getCount()>0)
-        {
-            recipe.recipeID=cursor.getInt(0);
-            recipe.recipeName=cursor.getString(1);
-            recipe.Ingredients=Recipe.StringToList(cursor.getString(2),recipe.Ingredients,"~");
-            recipe.Cuisine=Recipe.StringToList(cursor.getString(3),recipe.Cuisine,"~");
-            recipe.procedure=cursor.getString(4);
-            recipe.servings=cursor.getInt(5);
-            recipe.cookingTime=cursor.getString(6);
-            recipe.prepTime=cursor.getString(7);
-            recipe.spiceLevel=cursor.getInt(8);
-            recipe.allergyWarnings=cursor.getString(9);
-            recipe.rating=cursor.getInt(10);
-            recipe.tags=Recipe.StringToList(cursor.getString(11),recipe.tags,"~");
+        for (Recipe recipe:recipeList) {
+            if(recipe.recipeName.trim().equalsIgnoreCase(name.trim()))
+                return recipe;
         }
-        return  recipe;
-    }
-    public static User getUserByEmail(String email)
-    {
-        //get a specific user by the ID and return the user
-        User user=new User();
-        //get the user from DB and fill up 'user'
-        Cursor cursor = recipeAppDatabase.rawQuery("Select * from user where email = ?", new String[]{email});
-        user.ID=cursor.getInt(0);
-        user.email=cursor.getString(1);
-        user.password=cursor.getString(2);
-        return user;
-        //call method
-        //User user=getUserByEmail(email)
-        //DatabaseHelper.currentUser=user;
+        return  new Recipe();
     }
 
     public static Boolean checklogin(String e1, String p1){
@@ -117,8 +95,12 @@ public class DatabaseHelper
         recipeAppDatabase.execSQL("UPDATE user SET password = '"+new_password+"' WHERE email = '"+eml1+"';");
     }
 
-    public static void setCurrentUser(User user)
+    public static void setCurrentUser(Cursor cursor)
     {
+        User user=new User();
+        user.ID=cursor.getInt(0);
+        user.email=cursor.getString(1);
+        user.password=cursor.getString(2);
         currentUser=user;
     }
 
@@ -150,11 +132,10 @@ public class DatabaseHelper
                         int servings=Integer.parseInt(getValue("servings",element2));
                         String cooking_time=getValue("cooking_time",element2);
                         String prep_time=getValue("prep_time",element2);
-                        int spice_level=Integer.parseInt(getValue("spice_level",element2));
+                        int user_id=Integer.parseInt(getValue("user_id",element2));
                         String allergens=getValue("allergens",element2);
-                        int rating=Integer.parseInt(getValue("rating",element2));
                         ArrayList<String> tags= new ArrayList<>(Arrays.asList(getValue("tags",element2).split(",")));
-                        Recipe recipe = new Recipe(0,recipeName,ingredients,cuisine,procedure,servings,cooking_time,prep_time,spice_level,allergens,rating,tags);
+                        Recipe recipe = new Recipe(0,recipeName,ingredients,cuisine,procedure,servings,cooking_time,prep_time,user_id,allergens,tags);
                         insertRecipeData(recipe);
                     }
                 }
@@ -169,22 +150,19 @@ public class DatabaseHelper
         return node.getNodeValue();
     }
 
-    private static void getAllRecipe(){
-        String[] columns = {"id", "recipeName", "servings"};
+    public static void getAllRecipe(){
+        String[] columns = {"id", "recipeName", "ingredients", "cuisine", "procedure", "servings", "cookingTime", "prepTime", "userID", "allergyWarning", "tags"};
         Cursor cursor = recipeAppDatabase.query("recipe", columns, null, null, null, null, null);
 
         while(cursor.moveToNext()){
-            int index1 = cursor.getColumnIndex("id");
-            int recipeid = cursor.getInt(index1);
-            int index2 = cursor.getColumnIndex("recipeName");
-            String name = cursor.getString(index2);
-            int index3 = cursor.getColumnIndex("servings");
-            int serving = cursor.getInt(index3);
-            Recipe recipe = new Recipe();
-            recipe.recipeID=recipeid;
-            recipe.recipeName=name;
-            recipe.servings=serving;
-            recipeList.add(recipe);
+            String values[]=new String[columns.length];
+            for (int i = 0; i < columns.length; i++) {
+                values[i]=cursor.getString((int)cursor.getColumnIndex(columns[i]));
+            }
+            if(Integer.parseInt(values[8])==-1||Integer.parseInt(values[8])==DatabaseHelper.currentUser.ID) {
+                Recipe recipe = new Recipe(Integer.parseInt(values[0]), values[1], Recipe.StringToList(values[2], "~"), Recipe.StringToList(values[3], "~"), values[4], Integer.parseInt(values[5]), values[6], values[7], Integer.parseInt(values[8]), values[9], Recipe.StringToList(values[10], "~"));
+                recipeList.add(recipe);
+            }
         }
     }
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.add_or_edit_recipe"
+    tools:context=".Activities.edit_recipe_ingredients"
     >
 
 
@@ -113,16 +113,15 @@
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/ingredients_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
                     android:fontFamily="@font/mrs_saint_delafield"
                     android:text="@string/ingredients"
                     android:textColor="@color/black"
                     android:textSize="30sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/prep_time_edittext" />
+                    app:layout_constraintTop_toBottomOf="@+id/cuisine_edit_text" />
 
                 <EditText
                     android:id="@+id/ingredients_edit_text"
@@ -140,8 +139,39 @@
                     android:textSize="30sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView13"
+                    app:layout_constraintTop_toBottomOf="@+id/ingredients_txt"
                     tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/cuisine_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="-10dp"
+                    android:background="#00000000"
+                    android:ems="10"
+                    android:fontFamily="@font/mrs_saint_delafield"
+                    android:hint="• List the cuisines this recipe comes under"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:lineSpacingExtra="-21sp"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cuisine_text"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/cuisine_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/mrs_saint_delafield"
+                    android:text="@string/cuisine"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/prep_time_edittext" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

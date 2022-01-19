@@ -40,7 +40,7 @@ public class all_recipe extends AppCompatActivity{
     {
         Button addButton=findViewById(R.id.add_button);
         addButton.setOnClickListener(view -> {
-            Intent intent =new Intent(this,add_or_edit_recipe.class);
+            Intent intent =new Intent(this, edit_recipe_ingredients.class);
             startActivity(intent);
         });
     }

@@ -2,6 +2,7 @@ package com.javaproject.recipemanagementapp.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -49,6 +50,7 @@ public class login extends AppCompatActivity {
                 Boolean chk = DatabaseHelper.checklogin(e, p);
                 if(chk){
                     Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
+                    DatabaseHelper.getAllRecipe();
                     Intent intent = new Intent(login.this, landing_page.class);
                     startActivity(intent);
                 }
@@ -56,16 +58,6 @@ public class login extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Wrong email or password", Toast.LENGTH_SHORT).show();
                 }
             }
-
-
-
-
-
-
-
-
-
-
             /*Boolean Checkemailpassword = db.emailpassword(email, password);
 
             if(Checkemailpassword==true){
@@ -80,8 +72,5 @@ public class login extends AppCompatActivity {
             }
 */
         });
-
-
-
     }
 }
