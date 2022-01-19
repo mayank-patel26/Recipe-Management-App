@@ -52,4 +52,12 @@ public class landing_page extends AppCompatActivity {
         }
     }
 
+
+    @Override
+    public void onBackPressed() {
+        Intent toExit = new Intent(this, ExitPage.class);
+        startActivity(toExit);
+        super.onBackPressed();
+    }
+
 }

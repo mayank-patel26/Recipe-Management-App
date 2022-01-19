@@ -65,8 +65,8 @@ public class view_recipe extends AppCompatActivity {
         procedure.setText(procedureStr);
         String tagsStr = "Tags :\n# "+Recipe.ListtoString(DatabaseHelper.currentEditRecipe.tags,"# ");
         tags.setText(tagsStr);
-        cookingTime.setText(DatabaseHelper.currentEditRecipe.cookingTime);
-        prepTime.setText(DatabaseHelper.currentEditRecipe.prepTime);
-        servings.setText(DatabaseHelper.currentEditRecipe.servings);
+        cookingTime.setText(String.valueOf(DatabaseHelper.currentEditRecipe.cookingTime));
+        prepTime.setText(String.valueOf(DatabaseHelper.currentEditRecipe.prepTime));
+        servings.setText(String.valueOf(DatabaseHelper.currentEditRecipe.servings));
     }
 }

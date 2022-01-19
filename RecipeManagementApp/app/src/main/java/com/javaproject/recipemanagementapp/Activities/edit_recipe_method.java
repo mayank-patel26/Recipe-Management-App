@@ -7,16 +7,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.javaproject.recipemanagementapp.AddBulletPoints;
 import com.javaproject.recipemanagementapp.DatabaseHelper;
 import com.javaproject.recipemanagementapp.R;
+import com.javaproject.recipemanagementapp.Tables.Recipe;
 
 public class edit_recipe_method extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_edit_recipe_method);
         AddBulletPoints.setBulletPoints(findViewById(R.id.recipe_procedure),"•");
         addButtonOnClicks();
