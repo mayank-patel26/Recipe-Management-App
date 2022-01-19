@@ -145,7 +145,6 @@ public class DatabaseHelper
                 }
 
             } catch (Exception e) {e.printStackTrace();}
-
         }
         }
         private static String getValue(String tag, Element element) {
@@ -164,7 +163,7 @@ public class DatabaseHelper
                 values[i]=cursor.getString((int)cursor.getColumnIndex(columns[i]));
             }
             if(Integer.parseInt(values[8])==-1||Integer.parseInt(values[8])==DatabaseHelper.currentUser.ID) {
-                Recipe recipe = new Recipe(Integer.parseInt(values[0]), values[1], Recipe.StringToList(values[2], "~"), Recipe.StringToList(values[3], "~"), values[4], Integer.parseInt(values[5]), values[6], values[7], Integer.parseInt(values[8]), values[9], Recipe.StringToList(values[10], "~"));
+                Recipe recipe = new Recipe(Integer.parseInt(values[0]), values[1], Recipe.StringToList(values[2], ","), Recipe.StringToList(values[3], ","), values[4], Integer.parseInt(values[5]), values[6], values[7], Integer.parseInt(values[8]), values[9], Recipe.StringToList(values[10], "~"));
                 recipeList.add(recipe);
             }
         }
