@@ -50,6 +50,10 @@ public class DatabaseHelper
     {
         //insert user values into the table here
         recipeAppDatabase.execSQL("INSERT INTO user(email, password, fullName) VALUES('"+email1+"','"+password1+"', '"+full_name+"');");
+        currentUser=new User();
+        currentUser.email=email1;
+        currentUser.password=password1;
+        currentUser.fullName=full_name;
     }
 
     public static Boolean checkemail (String email)

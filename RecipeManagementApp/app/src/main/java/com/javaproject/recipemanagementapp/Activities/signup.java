@@ -48,7 +48,6 @@ public class signup extends AppCompatActivity {
                     Boolean check = checkemail(s1);
                     if (!check) {
                         DatabaseHelper.insertUserData(s2, s3, s1);
-                        DatabaseHelper.currentUser=DatabaseHelper.getUserByEmail(s2);
                         DatabaseHelper.getAllRecipe();
                         Toast.makeText(getApplicationContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
                         Intent intent2 = new Intent(signup.this, landing_page.class);
