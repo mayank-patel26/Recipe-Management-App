@@ -8,67 +8,94 @@
 
     <Button
         android:id="@+id/logout_button"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:text="Log Out"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="115dp"
+        android:text="@string/text_logout"
         android:textAppearance="@style/Theme.RecipeManagementApp"
         android:textColor="@color/black"
-        android:textSize="16dp"
+        android:textSize="16sp"
         app:backgroundTint="@color/white"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="566dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/friends_button" />
 
     <Button
         android:id="@+id/friends_button"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:text="Friends"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/text_friends"
         android:textAppearance="@style/Theme.RecipeManagementApp"
         android:textColor="@color/black"
-        android:textSize="16dp"
+        android:textSize="16sp"
         app:backgroundTint="@color/white"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="496dp" />
+        app:layout_constraintBottom_toTopOf="@+id/logout_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_button" />
 
     <Button
         android:id="@+id/settings_button"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:text="Settings"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/text_settings"
         android:textAppearance="@style/Theme.RecipeManagementApp"
         android:textColor="@color/black"
-        android:textSize="16dp"
+        android:textSize="16sp"
         app:backgroundTint="@color/white"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="430dp" />
+        app:layout_constraintBottom_toTopOf="@+id/friends_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_button" />
 
     <Button
         android:id="@+id/profile_button"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:text="Profile"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/text_profile"
         android:textAppearance="@style/Theme.RecipeManagementApp"
         android:textColor="@color/black"
-        android:textSize="16dp"
+        android:textSize="16sp"
         app:backgroundTint="@color/white"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="368dp" />
+        app:layout_constraintBottom_toTopOf="@+id/settings_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_of_user" />
 
     <TextView
         android:id="@+id/name_of_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NAME"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="116dp"
+        android:text="@string/text_name"
         android:textColor="@color/white"
-        android:textSize="20dp"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="225dp" />
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/profile_button"
+        app:layout_constraintStart_toStartOf="@+id/photo_user"
+        app:layout_constraintTop_toBottomOf="@+id/photo_user" />
 
     <ImageView
         android:id="@+id/photo_user"
         android:layout_width="89dp"
-        android:layout_height="94dp"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="117dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="117dp"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/name_of_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>
