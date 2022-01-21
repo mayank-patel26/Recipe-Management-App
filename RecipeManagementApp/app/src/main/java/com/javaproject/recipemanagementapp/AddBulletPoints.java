@@ -1,13 +1,9 @@
 package com.javaproject.recipemanagementapp;
 
-import android.os.Debug;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import java.io.Console;
-import java.sql.SQLWarning;
 
 public class AddBulletPoints
 {
@@ -17,16 +13,18 @@ public class AddBulletPoints
             @Override
             public void afterTextChanged(Editable e) {
             }
+
             @Override
             public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
             }
+
             @Override
             public void onTextChanged(CharSequence text, int start, int lengthBefore, int lengthAfter)
             {
                 if(text!=null) {
                     if (lengthAfter > lengthBefore) {
                         if (text.toString().length() == 1) {
-                            text = bullet+" " + text;
+                            text = bullet +" "+ text;
                             editText.setText(text);
                             editText.setSelection(editText.getText().length());
                         }

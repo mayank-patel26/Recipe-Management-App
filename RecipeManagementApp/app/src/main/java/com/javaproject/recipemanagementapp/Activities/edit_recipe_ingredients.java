@@ -28,6 +28,7 @@ public class edit_recipe_ingredients extends AppCompatActivity {
     {
         Button next = findViewById(R.id.next_button);
         next.setOnClickListener(view -> {
+
             saveRecipe();
             Intent intent = new Intent(this, edit_recipe_method.class);
             startActivity(intent);
@@ -43,10 +44,10 @@ public class edit_recipe_ingredients extends AppCompatActivity {
             EditText prepTime= findViewById(R.id.prep_time_edittext);
             prepTime.setText(DatabaseHelper.currentEditRecipe.prepTime);
             EditText cuisine= findViewById(R.id.cuisine_edit_text);
-            String cui="•"+Recipe.ListtoString(DatabaseHelper.currentEditRecipe.Cuisine).replaceAll(",","\n•");
+            String cui=Recipe.ListtoString(DatabaseHelper.currentEditRecipe.Cuisine).replaceAll(",","\n•");
             cuisine.setText(cui);
             EditText ingredients= findViewById(R.id.ingredients_edit_text);
-            String ing="•"+Recipe.ListtoString(DatabaseHelper.currentEditRecipe.Ingredients).replaceAll(",","\n•");
+            String ing=Recipe.ListtoString(DatabaseHelper.currentEditRecipe.Ingredients).replaceAll(",","\n•");
             ingredients.setText(ing);
     }
 

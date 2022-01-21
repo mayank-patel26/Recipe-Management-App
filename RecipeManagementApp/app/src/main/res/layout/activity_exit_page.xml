@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/rounded_corner_rectangle_white" />
 
     <Button
-        android:id="@+id/CancelButton"
+        android:id="@+id/Exit_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -31,7 +31,7 @@
         tools:ignore="TextContrastCheck,TextContrastCheck" />
 
     <Button
-        android:id="@+id/ExitButton"
+        android:id="@+id/Cancel_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"

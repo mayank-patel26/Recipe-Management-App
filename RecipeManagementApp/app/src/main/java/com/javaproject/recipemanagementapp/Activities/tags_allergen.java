@@ -1,6 +1,7 @@
 package com.javaproject.recipemanagementapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Database;
 
 import android.content.Intent;
 import android.os.Bundle;

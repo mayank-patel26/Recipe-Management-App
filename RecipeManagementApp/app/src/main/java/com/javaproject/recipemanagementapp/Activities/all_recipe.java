@@ -62,12 +62,12 @@ public class all_recipe extends AppCompatActivity{
         }
     }
 
-    @Override
-    public void onBackPressed() {
-        recipeList.clear();
-        recipeAdapter.notifyDataSetChanged();
-        super.onBackPressed();
-    }
+//    @Override  //OVERRIDES the BACK BUTTON press action
+//    public void onBackPressed() {
+//        recipeList.clear();
+//        recipeAdapter.notifyDataSetChanged();
+//        super.onBackPressed();
+//    }
 
 
 }

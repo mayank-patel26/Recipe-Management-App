@@ -26,14 +26,12 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
     final View.OnClickListener onClickListener = new MyOnClickListener();
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView recipeId;
         TextView recipe_name;
         TextView recipeServing;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            recipeId = itemView.findViewById(R.id.item_id);
             recipe_name = itemView.findViewById(R.id.item_name);
             recipeServing = itemView.findViewById(R.id.servings);
         }
@@ -59,7 +57,6 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull RecipeAdapter.ViewHolder viewHolder, int i) {
         Recipe recipe = recipeList.get(i);
-        viewHolder.recipeId.setText(String.valueOf(recipe.getRecipeID()));      //added String.valueOf(int) here
         viewHolder.recipe_name.setText(String.valueOf(recipe.getRecipeName()));
         viewHolder.recipeServing.setText(String.valueOf(recipe.getServings()));
     }
@@ -76,7 +73,6 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
             DatabaseHelper.currentEditRecipe = recipeList.get(itemPosition);
             Intent intent = new Intent(context, view_recipe.class);
             context.startActivity(intent);
-            Toast.makeText(context, DatabaseHelper.currentEditRecipe.recipeName, Toast.LENGTH_SHORT).show();
 
         }
     }

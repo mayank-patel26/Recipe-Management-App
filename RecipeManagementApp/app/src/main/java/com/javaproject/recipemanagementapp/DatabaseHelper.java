@@ -1,10 +1,8 @@
 package com.javaproject.recipemanagementapp;
 
-import android.app.Application;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.widget.Toast;
 
 import com.javaproject.recipemanagementapp.Tables.Recipe;
 import com.javaproject.recipemanagementapp.Tables.User;
@@ -18,7 +16,6 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Vector;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -158,13 +155,18 @@ public class DatabaseHelper
         Cursor cursor = recipeAppDatabase.query("recipe", columns, null, null, null, null, null);
 
         while(cursor.moveToNext()){
-            String values[]=new String[columns.length];
+            String[] values =new String[columns.length];
             for (int i = 0; i < columns.length; i++) {
                 values[i]=cursor.getString((int)cursor.getColumnIndex(columns[i]));
             }
-            if(Integer.parseInt(values[8])==-1||Integer.parseInt(values[8])==DatabaseHelper.currentUser.ID) {
-                Recipe recipe = new Recipe(Integer.parseInt(values[0]), values[1], Recipe.StringToList(values[2], ","), Recipe.StringToList(values[3], ","), values[4], Integer.parseInt(values[5]), values[6], values[7], Integer.parseInt(values[8]), values[9], Recipe.StringToList(values[10], "~"));
-                recipeList.add(recipe);
+            try{
+                if(Integer.parseInt(values[8])==-1||Integer.parseInt(values[8])==DatabaseHelper.currentUser.ID) {
+                    Recipe recipe = new Recipe(Integer.parseInt(values[0]), values[1], Recipe.StringToList(values[2], ","), Recipe.StringToList(values[3], ","), values[4], Integer.parseInt(values[5]), values[6], values[7], Integer.parseInt(values[8]), values[9], Recipe.StringToList(values[10], "~"));
+                    recipeList.add(recipe);
+                }
+            }
+            catch(Exception e){
+                e.printStackTrace();
             }
         }
     }
