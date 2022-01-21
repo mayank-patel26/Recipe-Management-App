@@ -132,14 +132,15 @@
 
                 <ImageView
                     android:id="@+id/timer_icon"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:contentDescription="@string/timer_icon"
                     app:layout_constraintBottom_toBottomOf="@+id/RoundIconBg1"
                     app:layout_constraintEnd_toEndOf="@+id/RoundIconBg1"
-                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintHorizontal_bias="0.6"
                     app:layout_constraintStart_toStartOf="@+id/RoundIconBg1"
                     app:layout_constraintTop_toTopOf="@+id/RoundIconBg1"
+                    app:layout_constraintVertical_bias="0.6"
                     app:srcCompat="@drawable/ic_baseline_timer_24"
                     app:tint="@color/black"
                     tools:ignore="VectorDrawableCompat" />
@@ -183,8 +184,8 @@
 
                 <ImageView
                     android:id="@+id/serving_icon"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:contentDescription="@string/serving_icon"
                     app:layout_constraintBottom_toBottomOf="@+id/RoundIconBg3"
                     app:layout_constraintEnd_toEndOf="@+id/RoundIconBg3"
@@ -196,8 +197,8 @@
 
                 <ImageView
                     android:id="@+id/hourglass_icon"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:contentDescription="@string/hourglass_icon"
                     app:layout_constraintBottom_toBottomOf="@+id/RoundIconBg2"
                     app:layout_constraintEnd_toEndOf="@+id/RoundIconBg2"
