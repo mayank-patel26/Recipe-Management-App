@@ -107,6 +107,10 @@
 
                 <TextView
                     android:id="@+id/prep_time_value"
+                    android:shadowColor = "#000"
+                    android:shadowDx = "-2"
+                    android:shadowDy = "2"
+                    android:shadowRadius = "1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -120,6 +124,10 @@
 
                 <TextView
                     android:id="@+id/cooking_time_text"
+                    android:shadowColor = "#000"
+                    android:shadowDx = "-2"
+                    android:shadowDy = "2"
+                    android:shadowRadius = "1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -159,6 +167,10 @@
 
                 <TextView
                     android:id="@+id/servings_text"
+                    android:shadowColor = "#000"
+                    android:shadowDx = "-2"
+                    android:shadowDy = "2"
+                    android:shadowRadius = "1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -210,6 +222,10 @@
 
                 <TextView
                     android:id="@+id/prep_time_text"
+                    android:shadowColor = "#000"
+                    android:shadowDx = "-2"
+                    android:shadowDy = "2"
+                    android:shadowRadius = "1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -224,6 +240,10 @@
 
                 <TextView
                     android:id="@+id/cooking_time_text2"
+                    android:shadowColor = "#000"
+                    android:shadowDx = "-2"
+                    android:shadowDy = "2"
+                    android:shadowRadius = "1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -236,6 +256,10 @@
 
                 <TextView
                     android:id="@+id/servings_value"
+                    android:shadowColor = "#000"
+                    android:shadowDx = "-2"
+                    android:shadowDy = "2"
+                    android:shadowRadius = "1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
