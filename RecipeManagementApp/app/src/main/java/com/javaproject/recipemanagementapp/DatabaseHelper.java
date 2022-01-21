@@ -73,7 +73,7 @@ public class DatabaseHelper
     {
         //insert recipe values here and call this method to insert a new recipe
         String recipeToString=recipe.toString();
-        recipeAppDatabase.execSQL("INSERT INTO recipe(recipeName,ingredients,cuisine, procedure, servings, cookingTime, prepTime, allergyWarning, tags, userID) VALUES("+recipeToString+");");
+        recipeAppDatabase.execSQL("INSERT OR REPLACE INTO recipe(recipeName,ingredients,cuisine, procedure, servings, cookingTime, prepTime, allergyWarning, tags, userID) VALUES("+recipeToString+");");
         recipeList.add(recipe);
     }
     public static Recipe getRecipeByName(String name)

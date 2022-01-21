@@ -69,14 +69,14 @@ public class edit_recipe_ingredients extends AppCompatActivity {
             DatabaseHelper.currentEditRecipe.Cuisine=Recipe.StringToList(cuisine,",");
         }
     }
-
+    public static boolean isCreating=false;
     boolean validate(String recipeName, String cookTime, String ingredients)
     {
         if(recipeName.equals("") || cookTime.equals("") || ingredients.equals("")) {
             Toast.makeText(getApplicationContext(), "Fields cannot be empty", Toast.LENGTH_SHORT).show();
             return false;
         }
-        else if(!DatabaseHelper.getRecipeByName(recipeName).recipeName.equals(""))
+        else if((!DatabaseHelper.getRecipeByName(recipeName).recipeName.equals(""))&&isCreating)
         {
             Toast.makeText(getApplicationContext(),"Recipe with the same name already exists",Toast.LENGTH_SHORT).show();
             return false;

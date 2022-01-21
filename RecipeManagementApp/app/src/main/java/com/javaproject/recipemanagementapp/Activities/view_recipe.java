@@ -31,6 +31,7 @@ public class view_recipe extends AppCompatActivity {
         populateRecipe();
         Button edit = findViewById(R.id.edit_btn);
         edit.setOnClickListener(view -> {
+            edit_recipe_ingredients.isCreating=false;
             Intent intent1 = new Intent(this, edit_recipe_ingredients.class);
             startActivity(intent1);
         });
