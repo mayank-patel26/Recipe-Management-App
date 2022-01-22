@@ -19,23 +19,23 @@
 
         <ImageView
             android:id="@+id/login_signup_applogo"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:background="@drawable/rounded_corner_button_white"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:contentDescription="@string/intro_app_logo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="@+id/imageView"
             app:layout_constraintVertical_bias="0.25"
-            app:srcCompat="@drawable/temp_app_logo" />
+            app:srcCompat="@drawable/celebration" />
 
         <TextView
             android:id="@+id/login_signup_text"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:text="TextView"
+            android:text="@string/login_signup_text"
             android:textAlignment="center"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/l_s_login_btn"
             app:layout_constraintEnd_toEndOf="parent"

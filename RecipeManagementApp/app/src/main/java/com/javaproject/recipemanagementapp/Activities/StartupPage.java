@@ -22,6 +22,5 @@ public class StartupPage extends AppCompatActivity {
             Intent intent = new Intent(StartupPage.this, intro_scroll.class);
             startActivity(intent);
         });
-
     }
 }

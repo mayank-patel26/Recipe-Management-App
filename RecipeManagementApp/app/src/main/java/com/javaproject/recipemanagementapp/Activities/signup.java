@@ -52,7 +52,7 @@ public class signup extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
                         Intent intent2 = new Intent(signup.this, landing_page.class);
                         startActivity(intent2);
-                    } else {
+                    } if(check) {
                         Toast.makeText(getApplicationContext(), "Email Address already exists", Toast.LENGTH_SHORT).show();
                         Intent intent2 = new Intent(signup.this, login.class);
                         startActivity(intent2);

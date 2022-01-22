@@ -42,4 +42,5 @@
     <string name="next">next</string>
     <string name="reset_password">Reset Password</string>
     <string name="cuisine">Cuisine :</string>
+    <string name="login_signup_text">Register now to make your cooking hassle free and fun</string>
 </resources>
