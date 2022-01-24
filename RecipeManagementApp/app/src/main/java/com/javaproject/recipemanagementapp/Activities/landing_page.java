@@ -19,8 +19,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class landing_page extends AppCompatActivity {
-    List<Recipe> recipeList;
-    RecipeAdapter recipeAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +48,14 @@ public class landing_page extends AppCompatActivity {
                 startActivity(in);
             });
         }
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Intent toExit = new Intent(this, ExitPage.class);
+        startActivity(toExit);
+        super.onBackPressed();
     }
 
 }
