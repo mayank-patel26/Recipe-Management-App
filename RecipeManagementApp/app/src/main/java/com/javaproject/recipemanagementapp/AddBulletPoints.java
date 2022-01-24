@@ -24,7 +24,7 @@ public class AddBulletPoints
                 if(text!=null) {
                     if (lengthAfter > lengthBefore) {
                         if (text.toString().length() == 1) {
-                            text = " " + text;
+                            text = bullet +" "+ text;
                             editText.setText(text);
                             editText.setSelection(editText.getText().length());
                         }

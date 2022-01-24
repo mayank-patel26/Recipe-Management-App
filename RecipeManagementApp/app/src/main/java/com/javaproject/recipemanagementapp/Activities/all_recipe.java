@@ -40,6 +40,9 @@ public class all_recipe extends AppCompatActivity{
     {
         Button addButton=findViewById(R.id.add_button);
         addButton.setOnClickListener(view -> {
+            DatabaseHelper.currentEditRecipe=new Recipe();
+            DatabaseHelper.currentEditRecipe.Cuisine.add(recipeType);
+            edit_recipe_ingredients.isCreating=true;
             Intent intent =new Intent(this, edit_recipe_ingredients.class);
             startActivity(intent);
         });
@@ -51,6 +54,7 @@ public class all_recipe extends AppCompatActivity{
             recipeList=DatabaseHelper.recipeList;
         else
         {
+            recipeList.clear();
             for (Recipe recipe:DatabaseHelper.recipeList) {
                 if(recipe.Cuisine.contains(recipeType))
                     recipeList.add(recipe);

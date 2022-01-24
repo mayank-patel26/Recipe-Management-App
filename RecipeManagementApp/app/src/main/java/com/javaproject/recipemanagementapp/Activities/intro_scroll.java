@@ -37,11 +37,14 @@ public class intro_scroll extends AppCompatActivity {
 
 
                 //fill list screen
+                String str1 = "Multiple users can use the same device without worrying about losing their recipe data";
+                String str2 = "Have a fun time cooking from the prebuilt recipe list that comes with the app";
+                String str3 = "Manage your collection by adding, editing or deleting the recipe";
 
                 List<ScreenItem> mList = new ArrayList<>();
-                mList.add(new ScreenItem("App Feature 1", R.drawable.temp_app_logo));
-                mList.add(new ScreenItem("App Feature 2", R.drawable.temp_app_logo));
-                mList.add(new ScreenItem("App Feature 3", R.drawable.temp_app_logo));
+                mList.add(new ScreenItem(str1, R.drawable.multi_users));
+                mList.add(new ScreenItem(str2, R.drawable.saved_recipes));
+                mList.add(new ScreenItem(str3, R.drawable.edit_save));
 
                 //setup viewpager
                 ViewPager screenPager = findViewById(R.id.screen_viewpager);

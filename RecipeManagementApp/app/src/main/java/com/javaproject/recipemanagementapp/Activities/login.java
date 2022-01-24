@@ -3,11 +3,13 @@ package com.javaproject.recipemanagementapp.Activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Database;
 
 import com.javaproject.recipemanagementapp.DatabaseHelper;
 import com.javaproject.recipemanagementapp.R;
@@ -16,6 +18,7 @@ public class login extends AppCompatActivity {
     TextView forgot;
     EditText e5, e6;
     Button b2;
+    CheckBox remCheck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,11 @@ public class login extends AppCompatActivity {
         e6 = findViewById(R.id.login_password);
         b2 = findViewById(R.id.login_btn1);
         forgot = findViewById(R.id.forgot_password);
+        remCheck = findViewById(R.id.RememberMe_checkbox);
+
+        remCheck.setOnClickListener(view -> {
+            DatabaseHelper.setRemStatus(e5.getText().toString().trim());
+        });
 
         forgot.setOnClickListener(v1 -> {
             Intent goToResetPassword = new Intent(login.this, forgot_password.class);

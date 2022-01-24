@@ -1,9 +1,11 @@
 package com.javaproject.recipemanagementapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.javaproject.recipemanagementapp.Activities.StartupPage;
 import com.javaproject.recipemanagementapp.Tables.Recipe;
 import com.javaproject.recipemanagementapp.Tables.User;
 
@@ -19,7 +21,6 @@ import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-
 
 public class DatabaseHelper
 {
@@ -39,7 +40,8 @@ public class DatabaseHelper
         // create a recipe database table here
         recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS recipe(id INTEGER PRIMARY KEY AUTOINCREMENT, recipeName TEXT UNIQUE, ingredients TEXT, cuisine TEXT, procedure TEXT, servings INTEGER, cookingTime INTEGER, prepTime INTEGER, allergyWarning TEXT, tags TEXT,userID INTEGER)");
         //create the user table here
-        recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT UNIQUE, password TEXT, dateOfBirth TEXT, fullName TEXT, imagePath TEXT)");
+        recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT UNIQUE, password TEXT, dateOfBirth TEXT, fullName TEXT, imagePath TEXT, RemStatus BOOLEAN)");
+//        recipeAppDatabase.execSQL("DROP TABLE user;");
         setInitialValues(context);
     }
 
@@ -53,6 +55,11 @@ public class DatabaseHelper
         currentUser.fullName=full_name;
     }
 
+//    public static void setUserByEmail (String email){
+//        Cursor SetUser = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE email = '"+email+"';", new String[]{});
+//        setCurrentUser(SetUser);
+//    }
+
     public static Boolean checkemail (String email)
     {
         Cursor cursor = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE email = ?;", new String[]{email});
@@ -61,15 +68,39 @@ public class DatabaseHelper
             setCurrentUser(cursor);
             return true;
         }
-        return true;
+        return false;
     }
 
+    public static Boolean checkRemStatus(){
+        Cursor cursor1 = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE RemStatus = true;", new String[]{});
+        return (cursor1.getCount()>0);
+    }
 
+    public static String getRemEmail(){
+        Cursor c1 = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE RemStatus = true;", new String[]{});
+        return c1.toString().trim();
+
+    }
+
+    public static void resetRemStatus(){
+        recipeAppDatabase.execSQL("UPDATE user SET RemStatus = false WHERE RemStatus = true;");
+    }
+
+    public static void setRemStatus(String emailRemStatus){
+        recipeAppDatabase.execSQL("UPDATE user SET RemStatus = false WHERE RemStatus = true;");
+        recipeAppDatabase.execSQL("UPDATE user SET RemStatus = true WHERE email = '"+emailRemStatus+"';");
+//        Cursor cursor_Email = recipeAppDatabase.rawQuery("SELECT email FROM user WHERE RemStatus = true;", new String[]{});
+    }
 
     public static void insertRecipeData(Recipe recipe)
     {
         //insert recipe values here and call this method to insert a new recipe
         String recipeToString=recipe.toString();
+        if(!getRecipeByName(recipe.recipeName).recipeName.equals(""))
+        {
+            recipeAppDatabase.execSQL("DELETE FROM recipe WHERE recipeName like '"+recipe.recipeName+"';");
+            recipeList.remove(recipe);
+        }
         recipeAppDatabase.execSQL("INSERT INTO recipe(recipeName,ingredients,cuisine, procedure, servings, cookingTime, prepTime, allergyWarning, tags, userID) VALUES("+recipeToString+");");
         recipeList.add(recipe);
     }
@@ -110,6 +141,7 @@ public class DatabaseHelper
         Cursor cursor = recipeAppDatabase.rawQuery("SELECT * FROM recipe",new String[]{});
         if(cursor.getCount()==0)
         {
+//            recipeAppDatabase.execSQL("INSERT INTO user(email, password, fullName, RemStatus) VALUES('admin', 'admin', 'admin', false);");
             try {
                 InputStream is = context.getAssets().open("initial_recipes.xml");
 

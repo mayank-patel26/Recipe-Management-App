@@ -15,7 +15,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/yellow_transparent_rect" />
+        app:srcCompat="@drawable/yellow_transparent_rect"
+        />
 
     <Button
         android:id="@+id/intro_skip"
@@ -53,13 +54,12 @@
         android:id="@+id/startupapplogo"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@drawable/rounded_corner_button_white"
         android:contentDescription="@string/intro_app_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.25"
-        app:srcCompat="@drawable/temp_app_logo" />
+        app:layout_constraintVertical_bias="0.3"
+        app:srcCompat="@drawable/app_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

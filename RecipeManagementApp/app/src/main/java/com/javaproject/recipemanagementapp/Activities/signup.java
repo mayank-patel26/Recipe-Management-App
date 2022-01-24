@@ -1,7 +1,6 @@
 package com.javaproject.recipemanagementapp.Activities;
 
 import static com.javaproject.recipemanagementapp.DatabaseHelper.checkemail;
-import static com.javaproject.recipemanagementapp.DatabaseHelper.insertUserData;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,48 +15,47 @@ import com.javaproject.recipemanagementapp.R;
 
 public class signup extends AppCompatActivity {
 
-    EditText e1, e2, e3, e4;
-    Button b1;
+    EditText FName, Signup_email, Signup_pass, Reenter_pass;
+    Button SignUpBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        e1=findViewById(R.id.fullname);
-        e2=findViewById(R.id.signup_email);
-        e3=findViewById(R.id.signup_pass);
-        e4=findViewById(R.id.reenter_pass);
-        b1=findViewById(R.id.signup_btn1);
+        FName=findViewById(R.id.fullname);
+        Signup_email=findViewById(R.id.signup_email);
+        Signup_pass=findViewById(R.id.signup_pass);
+        Reenter_pass=findViewById(R.id.reenter_pass);
+        SignUpBtn=findViewById(R.id.signup_btn1);
 
-        /*ArrayList n=new ArrayList<Integer>();
-        n.stream().forEach(x->System.out.println(x+3));*/
+        SignUpBtn.setOnClickListener(view -> {
+            String fname = FName.getText().toString().trim();
+            String signup_email = Signup_email.getText().toString().trim();
+            String signup_pass = Signup_pass.getText().toString().trim();
+            String reenter_pass = Reenter_pass.getText().toString().trim();
 
-        b1.setOnClickListener(view -> {
-            String s1 = e1.getText().toString().trim();
-            String s2 = e2.getText().toString().trim();
-            String s3 = e3.getText().toString().trim();
-            String s4 = e4.getText().toString().trim();
-
-            if(s1.equals("")||s2.equals("")||s3.equals("")||s4.equals("")) {
+            if(fname.equals("")||signup_email.equals("")||signup_pass.equals("")||reenter_pass.equals("")) {
                 Toast.makeText(getApplicationContext(), "Fields are empty", Toast.LENGTH_SHORT).show();
             }
 
             else {
-                if (s3.equals(s4)) {
-                    Boolean check = checkemail(s1);
+                if (signup_pass.equals(reenter_pass)) {
+                    Boolean check = checkemail(signup_email);
                     if (!check) {
-                        DatabaseHelper.insertUserData(s2, s3, s1);
+                        DatabaseHelper.insertUserData(signup_email, signup_pass, fname);
                         DatabaseHelper.getAllRecipe();
                         Toast.makeText(getApplicationContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
-                        Intent intent2 = new Intent(signup.this, landing_page.class);
-                        startActivity(intent2);
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Email Address already exists", Toast.LENGTH_SHORT).show();
-                        Intent intent2 = new Intent(signup.this, login.class);
-                        startActivity(intent2);
+                        Intent intent22 = new Intent(signup.this, landing_page.class);
+                        startActivity(intent22);
                     }
-                } else {
+                    else if(check) {
+                        Toast.makeText(getApplicationContext(), "Email Address already exists, please login", Toast.LENGTH_SHORT).show();
+                        Intent intent42 = new Intent(signup.this, login.class);
+                        startActivity(intent42);
+                    }
+                }
+                else {
                     Toast.makeText(getApplicationContext(), "Passwords do not match", Toast.LENGTH_SHORT).show();
                 }
             }
