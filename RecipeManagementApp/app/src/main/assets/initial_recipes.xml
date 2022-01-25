@@ -1,16 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Recipes>
     <recipe>
-        <name>Trial Name</name>
+        <name>Brownie</name>
         <user_id>-1</user_id>
-        <ingredients>Thyme, Basil</ingredients>
-        <cuisine>Italian</cuisine>
-        <procedure>Cook a yummy dish!</procedure>
+        <ingredients>2 tablespoons butter, mild extra virgin olive oil, or neutral oil~ 1/4 cup (30g) all-purpose flour~ 3 tablespoons (35g) sugar~ 2 tablespoons (13g) natural unsweetened cocoa powder~ Pinch kosher salt~ Tiny pinch cinnamon, optional~ 3 tablespoons (44ml) milk, water, or coffee~ 1/8 teaspoon vanilla extract~ Ice cream, whipped cream, or heavy cream, for serving</ingredients>
+        <cuisine>Desserts</cuisine>
+        <procedure>Melt the butter~Place the flour, sugar, cocoa, salt (if using unsalted butter), and optional cinnamon in a microwave-safe ceramic mug. Stir with a fork until it resembles brown sand and there are no clumps.~Stir in the butter (or oil) with a fork until a paste forms.~Then add the milk (or water or coffee) and vanilla. Stir with the same fork until smooth.~Microwave, uncovered, on high power for 1 minute. You may need to adjust the time for less or more powerful microwaves.~Let the brownie rest for 4 minutes.~Serve with a scoop of vanilla ice cream or a small dab of cream (whipped or unwhipped).</procedure>
+        <servings>1</servings>
+        <cooking_time>10 mins</cooking_time>
+        <prep_time>3 mins</prep_time>
+        <allergens>Milk, Cinnamon</allergens>
+        <tags>cake, vanilla</tags>
+    </recipe>
+    <recipe>
+        <name>Burger</name>
+        <user_id>-1</user_id>
+        <ingredients>Burger Buns - 6pcs~ Dr. Oetkar Burger Mayonnaise~ Onion Sliced - 1 mid size~ Tomato Sliced - 1 mid size~ Boiled potatoes - 3 mid size~ Rice Flakes or Poha - 3/4 cup~ Boiled Peas - 1/4 cup~ Unsalted Butter - 2 tsp~ Powdered oats~ Salt - 3/4 tsp~ Coriander/Dhaniya Powder - 3/4 tsp~ Red Chilli Powder - 1/2 tsp~ Cumin/Jeera Powder - 1/2 tsp~ Turmeric Powder - 1/4 tsp~ Garlic Powder - 1/2 tsp~ Black Pepper Powder - 1/4 tsp~ Cornstarch - 1/4 cup~ Baking Powder - 1/4 tsp~ All Purpose Flour - 1/4 cup~ Cornstarch - 1/8 cup~ Corn Meal/Yellow Corn Flour - 1/8 cup~ Oil - 2 tsp~ Salt - 1/4 tsp~ 1/2 cup ice cold water</ingredients>
+        <cuisine>Fast Food</cuisine>
+        <procedure>Prep:~Boiled potatoes should be kept in the refrigerator unpeeled a day in advanced~ Mash and saute the potatoes in a pan~ Add all the spices and peas once the potatoes have cooked enough and turn of the flame~ Mix well and add salt to taste~ Keep the mashed potatoes in the freezer for at least an hour~ Procedure :~ Mix the flour, cornstarch, cornflour, oil and salt and add ice cold water accordingly to make a batter~ Shape the potato mix in a patty shape, coat with the batter and then in the powdered oat mix and deep fry on medium heat~ Assembling:~ Keep the sliced onions in water for 2 mins, then keep both the sliced tomates and onions (After the water has been drained) in the refrigerator for 10 mins~ Apply mayo on both buns, place the patty and add veggies as required and top it with burger buns.</procedure>
         <servings>3</servings>
         <cooking_time>20 mins</cooking_time>
-        <prep_time>2 mins</prep_time>
-        <spice_level>1</spice_level>
-        <allergens>Peanuts, Milk</allergens>
+        <prep_time>60 mins</prep_time>
+        <allergens>Mayonnaise</allergens>
         <tags>fast-food</tags>
+    </recipe>
+    <recipe>
+        <name>Vanilla cupcakes</name>
+        <user_id>-1</user_id>
+        <ingredients>1/2 cup whole milk, 1/2 whole vanilla bean, 1 1/2 cups plus 2 tablespoons all-purpose flour, 1/4 teaspoon kosher salt, 1 1/4 teaspoons baking powder, 1/4 cup sour cream, 1 1/2 teaspoons vanilla extract, 8 tablespoons (1 stick) unsalted butter room temperature, 1 cup sugar, 1 large egg, 2 egg whites, 8 tablespoons (1 stick) unsalted butter, 1 1/4 cups powdered sugar,1/2 vanilla bean (or 1 teaspoon vanilla extract)</ingredients>
+        <cuisine>Desserts</cuisine>
+        <procedure>Preheat the oven to 350°F. Line a 12-cup muffin or cupcake tin with cupcake liners and set aside.~ While the oven preheats, cut open and scrape out the seeds of a vanilla bean.~ Place the seeds, empty bean, and the milk in a small saucepan. Warm over medium heat for a few minutes until the milk is just starting to steam. Be careful not to boil or scald the milk.~ Remove from heat and allow the milk to cool with the vanilla beans. After it cools, remove the bean pod.~ In one bowl whisk together the flour, baking powder, and salt.~ In another bowl whisk together the vanilla-steeped milk, vanilla extract, and sour cream.~ Beat the butter in the bowl of a stand mixer fitted with a beater attachment for about 3 minutes on medium speed, then add the sugar and beat until light and fluffy, about 3 minutes. Scrape down the sides of the mixing bowl.~ Add half the flour mixture to the batter and mix on low until combined. Then add all of the milk mixture, and mix to combine. Finally, add the remaining flour mixture and mix until just combined and you see no more visible dry flour. ~ Divide the batter evenly between the cupcake liners in the muffin tin. Bake at 350° F for 18 to 20 minutes or until slightly golden brown.~ Allow the cupcakes to cool for a few minutes in the pan, then carefully transfer them to a wire rack to cool completely.~ Beat the butter for the frosting and slowly add in the powdered sugar. Scrape the seeds out of the vanilla bean and beat in.~ Frost each cupcake individually and serve.</procedure>
+        <servings>12</servings>
+        <cooking_time>30 mins</cooking_time>
+        <prep_time>30 mins</prep_time>
+        <allergens>Egg, Milk</allergens>
+        <tags>cupcakes, vanilla</tags>
+    </recipe>
+    <recipe>
+        <name>Tiramisu</name>
+        <user_id>-1</user_id>
+        <ingredients>6 large egg yolks~ 1 cup (200g) sugar, divided~ 1 1/2 cups (12 ounces) mascarpone cheese, cold from the fridge~ 1 cup heavy cream, cold from the fridge~ 1 cup boiling water~ 1 tablespoon instant espresso powder~ 1 (7-ounce) package ladyfingers~ Unsweetened cocoa powder (not Dutch-processed) for dusting the top</ingredients>
+        <cuisine>Desserts</cuisine>
+        <procedure>Melt the chocolate in a microwave or over a double boiler. Once melted, set aside to cool slightly.~While the chocolate is cooling beat the mascarpone, sugar, and vanilla until smooth.~Add in then cream and continue to whip to stiff peaks.~Divide the mix in 1/2 between 2 bowls, then set 1 bowl aside ~Swiftly add the melted, cooled chocolate to 1/2 of the mascarpone mix, beating vigorously with a whisk to ensure the chocolate does not seize up.~Dip ladyfingers in coffee, then place in a 7 x 12 inch pan to make the first layer.~Spread the chocolate mascarpone mixture on top of first layer of ladyfingers. Repeat process with second layer of ladyfingers and top with the regular mascarpone mixture.~ Dust the top of dessert with powdered sugar using a sieve. I lay a stencil on top and dusted with cocoa powder to create stars. ~Refrigerate for about 4-6 hours. Store in the fridge for 24</procedure>
+        <servings>9</servings>
+        <cooking_time>10 mins</cooking_time>
+        <prep_time>9 hrs</prep_time>
+        <allergens>Egg, Milk</allergens>
+        <tags>cupcakes, vanilla</tags>
+    </recipe>
+    <recipe>
+        <name>Blueberry Cake</name>
+        <user_id>-1</user_id>
+        <ingredients>1 cup (130g) all-purpose flour plus 1 teaspoon of flour (plus more for prepping cake pan)~ 1 teaspoon baking powder~ 1/2 teaspoon salt (omit if using salted butter)~ 1/8 teaspoon cinnamon~ 1/2 cup (113g, 1 stick) unsalted butter, softened~ 3/4 cup (160g) sugar~ 1/4 teaspoon vanilla extract~ 2 large eggs~ 1 teaspoon lemon zest, optional~ 2 cups (325g) blueberries, rinsed and drained (if using frozen blueberries, thaw and drain first)~ 1 teaspoon lemon juice~ Powdered sugar for dusting</ingredients>
+        <cuisine>Desserts</cuisine>
+        <procedure>Preheat oven to 350°F. Lightly butter an 8 or 9-inch springform pan and dust with flour. Or use an 8 or 9-inch round cake pan, butter and dust with flour and line the bottom with parchment paper.~Vigorously whisk together 1 cup of flour with baking powder, salt, and cinnamon and set aside.~Using a mixer, beat the butter on medium high speed for 2 minutes. Add the sugar and beat until light and fluffy, a couple minutes more. Stir in the vanilla extract. Add the eggs one at a time and beat until well blended. Stir in the lemon zest if using. Reduce the speed of the mixer to low and slowly add the flour mixture, beating until smooth.~Pour the batter into the prepared springform pan.~Combine the berries with the remaining teaspoon of flour and the lemon juice in a bowl. ~Bake on middle rack in oven for 45 to 55 minutes at 350°F, or until a tester inserted into the center comes out clean. Remove from oven and let the cake cool in the pan for 10 minutes. Carefully slide a thin knife around the edges of the cake to release it from the pan.~Transfer the cake to a platter, berry side up. Dust the cake with powdered sugar to serve.</procedure>
+        <servings>6</servings>
+        <cooking_time>45 mins</cooking_time>
+        <prep_time>15 mins</prep_time>
+        <allergens>Egg, Milk</allergens>
+        <tags>cake</tags>
+    </recipe>
+    <recipe>
+        <name>Masala Cheese Toast</name>
+        <user_id>-1</user_id>
+        <ingredients>3 Tbsp Chilli tomato ketchup~1 tsp Mustard~2 tbsp Mayonnaise~3 slices White or brown bread~4 slices Cheese~4 Egg whites~1 Spring onion~2 Green chillies~Few Coriander leaves~2-3 Basil leaves~1 bunch Chives~ Salt to taste~ Olive oil</ingredients>
+        <cuisine>Fast Food</cuisine>
+        <procedure>Herb paste: In a blender make a paste of spring onions, basil, green chillies, coriander and chives.~Sauce paste: In a bowl mix chilli tomato ketchup, mustard and mayonnaise.~Egg mixture: In another bowl whisk egg whites with a little salt. Add the herb paste.~Take a bread slice. Apply the sauce paste and place 2 cheese slices. Place another sauce smothered bread. Repeat. Chill for 2-3 minutes.~Dip the bread-cheese-sauce sandwich in the egg mixture.~In a pan add some olive oil and cook the french toast till golden brown on both sides.~Cut and serve</procedure>
+        <servings>5</servings>
+        <cooking_time>30 mins</cooking_time>
+        <prep_time>10 mins</prep_time>
+        <allergens>Dairy Products</allergens>
+        <tags>toast, spicy</tags>
     </recipe>
 </Recipes>

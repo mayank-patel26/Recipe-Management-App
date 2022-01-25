@@ -32,6 +32,7 @@ public class tags_allergen extends AppCompatActivity {
             saveTagsAllergen();
             //check if exists and then insert else update
             DatabaseHelper.insertRecipeData(DatabaseHelper.currentEditRecipe);
+            DatabaseHelper.recipeList.add(DatabaseHelper.currentEditRecipe);
             Intent intent = new Intent(this, landing_page.class);
             startActivity(intent);
         });

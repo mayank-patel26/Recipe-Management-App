@@ -102,7 +102,6 @@ public class DatabaseHelper
             recipeList.remove(recipe);
         }
         recipeAppDatabase.execSQL("INSERT INTO recipe(recipeName,ingredients,cuisine, procedure, servings, cookingTime, prepTime, allergyWarning, tags, userID) VALUES("+recipeToString+");");
-        recipeList.add(recipe);
     }
     public static Recipe getRecipeByName(String name)
     {
@@ -185,7 +184,6 @@ public class DatabaseHelper
     public static void getAllRecipe(){
         String[] columns = {"id", "recipeName", "ingredients", "cuisine", "procedure", "servings", "cookingTime", "prepTime", "userID", "allergyWarning", "tags"};
         Cursor cursor = recipeAppDatabase.query("recipe", columns, null, null, null, null, null);
-
         while(cursor.moveToNext()){
             String[] values =new String[columns.length];
             for (int i = 0; i < columns.length; i++) {
