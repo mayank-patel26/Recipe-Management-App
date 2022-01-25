@@ -109,7 +109,7 @@ public class DatabaseHelper
             if(recipe.recipeName.trim().equalsIgnoreCase(name.trim()))
                 return recipe;
         }
-        return  new Recipe();
+        return new Recipe();
     }
 
     public static Boolean checklogin(String e1, String p1){
