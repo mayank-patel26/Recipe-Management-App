@@ -2,7 +2,6 @@ package com.javaproject.recipemanagementapp.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -14,7 +13,6 @@ import com.javaproject.recipemanagementapp.DatabaseHelper;
 import com.javaproject.recipemanagementapp.R;
 import com.javaproject.recipemanagementapp.Tables.Recipe;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class all_recipe extends AppCompatActivity{
@@ -24,7 +22,7 @@ public class all_recipe extends AppCompatActivity{
     RecyclerView rvPrograms;
     RecipeAdapter recipeAdapter;
     RecyclerView.LayoutManager layoutManager;
-    List<Recipe> recipeList=new ArrayList<>();
+    List<Recipe> recipeList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,18 +50,14 @@ public class all_recipe extends AppCompatActivity{
             DatabaseHelper.currentEditRecipe=new Recipe();
             DatabaseHelper.currentEditRecipe.Cuisine.add(recipeType);
             edit_recipe_ingredients.isCreating=true;
-            Intent intent =new Intent(this, edit_recipe_ingredients.class);
+            Intent intent = new Intent(this, edit_recipe_ingredients.class);
             startActivity(intent);
         });
-
-        Button profile_button1 = (Button) findViewById(R.id.profile_button1);
-        profile_button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(all_recipe.this, options.class);
-                startActivity(intent);
-            }
-        });
+        /*Button profile_button1 = findViewById(R.id.profile_button1);
+        profile_button1.setOnClickListener(view -> {
+            Intent profile = new Intent(profile_page.this, login.class);
+            startActivity(profile);
+        });*/
     }
 
     void setRecipeList()
