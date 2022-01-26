@@ -7,6 +7,7 @@
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/ic_baseline_hourglass_bottom_24.xml" value="0.2125" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.24537037037037038" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/normal_rectangle.xml" value="0.2140625" />
+        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/profile_circle.xml" value="0.2703125" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/rounded_corner_button.xml" value="0.2140625" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/rounded_corner_button_white.xml" value="0.16197916666666667" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/drawable/rounded_corner_rectangle.xml" value="0.2140625" />
@@ -19,6 +20,7 @@
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_add_or_edit_recipe.xml" value="0.264" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_all_recipe.xml" value="0.264" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_bordered_rect.xml" value="0.25416666666666665" />
+        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_change_password.xml" value="0.25025641025641027" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_display_recipe.xml" value="0.23854166666666668" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_edit_recipe_ingredients.xml" value="0.264" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_edit_recipe_method.xml" value="0.4" />
@@ -32,6 +34,7 @@
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_login_signup.xml" value="0.264" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_login_startup.xml" value="0.13020833333333334" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_options.xml" value="0.25025641025641027" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_recipe_with_paper.xml" value="0.16799999999999998" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_settings.xml" value="0.264" />
         <entry key="..\:/College Stuff/Projects/Java/Recipe-Management-App/RecipeManagementApp/app/src/main/res/layout/activity_signup.xml" value="0.4" />
