@@ -30,8 +30,9 @@ public class tags_allergen extends AppCompatActivity {
         Button done = findViewById(R.id.done_button_tags_allergen);
         done.setOnClickListener(view -> {
             saveTagsAllergen();
-            //check if exists and then insert else update
+            DatabaseHelper.currentEditRecipe.userID=DatabaseHelper.currentUser.ID;
             DatabaseHelper.insertRecipeData(DatabaseHelper.currentEditRecipe);
+            DatabaseHelper.recipeList.add(DatabaseHelper.currentEditRecipe);
             Intent intent = new Intent(this, landing_page.class);
             startActivity(intent);
         });

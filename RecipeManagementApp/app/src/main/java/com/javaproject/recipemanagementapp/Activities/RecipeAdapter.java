@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,12 +30,14 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView recipe_name;
         TextView recipeServing;
+        ImageButton dustbin;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             recipe_name = itemView.findViewById(R.id.item_name);
             recipeServing = itemView.findViewById(R.id.servings);
+            dustbin = itemView.findViewById(R.id.imageButton);
         }
     }
 
@@ -59,6 +63,9 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
         Recipe recipe = recipeList.get(i);
         viewHolder.recipe_name.setText(String.valueOf(recipe.getRecipeName()));
         viewHolder.recipeServing.setText(String.valueOf(recipe.getServings()));
+        viewHolder.dustbin.setOnClickListener(view -> {
+           DatabaseHelper.deleteRecipe(recipe);
+        });
     }
 
     @Override

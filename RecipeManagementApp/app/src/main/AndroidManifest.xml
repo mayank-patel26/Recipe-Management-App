@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecipeManagementApp">
         <activity
-            android:name=".SettingsActivity"
+            android:name=".Activities.change_password"
             android:exported="false" />
         <activity
-            android:name=".options"
+            android:name=".Activities.options"
             android:exported="false" />
         <activity
             android:name=".Activities.tags_allergen"
