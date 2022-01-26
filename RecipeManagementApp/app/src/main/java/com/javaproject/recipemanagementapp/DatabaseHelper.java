@@ -60,6 +60,14 @@ public class DatabaseHelper
 //        setCurrentUser(SetUser);
 //    }
 
+    public static void deleteRecipe(Recipe recipe)
+    {
+        //write code to delete from DB here
+        //you can execute normal SQL commands by doing:
+        //recipeAppDatabase.execSQL("Command here");
+        //to remove the recipe from mayank's list do(this only removes it from the list not the DB)
+        recipeList.remove(recipe);
+    }
     public static Boolean checkemail (String email)
     {
         Cursor cursor = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE email = ?;", new String[]{email});
