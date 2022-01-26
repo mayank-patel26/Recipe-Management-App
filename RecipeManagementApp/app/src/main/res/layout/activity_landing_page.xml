@@ -14,23 +14,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
+        <ImageButton
             android:id="@+id/profile_button1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/profile_circle"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/icon_profile"
             android:text="A"
             android:textColor="@color/black"
             android:textSize="18sp"
-            app:backgroundTint="@color/green"
-            app:layout_constraintBottom_toTopOf="@+id/landing_page_scroll1"
+            app:backgroundTint="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/searchView2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/searchView2" />
 
         <ScrollView
             android:id="@+id/landing_page_scroll1"

@@ -3,6 +3,7 @@ package com.javaproject.recipemanagementapp.Activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -58,11 +59,12 @@ public class all_recipe extends AppCompatActivity{
             Intent intent = new Intent(this, edit_recipe_ingredients.class);
             startActivity(intent);
         });
-        /*Button profile_button1 = findViewById(R.id.profile_button1);
+
+        ImageButton profile_button1 = findViewById(R.id.profile_button1);
         profile_button1.setOnClickListener(view -> {
-            Intent profile = new Intent(profile_page.this, login.class);
+            Intent profile = new Intent(all_recipe.this, options.class);
             startActivity(profile);
-        });*/
+        });
     }
 
     void setRecipeList()
