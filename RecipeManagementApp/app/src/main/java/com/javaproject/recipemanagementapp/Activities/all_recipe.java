@@ -43,9 +43,14 @@ public class all_recipe extends AppCompatActivity{
             DatabaseHelper.currentEditRecipe=new Recipe();
             DatabaseHelper.currentEditRecipe.Cuisine.add(recipeType);
             edit_recipe_ingredients.isCreating=true;
-            Intent intent =new Intent(this, edit_recipe_ingredients.class);
+            Intent intent = new Intent(this, edit_recipe_ingredients.class);
             startActivity(intent);
         });
+        /*Button profile_button1 = findViewById(R.id.profile_button1);
+        profile_button1.setOnClickListener(view -> {
+            Intent profile = new Intent(profile_page.this, login.class);
+            startActivity(profile);
+        });*/
     }
 
     void setRecipeList()
