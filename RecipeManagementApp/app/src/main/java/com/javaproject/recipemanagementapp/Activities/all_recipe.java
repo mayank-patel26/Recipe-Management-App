@@ -2,6 +2,7 @@ package com.javaproject.recipemanagementapp.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -46,6 +47,15 @@ public class all_recipe extends AppCompatActivity{
             edit_recipe_ingredients.isCreating=true;
             Intent intent =new Intent(this, edit_recipe_ingredients.class);
             startActivity(intent);
+        });
+
+        Button profile_button1 = (Button) findViewById(R.id.profile_button1);
+        profile_button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(all_recipe.this, options.class);
+                startActivity(intent);
+            }
         });
     }
 

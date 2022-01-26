@@ -75,7 +75,6 @@ public class DatabaseHelper
         Cursor cursor1 = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE RemStatus = true;", new String[]{});
         return (cursor1.getCount()>0);
     }
-
     public static String getRemEmail(){
         Cursor c1 = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE RemStatus = true;", new String[]{});
         return c1.toString().trim();
@@ -123,7 +122,19 @@ public class DatabaseHelper
     }
 
     public static void setNewPassword(String eml1, String new_password){
-        recipeAppDatabase.execSQL("UPDATE user SET password = '"+new_password+"' WHERE email = '"+eml1+"';");
+        recipeAppDatabase.execSQL("UPDATE user SET password = '"+new_password+"' WHERE email = '"+eml1+"' ;");
+    }
+    public static void setNewPass_options(String eml1, String old_password, String new_password){
+        recipeAppDatabase.execSQL("UPDATE user SET password = '"+new_password+"' WHERE email = '"+eml1+"' and password = '"+old_password+"' ;");
+    }
+
+    public static void deleteUser(String email){
+        recipeAppDatabase.execSQL("DELETE FROM User WHERE email = '"+currentUser.email+"';");
+    }
+
+    public static void deleteRecipe(Recipe recipe){
+        recipeAppDatabase.execSQL("DELETE FROM Recipe WHERE id = '"+recipe.recipeID+"';");
+        recipeList.remove(recipe);
     }
 
     public static void setCurrentUser(Cursor cursor)
@@ -181,7 +192,8 @@ public class DatabaseHelper
         return node.getNodeValue();
     }
 
-    public static void getAllRecipe(){
+    public static void getAllRecipe()
+    {
         String[] columns = {"id", "recipeName", "ingredients", "cuisine", "procedure", "servings", "cookingTime", "prepTime", "userID", "allergyWarning", "tags"};
         Cursor cursor = recipeAppDatabase.query("recipe", columns, null, null, null, null, null);
         while(cursor.moveToNext()){
@@ -200,5 +212,4 @@ public class DatabaseHelper
             }
         }
     }
-
-}
+   }

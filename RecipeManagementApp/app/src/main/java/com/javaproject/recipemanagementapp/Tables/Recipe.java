@@ -99,7 +99,7 @@ public class Recipe {
                 "','" + prepTime +
                 "','" + allergyWarnings +
                 "','" + ListtoString(tags) +
-                "',"+userID;
+                "'," + userID;
     }
 }
 
