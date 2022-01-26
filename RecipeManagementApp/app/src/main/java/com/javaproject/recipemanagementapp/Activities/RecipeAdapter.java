@@ -6,9 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -37,7 +35,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
 
             recipe_name = itemView.findViewById(R.id.item_name);
             recipeServing = itemView.findViewById(R.id.servings);
-            dustbin = itemView.findViewById(R.id.imageButton);
+            dustbin = itemView.findViewById(R.id.ViewDelete);
         }
     }
 
@@ -64,7 +62,9 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
         viewHolder.recipe_name.setText(String.valueOf(recipe.getRecipeName()));
         viewHolder.recipeServing.setText(String.valueOf(recipe.getServings()));
         viewHolder.dustbin.setOnClickListener(view -> {
-           DatabaseHelper.deleteRecipe(recipe);
+            DatabaseHelper.deleteRecipe(recipe);
+            Intent refresh = new Intent(context, all_recipe.class);
+            context.startActivity(refresh);
         });
     }
 

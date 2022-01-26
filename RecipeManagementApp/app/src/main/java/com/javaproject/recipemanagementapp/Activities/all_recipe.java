@@ -38,9 +38,14 @@ public class all_recipe extends AppCompatActivity{
         addOnClicks();
 
         backbtn = findViewById(R.id.back_btn);
-        backbtn.setOnClickListener(view -> {
-            super.onBackPressed();
-        });
+        backbtn.setOnClickListener(view -> onBackPressed());
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent toExit = new Intent(this, landing_page.class);
+        startActivity(toExit);
+        super.onBackPressed();
     }
 
     void addOnClicks()

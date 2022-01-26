@@ -1,9 +1,12 @@
 package com.javaproject.recipemanagementapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.provider.ContactsContract;
 
+import com.javaproject.recipemanagementapp.Activities.all_recipe;
 import com.javaproject.recipemanagementapp.Tables.Recipe;
 import com.javaproject.recipemanagementapp.Tables.User;
 
