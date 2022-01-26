@@ -22,7 +22,7 @@ public class StartupPage extends AppCompatActivity {
         if(DatabaseHelper.checkRemStatus()){
             String setEmail = DatabaseHelper.getRemEmail();
             DatabaseHelper.checkemail(setEmail);
-//            DatabaseHelper.getAllRecipe();
+            DatabaseHelper.getAllRecipe();
             Button get_started = findViewById(R.id.intro_skip);
             get_started.setOnClickListener(view -> {
                 Intent toLandingPage = new Intent(StartupPage.this, landing_page.class);

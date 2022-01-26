@@ -404,30 +404,23 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/rounded_corner_rectangle_white"
+            android:fontFamily="sans-serif-medium"
             android:padding="10dp"
             android:paddingLeft="0dp"
             android:paddingTop="0dp"
+            android:shadowDx="-5"
+            android:shadowDy="5"
+            android:shadowRadius="5"
             android:text="Categories"
-            android:textAlignment="center"
-            android:textSize="20sp"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/landing_page_scroll1"
             app:layout_constraintEnd_toStartOf="@+id/profile_button1"
-            app:layout_constraintStart_toEndOf="@+id/resetRemBtn"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/resetRemBtn"
-            android:layout_width="50dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/profile_circle"
-            android:text="X"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:backgroundTint="#BF0000"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

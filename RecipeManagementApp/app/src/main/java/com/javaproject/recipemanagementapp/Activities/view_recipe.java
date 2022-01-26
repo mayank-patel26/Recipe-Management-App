@@ -3,6 +3,7 @@ package com.javaproject.recipemanagementapp.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.Spannable;
@@ -10,6 +11,7 @@ import android.text.Spanned;
 import android.text.style.AbsoluteSizeSpan;
 import android.text.style.ForegroundColorSpan;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.javaproject.recipemanagementapp.AddBulletPoints;
@@ -23,7 +25,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class view_recipe extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

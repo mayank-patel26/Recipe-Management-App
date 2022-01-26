@@ -41,7 +41,7 @@ public class signup extends AppCompatActivity {
 
             else {
                 if (signup_pass.equals(reenter_pass)) {
-                    Boolean check = checkemail(signup_email);
+                    Boolean check = DatabaseHelper.checkemail(signup_email);
                     if (!check) {
                         DatabaseHelper.insertUserData(signup_email, signup_pass, fname);
                         DatabaseHelper.getAllRecipe();
@@ -49,7 +49,7 @@ public class signup extends AppCompatActivity {
                         Intent intent22 = new Intent(signup.this, landing_page.class);
                         startActivity(intent22);
                     }
-                    else if(check) {
+                    else{
                         Toast.makeText(getApplicationContext(), "Email Address already exists, please login", Toast.LENGTH_SHORT).show();
                         Intent intent42 = new Intent(signup.this, login.class);
                         startActivity(intent42);

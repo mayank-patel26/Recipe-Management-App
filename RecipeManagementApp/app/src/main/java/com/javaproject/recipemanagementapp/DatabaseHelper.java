@@ -1,11 +1,9 @@
 package com.javaproject.recipemanagementapp;
 
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.javaproject.recipemanagementapp.Activities.StartupPage;
 import com.javaproject.recipemanagementapp.Tables.Recipe;
 import com.javaproject.recipemanagementapp.Tables.User;
 
@@ -60,15 +58,16 @@ public class DatabaseHelper
 //        setCurrentUser(SetUser);
 //    }
 
-    public static Boolean checkemail (String email)
+    public static Boolean checkemail (String em2)
     {
-        Cursor cursor = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE email = ?;", new String[]{email});
-        if(cursor.getCount()>0)
-        {
+        Cursor cursor = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE email = '"+em2+"'", new String[]{});
+        if(cursor.getCount()>0){
             setCurrentUser(cursor);
             return true;
         }
-        return false;
+        else{
+            return false;
+        }
     }
 
     public static Boolean checkRemStatus(){
