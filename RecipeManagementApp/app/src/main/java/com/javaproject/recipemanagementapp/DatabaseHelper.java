@@ -74,11 +74,11 @@ public class DatabaseHelper
         }
     }
 
-    public static Cursor getRemCursor(String email3){
-        Cursor c3 = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE email = '"+email3+"';", new String[]{});
-        c3.moveToFirst();
-        return c3;
-    }
+//    public static Cursor getRemCursor(String email3){
+//        Cursor c3 = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE email = '"+email3+"';", new String[]{});
+//        c3.moveToFirst();
+//        return c3;
+//    }
 
     public static Boolean checkRemStatus(){
         Cursor cursor1 = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE RemStatus = true;", new String[]{});
@@ -97,7 +97,8 @@ public class DatabaseHelper
     public static void setRemStatus(String emailRemStatus){
         recipeAppDatabase.execSQL("UPDATE user SET RemStatus = false WHERE RemStatus = true;");
         recipeAppDatabase.execSQL("UPDATE user SET RemStatus = true WHERE email = '"+emailRemStatus+"';");
-//        Cursor cursor_Email = recipeAppDatabase.rawQuery("SELECT email FROM user WHERE RemStatus = true;", new String[]{});
+//        Cursor cursor_setRemUser = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE RemStatus = true;", new String[]{});
+//        setCurrentUser(cursor_setRemUser);
     }
 
     public static void insertRecipeData(Recipe recipe)

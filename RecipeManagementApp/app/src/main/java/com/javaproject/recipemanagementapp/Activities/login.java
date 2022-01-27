@@ -1,7 +1,9 @@
 package com.javaproject.recipemanagementapp.Activities;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
