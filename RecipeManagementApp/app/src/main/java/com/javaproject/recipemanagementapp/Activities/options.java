@@ -10,10 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.javaproject.recipemanagementapp.DatabaseHelper;
 import com.javaproject.recipemanagementapp.R;
+import com.javaproject.recipemanagementapp.Tables.Recipe;
+
+import java.util.List;
 
 public class options extends AppCompatActivity {
     public TextView optionEmail;
     Button signOut;
+    List<Recipe> recipeListSignOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +26,13 @@ public class options extends AppCompatActivity {
         addOnClicks();
 
         signOut = findViewById(R.id.signOut_btn);
+        recipeListSignOut=DatabaseHelper.recipeList;
 
         signOut.setOnClickListener(view -> {
             DatabaseHelper.resetRemStatus();
-            Intent toSignUp = new Intent(this, signup.class);
-            startActivity(toSignUp);
+            Intent toLoginSignup = new Intent(this, login_signup.class);
+            startActivity(toLoginSignup);
+            recipeListSignOut.clear();
         });
 
         optionEmail = findViewById(R.id.options_email);
@@ -43,6 +49,7 @@ public class options extends AppCompatActivity {
 
         Button deactive_account = findViewById(R.id.deactive_account);
         deactive_account.setOnClickListener(v -> {
+            recipeListSignOut.clear();
             String email = DatabaseHelper.currentUser.email;
             DatabaseHelper.deleteUser(email);
             Toast.makeText(getApplicationContext(), "Account Deleted Successfully.", Toast.LENGTH_SHORT).show();

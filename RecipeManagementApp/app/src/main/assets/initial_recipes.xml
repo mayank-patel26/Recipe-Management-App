@@ -72,4 +72,196 @@
         <allergens>Dairy Products</allergens>
         <tags>toast, spicy</tags>
     </recipe>
+    <recipe>
+        <name>Dosa</name>
+        <user_id>-1</user_id>
+        <ingredients>3 Tbsp Chilli tomato ketchup~1 tsp Mustard~2 tbsp Mayonnaise~3 slices White or brown bread~4 slices Cheese~4 Egg whites~1 Spring onion~2 Green chillies~Few Coriander leaves~2-3 Basil leaves~1 bunch Chives~ Salt to taste~ Olive oil</ingredients>
+        <cuisine>South Indian</cuisine>
+        <procedure>Herb paste: In a blender make a paste of spring onions, basil, green chillies, coriander and chives.~Sauce paste: In a bowl mix chilli tomato ketchup, mustard and mayonnaise.~Egg mixture: In another bowl whisk egg whites with a little salt. Add the herb paste.~Take a bread slice. Apply the sauce paste and place 2 cheese slices. Place another sauce smothered bread. Repeat. Chill for 2-3 minutes.~Dip the bread-cheese-sauce sandwich in the egg mixture.~In a pan add some olive oil and cook the french toast till golden brown on both sides.~Cut and serve</procedure>
+        <servings>15</servings>
+        <cooking_time>30 mins</cooking_time>
+        <prep_time>10 mins</prep_time>
+        <allergens> </allergens>
+        <tags>breakfast</tags>
+    </recipe>
+    <recipe>
+        <name>Pizza</name>
+        <user_id>-1</user_id>
+        <ingredients>3 Tbsp Chilli tomato ketchup~1 tsp Mustard~2 tbsp Mayonnaise~3 slices White or brown bread~4 slices Cheese~4 Egg whites~1 Spring onion~2 Green chillies~Few Coriander leaves~2-3 Basil leaves~1 bunch Chives~ Salt to taste~ Olive oil</ingredients>
+        <cuisine>Italian</cuisine>
+        <procedure>Herb paste: In a blender make a paste of spring onions, basil, green chillies, coriander and chives.~Sauce paste: In a bowl mix chilli tomato ketchup, mustard and mayonnaise.~Egg mixture: In another bowl whisk egg whites with a little salt. Add the herb paste.~Take a bread slice. Apply the sauce paste and place 2 cheese slices. Place another sauce smothered bread. Repeat. Chill for 2-3 minutes.~Dip the bread-cheese-sauce sandwich in the egg mixture.~In a pan add some olive oil and cook the french toast till golden brown on both sides.~Cut and serve</procedure>
+        <servings>4</servings>
+        <cooking_time>30 mins</cooking_time>
+        <prep_time>10 mins</prep_time>
+        <allergens> </allergens>
+        <tags>toast, spicy</tags>
+    </recipe>
+    <recipe>
+        <name>Butter Chicken</name>
+        <user_id>-1</user_id>
+        <ingredients>3 Tbsp Chilli tomato ketchup~1 tsp Mustard~2 tbsp Mayonnaise~3 slices White or brown bread~4 slices Cheese~4 Egg whites~1 Spring onion~2 Green chillies~Few Coriander leaves~2-3 Basil leaves~1 bunch Chives~ Salt to taste~ Olive oil</ingredients>
+        <cuisine>Punjabi</cuisine>
+        <procedure>Herb paste: In a blender make a paste of spring onions, basil, green chillies, coriander and chives.~Sauce paste: In a bowl mix chilli tomato ketchup, mustard and mayonnaise.~Egg mixture: In another bowl whisk egg whites with a little salt. Add the herb paste.~Take a bread slice. Apply the sauce paste and place 2 cheese slices. Place another sauce smothered bread. Repeat. Chill for 2-3 minutes.~Dip the bread-cheese-sauce sandwich in the egg mixture.~In a pan add some olive oil and cook the french toast till golden brown on both sides.~Cut and serve</procedure>
+        <servings>4</servings>
+        <cooking_time>30 mins</cooking_time>
+        <prep_time>10 mins</prep_time>
+        <allergens> </allergens>
+        <tags>spicy</tags>
+    </recipe>
+    <recipe>
+        <name>Taco</name>
+        <user_id>-1</user_id>
+        <ingredients>3 Tbsp Chilli tomato ketchup~1 tsp Mustard~2 tbsp Mayonnaise~3 slices White or brown bread~4 slices Cheese~4 Egg whites~1 Spring onion~2 Green chillies~Few Coriander leaves~2-3 Basil leaves~1 bunch Chives~ Salt to taste~ Olive oil</ingredients>
+        <cuisine>Mexican</cuisine>
+        <procedure>Herb paste: In a blender make a paste of spring onions, basil, green chillies, coriander and chives.~Sauce paste: In a bowl mix chilli tomato ketchup, mustard and mayonnaise.~Egg mixture: In another bowl whisk egg whites with a little salt. Add the herb paste.~Take a bread slice. Apply the sauce paste and place 2 cheese slices. Place another sauce smothered bread. Repeat. Chill for 2-3 minutes.~Dip the bread-cheese-sauce sandwich in the egg mixture.~In a pan add some olive oil and cook the french toast till golden brown on both sides.~Cut and serve</procedure>
+        <servings>3</servings>
+        <cooking_time>30 mins</cooking_time>
+        <prep_time>10 mins</prep_time>
+        <allergens> </allergens>
+        <tags>toast, spicy, chilly</tags>
+    </recipe>
+    <recipe>
+        <name>Dumplings</name>
+        <user_id>-1</user_id>
+        <ingredients>3 Tbsp Chilli tomato ketchup~1 tsp Mustard~2 tbsp Mayonnaise~3 slices White or brown bread~4 slices Cheese~4 Egg whites~1 Spring onion~2 Green chillies~Few Coriander leaves~2-3 Basil leaves~1 bunch Chives~ Salt to taste~ Olive oil</ingredients>
+        <cuisine>Chinese</cuisine>
+        <procedure>Herb paste: In a blender make a paste of spring onions, basil, green chillies, coriander and chives.~Sauce paste: In a bowl mix chilli tomato ketchup, mustard and mayonnaise.~Egg mixture: In another bowl whisk egg whites with a little salt. Add the herb paste.~Take a bread slice. Apply the sauce paste and place 2 cheese slices. Place another sauce smothered bread. Repeat. Chill for 2-3 minutes.~Dip the bread-cheese-sauce sandwich in the egg mixture.~In a pan add some olive oil and cook the french toast till golden brown on both sides.~Cut and serve</procedure>
+        <servings>2</servings>
+        <cooking_time>30 mins</cooking_time>
+        <prep_time>10 mins</prep_time>
+        <allergens> </allergens>
+        <tags>boiled</tags>
+    </recipe>
+    <recipe>
+        <name>Thai Fried Rice</name>
+        <user_id>-1</user_id>
+        <ingredients>3 Tbsp Chilli tomato ketchup~1 tsp Mustard~2 tbsp Mayonnaise~3 slices White or brown bread~4 slices Cheese~4 Egg whites~1 Spring onion~2 Green chillies~Few Coriander leaves~2-3 Basil leaves~1 bunch Chives~ Salt to taste~ Olive oil</ingredients>
+        <cuisine>Thai</cuisine>
+        <procedure>Herb paste: In a blender make a paste of spring onions, basil, green chillies, coriander and chives.~Sauce paste: In a bowl mix chilli tomato ketchup, mustard and mayonnaise.~Egg mixture: In another bowl whisk egg whites with a little salt. Add the herb paste.~Take a bread slice. Apply the sauce paste and place 2 cheese slices. Place another sauce smothered bread. Repeat. Chill for 2-3 minutes.~Dip the bread-cheese-sauce sandwich in the egg mixture.~In a pan add some olive oil and cook the french toast till golden brown on both sides.~Cut and serve</procedure>
+        <servings>2</servings>
+        <cooking_time>30 mins</cooking_time>
+        <prep_time>10 mins</prep_time>
+        <allergens>Nuts</allergens>
+        <tags>spicy, chilly</tags>
+    </recipe>
+    <recipe>
+        <name>Sizzling Platter</name>
+        <user_id>-1</user_id>
+        <ingredients>3 Tbsp Chilli tomato ketchup~1 tsp Mustard~2 tbsp Mayonnaise~3 slices White or brown bread~4 slices Cheese~4 Egg whites~1 Spring onion~2 Green chillies~Few Coriander leaves~2-3 Basil leaves~1 bunch Chives~ Salt to taste~ Olive oil</ingredients>
+        <cuisine>Asian</cuisine>
+        <procedure>Herb paste: In a blender make a paste of spring onions, basil, green chillies, coriander and chives.~Sauce paste: In a bowl mix chilli tomato ketchup, mustard and mayonnaise.~Egg mixture: In another bowl whisk egg whites with a little salt. Add the herb paste.~Take a bread slice. Apply the sauce paste and place 2 cheese slices. Place another sauce smothered bread. Repeat. Chill for 2-3 minutes.~Dip the bread-cheese-sauce sandwich in the egg mixture.~In a pan add some olive oil and cook the french toast till golden brown on both sides.~Cut and serve</procedure>
+        <servings>6</servings>
+        <cooking_time>30 mins</cooking_time>
+        <prep_time>10 mins</prep_time>
+        <allergens> </allergens>
+        <tags>spicy, chilly</tags>
+    </recipe>
+    <recipe>
+        <name>Mughlai Chicken Biryani</name>
+        <user_id>-1</user_id>
+        <ingredients>3 Tbsp Chilli tomato ketchup~1 tsp Mustard~2 tbsp Mayonnaise~3 slices White or brown bread~4 slices Cheese~4 Egg whites~1 Spring onion~2 Green chillies~Few Coriander leaves~2-3 Basil leaves~1 bunch Chives~ Salt to taste~ Olive oil</ingredients>
+        <cuisine>Mughlai</cuisine>
+        <procedure>Herb paste: In a blender make a paste of spring onions, basil, green chillies, coriander and chives.~Sauce paste: In a bowl mix chilli tomato ketchup, mustard and mayonnaise.~Egg mixture: In another bowl whisk egg whites with a little salt. Add the herb paste.~Take a bread slice. Apply the sauce paste and place 2 cheese slices. Place another sauce smothered bread. Repeat. Chill for 2-3 minutes.~Dip the bread-cheese-sauce sandwich in the egg mixture.~In a pan add some olive oil and cook the french toast till golden brown on both sides.~Cut and serve</procedure>
+        <servings>4</servings>
+        <cooking_time>30 mins</cooking_time>
+        <prep_time>10 mins</prep_time>
+        <allergens> </allergens>
+        <tags>spicy</tags>
+    </recipe>
+    <recipe>
+        <name>Sev Puri</name>
+        <user_id>-1</user_id>
+        <ingredients>3 Tbsp Chilli tomato ketchup~1 tsp Mustard~2 tbsp Mayonnaise~3 slices White or brown bread~4 slices Cheese~4 Egg whites~1 Spring onion~2 Green chillies~Few Coriander leaves~2-3 Basil leaves~1 bunch Chives~ Salt to taste~ Olive oil</ingredients>
+        <cuisine>Fast Food</cuisine>
+        <procedure>Herb paste: In a blender make a paste of spring onions, basil, green chillies, coriander and chives.~Sauce paste: In a bowl mix chilli tomato ketchup, mustard and mayonnaise.~Egg mixture: In another bowl whisk egg whites with a little salt. Add the herb paste.~Take a bread slice. Apply the sauce paste and place 2 cheese slices. Place another sauce smothered bread. Repeat. Chill for 2-3 minutes.~Dip the bread-cheese-sauce sandwich in the egg mixture.~In a pan add some olive oil and cook the french toast till golden brown on both sides.~Cut and serve</procedure>
+        <servings>1</servings>
+        <cooking_time>30 mins</cooking_time>
+        <prep_time>10 mins</prep_time>
+        <allergens></allergens>
+        <tags>spicy</tags>
+    </recipe>
+    <recipe>
+        <name>Lemonade</name>
+        <user_id>-1</user_id>
+        <ingredients>3 Tbsp Chilli tomato ketchup~1 tsp Mustard~2 tbsp Mayonnaise~3 slices White or brown bread~4 slices Cheese~4 Egg whites~1 Spring onion~2 Green chillies~Few Coriander leaves~2-3 Basil leaves~1 bunch Chives~ Salt to taste~ Olive oil</ingredients>
+        <cuisine>Fast Food</cuisine>
+        <procedure>Herb paste: In a blender make a paste of spring onions, basil, green chillies, coriander and chives.~Sauce paste: In a bowl mix chilli tomato ketchup, mustard and mayonnaise.~Egg mixture: In another bowl whisk egg whites with a little salt. Add the herb paste.~Take a bread slice. Apply the sauce paste and place 2 cheese slices. Place another sauce smothered bread. Repeat. Chill for 2-3 minutes.~Dip the bread-cheese-sauce sandwich in the egg mixture.~In a pan add some olive oil and cook the french toast till golden brown on both sides.~Cut and serve</procedure>
+        <servings>1</servings>
+        <cooking_time>30 mins</cooking_time>
+        <prep_time>10 mins</prep_time>
+        <allergens></allergens>
+        <tags>lemon</tags>
+    </recipe>
+    <recipe>
+        <name>Manchow Soup</name>
+        <user_id>-1</user_id>
+        <ingredients>3 Tbsp Chilli tomato ketchup~1 tsp Mustard~2 tbsp Mayonnaise~3 slices White or brown bread~4 slices Cheese~4 Egg whites~1 Spring onion~2 Green chillies~Few Coriander leaves~2-3 Basil leaves~1 bunch Chives~ Salt to taste~ Olive oil</ingredients>
+        <cuisine>Soups</cuisine>
+        <procedure>Herb paste: In a blender make a paste of spring onions, basil, green chillies, coriander and chives.~Sauce paste: In a bowl mix chilli tomato ketchup, mustard and mayonnaise.~Egg mixture: In another bowl whisk egg whites with a little salt. Add the herb paste.~Take a bread slice. Apply the sauce paste and place 2 cheese slices. Place another sauce smothered bread. Repeat. Chill for 2-3 minutes.~Dip the bread-cheese-sauce sandwich in the egg mixture.~In a pan add some olive oil and cook the french toast till golden brown on both sides.~Cut and serve</procedure>
+        <servings>2</servings>
+        <cooking_time>30 mins</cooking_time>
+        <prep_time>10 mins</prep_time>
+        <allergens></allergens>
+        <tags>spicy</tags>
+    </recipe>
+    <recipe>
+        <name>French Fries</name>
+        <user_id>-1</user_id>
+        <ingredients>3 Tbsp Chilli tomato ketchup~1 tsp Mustard~2 tbsp Mayonnaise~3 slices White or brown bread~4 slices Cheese~4 Egg whites~1 Spring onion~2 Green chillies~Few Coriander leaves~2-3 Basil leaves~1 bunch Chives~ Salt to taste~ Olive oil</ingredients>
+        <cuisine>Starters</cuisine>
+        <procedure>Herb paste: In a blender make a paste of spring onions, basil, green chillies, coriander and chives.~Sauce paste: In a bowl mix chilli tomato ketchup, mustard and mayonnaise.~Egg mixture: In another bowl whisk egg whites with a little salt. Add the herb paste.~Take a bread slice. Apply the sauce paste and place 2 cheese slices. Place another sauce smothered bread. Repeat. Chill for 2-3 minutes.~Dip the bread-cheese-sauce sandwich in the egg mixture.~In a pan add some olive oil and cook the french toast till golden brown on both sides.~Cut and serve</procedure>
+        <servings>1</servings>
+        <cooking_time>30 mins</cooking_time>
+        <prep_time>10 mins</prep_time>
+        <allergens></allergens>
+        <tags>fast food</tags>
+    </recipe>
+    <recipe>
+        <name>Paneer Tikka Masala</name>
+        <user_id>-1</user_id>
+        <ingredients>3 Tbsp Chilli tomato ketchup~1 tsp Mustard~2 tbsp Mayonnaise~3 slices White or brown bread~4 slices Cheese~4 Egg whites~1 Spring onion~2 Green chillies~Few Coriander leaves~2-3 Basil leaves~1 bunch Chives~ Salt to taste~ Olive oil</ingredients>
+        <cuisine>Main Course</cuisine>
+        <procedure>Herb paste: In a blender make a paste of spring onions, basil, green chillies, coriander and chives.~Sauce paste: In a bowl mix chilli tomato ketchup, mustard and mayonnaise.~Egg mixture: In another bowl whisk egg whites with a little salt. Add the herb paste.~Take a bread slice. Apply the sauce paste and place 2 cheese slices. Place another sauce smothered bread. Repeat. Chill for 2-3 minutes.~Dip the bread-cheese-sauce sandwich in the egg mixture.~In a pan add some olive oil and cook the french toast till golden brown on both sides.~Cut and serve</procedure>
+        <servings>2</servings>
+        <cooking_time>30 mins</cooking_time>
+        <prep_time>10 mins</prep_time>
+        <allergens>Paneer</allergens>
+        <tags>sweet</tags>
+    </recipe>
+    <recipe>
+        <name>Chicken Masala</name>
+        <user_id>-1</user_id>
+        <ingredients>3 Tbsp Chilli tomato ketchup~1 tsp Mustard~2 tbsp Mayonnaise~3 slices White or brown bread~4 slices Cheese~4 Egg whites~1 Spring onion~2 Green chillies~Few Coriander leaves~2-3 Basil leaves~1 bunch Chives~ Salt to taste~ Olive oil</ingredients>
+        <cuisine>Curry</cuisine>
+        <procedure>Herb paste: In a blender make a paste of spring onions, basil, green chillies, coriander and chives.~Sauce paste: In a bowl mix chilli tomato ketchup, mustard and mayonnaise.~Egg mixture: In another bowl whisk egg whites with a little salt. Add the herb paste.~Take a bread slice. Apply the sauce paste and place 2 cheese slices. Place another sauce smothered bread. Repeat. Chill for 2-3 minutes.~Dip the bread-cheese-sauce sandwich in the egg mixture.~In a pan add some olive oil and cook the french toast till golden brown on both sides.~Cut and serve</procedure>
+        <servings>3</servings>
+        <cooking_time>30 mins</cooking_time>
+        <prep_time>10 mins</prep_time>
+        <allergens></allergens>
+        <tags>Non-veg, spicy</tags>
+    </recipe>
+    <recipe>
+        <name>Garlic Bread</name>
+        <user_id>-1</user_id>
+        <ingredients>3 Tbsp Chilli tomato ketchup~1 tsp Mustard~2 tbsp Mayonnaise~3 slices White or brown bread~4 slices Cheese~4 Egg whites~1 Spring onion~2 Green chillies~Few Coriander leaves~2-3 Basil leaves~1 bunch Chives~ Salt to taste~ Olive oil</ingredients>
+        <cuisine>Bread</cuisine>
+        <procedure>Herb paste: In a blender make a paste of spring onions, basil, green chillies, coriander and chives.~Sauce paste: In a bowl mix chilli tomato ketchup, mustard and mayonnaise.~Egg mixture: In another bowl whisk egg whites with a little salt. Add the herb paste.~Take a bread slice. Apply the sauce paste and place 2 cheese slices. Place another sauce smothered bread. Repeat. Chill for 2-3 minutes.~Dip the bread-cheese-sauce sandwich in the egg mixture.~In a pan add some olive oil and cook the french toast till golden brown on both sides.~Cut and serve</procedure>
+        <servings>2</servings>
+        <cooking_time>30 mins</cooking_time>
+        <prep_time>10 mins</prep_time>
+        <allergens>Dairy Products</allergens>
+        <tags>toast, starters</tags>
+    </recipe>
+    <recipe>
+        <name>Chocolate Icecream</name>
+        <user_id>-1</user_id>
+        <ingredients>3 Tbsp Chilli tomato ketchup~1 tsp Mustard~2 tbsp Mayonnaise~3 slices White or brown bread~4 slices Cheese~4 Egg whites~1 Spring onion~2 Green chillies~Few Coriander leaves~2-3 Basil leaves~1 bunch Chives~ Salt to taste~ Olive oil</ingredients>
+        <cuisine>Desserts</cuisine>
+        <procedure>Herb paste: In a blender make a paste of spring onions, basil, green chillies, coriander and chives.~Sauce paste: In a bowl mix chilli tomato ketchup, mustard and mayonnaise.~Egg mixture: In another bowl whisk egg whites with a little salt. Add the herb paste.~Take a bread slice. Apply the sauce paste and place 2 cheese slices. Place another sauce smothered bread. Repeat. Chill for 2-3 minutes.~Dip the bread-cheese-sauce sandwich in the egg mixture.~In a pan add some olive oil and cook the french toast till golden brown on both sides.~Cut and serve</procedure>
+        <servings>2</servings>
+        <cooking_time>30 mins</cooking_time>
+        <prep_time>10 mins</prep_time>
+        <allergens>Dairy Products</allergens>
+        <tags>sweet, icecream</tags>
+    </recipe>
 </Recipes>

@@ -38,11 +38,11 @@
     <TextView
         android:id="@+id/startup_text"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
         android:text="@string/startup_text"
         android:textAlignment="center"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/intro_skip"
         app:layout_constraintEnd_toEndOf="parent"
