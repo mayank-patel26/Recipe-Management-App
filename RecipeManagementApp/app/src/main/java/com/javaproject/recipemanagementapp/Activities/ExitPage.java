@@ -1,7 +1,6 @@
 
 package com.javaproject.recipemanagementapp.Activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -18,8 +17,8 @@ public class ExitPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exit_page);
 
-        cancel = findViewById(R.id.Cancel_btn);
-        exit = findViewById(R.id.Exit_btn);
+        cancel = findViewById(R.id.signoutCancel_button);
+        exit = findViewById(R.id.signoutConfirm_button);
 
         cancel.setOnClickListener(view -> {
 //            Intent toLandingPage = new Intent(this, landing_page.class);

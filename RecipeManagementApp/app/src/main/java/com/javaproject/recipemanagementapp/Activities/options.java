@@ -23,18 +23,18 @@ public class options extends AppCompatActivity {
 
         signOut = findViewById(R.id.signOut_btn);
 
-        signOut.setOnClickListener(view -> {
-            DatabaseHelper.resetRemStatus();
-            Intent toSignUp = new Intent(this, signup.class);
-            startActivity(toSignUp);
-        });
-
         optionEmail = findViewById(R.id.options_email);
         optionEmail.setText(DatabaseHelper.currentUser.email.trim());
     }
 
     void addOnClicks()
     {
+        Button signOut_btn = findViewById(R.id.signOut_btn);
+        signOut_btn.setOnClickListener(v -> {
+            Intent intent = new Intent(options.this, SignoutActivity.class);
+            startActivity(intent);
+        });
+
         Button change_password = findViewById(R.id.change_password);
         change_password.setOnClickListener(v -> {
             Intent intent = new Intent(options.this, change_password.class);

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecipeManagementApp">
         <activity
+            android:name=".Activities.SignoutActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.change_password"
             android:exported="false" />
         <activity
