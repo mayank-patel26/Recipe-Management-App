@@ -34,6 +34,49 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <TextView
+                    android:id="@+id/servings_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mrs_saint_delafield"
+                    android:text="Servings : "
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/servings_edittxt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/servings_edittxt" />
+
+                <EditText
+                    android:id="@+id/prep_time_edittext2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="#00000000"
+                    android:ems="10"
+                    android:fontFamily="@font/mrs_saint_delafield"
+                    android:hint="15 mins"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:lineSpacingExtra="-21sp"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView14"
+                    app:layout_constraintTop_toBottomOf="@+id/cooking_time_edittext"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mrs_saint_delafield"
+                    android:text="@string/prep_time_edit_text"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/prep_time_edittext2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/prep_time_edittext2" />
+
                 <EditText
                     android:id="@+id/name_of_recipe"
                     android:layout_width="0dp"
@@ -82,34 +125,23 @@
                     app:layout_constraintTop_toBottomOf="@+id/name_of_recipe"
                     tools:ignore="TouchTargetSizeCheck" />
 
-                <TextView
-                    android:id="@+id/textView14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/mrs_saint_delafield"
-                    android:text="@string/prep_time_edit_text"
-                    android:textColor="@color/black"
-                    android:textSize="30sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/prep_time_edittext"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/prep_time_edittext" />
-
                 <EditText
-                    android:id="@+id/prep_time_edittext"
+                    android:id="@+id/servings_edittxt"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="#00000000"
                     android:ems="10"
                     android:fontFamily="@font/mrs_saint_delafield"
-                    android:hint="15 mins"
+                    android:hint="3"
                     android:importantForAutofill="no"
                     android:inputType="textMultiLine"
                     android:lineSpacingExtra="-21sp"
                     android:textSize="30sp"
+                    android:visibility="visible"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView14"
-                    app:layout_constraintTop_toBottomOf="@+id/cooking_time_edittext"
+                    app:layout_constraintStart_toEndOf="@+id/servings_txt"
+                    app:layout_constraintTop_toBottomOf="@+id/prep_time_edittext2"
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <TextView
@@ -171,7 +203,7 @@
                     android:textColor="@color/black"
                     android:textSize="30sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/prep_time_edittext" />
+                    app:layout_constraintTop_toBottomOf="@+id/servings_edittxt" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

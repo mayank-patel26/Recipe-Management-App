@@ -24,11 +24,18 @@ public class tags_allergen extends AppCompatActivity {
         AddBulletPoints.setBulletPoints(findViewById(R.id.allergen_edit_text),"•");
         AddBulletPoints.setBulletPoints(findViewById(R.id.tags_edit_text),"#");
         setOnClicks();
+        populateTagsAndAllergen();
 
+    }
+    void populateTagsAndAllergen()
+    {
         recipeName2 = findViewById(R.id.recipe_name);
         recipeName2.setText(DatabaseHelper.currentEditRecipe.recipeName.trim());
+        EditText tags=findViewById(R.id.tags_edit_text);
+        EditText allergen=findViewById(R.id.allergen_edit_text);
+        tags.setText(Recipe.ListtoString(DatabaseHelper.currentEditRecipe.tags).replaceAll("~","#"));
+        allergen.setText(DatabaseHelper.currentEditRecipe.allergyWarnings.replaceAll("~","\n•"));
     }
-
     void setOnClicks()
     {
         Button done = findViewById(R.id.done_button_tags_allergen);
