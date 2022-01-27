@@ -86,6 +86,7 @@ public class DatabaseHelper
     }
     public static String getRemEmail(){
         Cursor c1 = recipeAppDatabase.rawQuery("SELECT email FROM user WHERE RemStatus = true;", new String[]{});
+        c1.moveToFirst();
         return c1.getString(0).trim();
 
     }
