@@ -27,4 +27,12 @@ public class login_signup extends AppCompatActivity {
             startActivity(i2);
         });
     }
+
+
+    @Override
+    public void onBackPressed(){
+        Intent toLandingPage = new Intent(this, ExitPage.class);
+        startActivity(toLandingPage);
+//        super.onBackPressed();
+    }
 }

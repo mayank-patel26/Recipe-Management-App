@@ -73,6 +73,14 @@ public class signup extends AppCompatActivity {
 
     }
 
+
+    @Override
+    public void onBackPressed(){
+        Intent toExit = new Intent(this, ExitPage.class);
+        startActivity(toExit);
+//        super.onBackPressed();
+    }
+
 //    void confirmDBCreation()
 //    {
 //        //create a database if it doesn't exist

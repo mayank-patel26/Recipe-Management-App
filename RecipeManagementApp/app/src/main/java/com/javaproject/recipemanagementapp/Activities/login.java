@@ -83,4 +83,11 @@ public class login extends AppCompatActivity {
 */
         });
     }
+
+    @Override
+    public void onBackPressed(){
+        Intent toLandingPage = new Intent(this, ExitPage.class);
+        startActivity(toLandingPage);
+//        super.onBackPressed();
+    }
 }
