@@ -6,27 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".Activities.options">
 
-    <TextView
+    <ImageView
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
         android:layout_marginTop="50dp"
-        android:background="@drawable/profile_circle"
         android:paddingHorizontal="70dp"
         android:paddingVertical="40dp"
+        android:scaleType="centerCrop"
         android:text="A"
         android:textAlignment="center"
         android:textSize="80sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_profile" />
 
     <TextView
         android:id="@+id/options_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/rounded_corner_rectangle_white"
         android:paddingHorizontal="20dp"
@@ -36,9 +37,11 @@
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView8"

@@ -64,6 +64,7 @@ public class DatabaseHelper
     public static Boolean checkemail (String em2)
     {
         Cursor cursor = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE email = '"+em2+"'", new String[]{});
+//        cursor.moveToFirst();
         if(cursor.getCount()>0){
             setCurrentUser(cursor);
             return true;
@@ -71,6 +72,12 @@ public class DatabaseHelper
         else{
             return false;
         }
+    }
+
+    public static Cursor getRemCursor(String email3){
+        Cursor c3 = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE email = '"+email3+"';", new String[]{});
+        c3.moveToFirst();
+        return c3;
     }
 
     public static Boolean checkRemStatus(){
@@ -115,6 +122,7 @@ public class DatabaseHelper
 
     public static Boolean checklogin(String e1, String p1){
         Cursor cursor = recipeAppDatabase.rawQuery("SELECT * FROM user WHERE email = '"+e1+"' AND password = '"+p1+"';", new String[]{});
+        checkemail(e1);
         return (cursor.getCount()>0);
     }
 
@@ -131,16 +139,23 @@ public class DatabaseHelper
     }
 
     public static void deleteUser(String email){
-        recipeAppDatabase.execSQL("DELETE FROM User WHERE email = '"+currentUser.email+"';");
+        recipeAppDatabase.execSQL("DELETE FROM user WHERE email = '"+email+"';");
+        recipeAppDatabase.execSQL("UPDATE user SET RemStatus = false WHERE RemStatus = true;");
     }
 
     public static void deleteRecipe(Recipe recipe){
-        recipeAppDatabase.execSQL("DELETE FROM Recipe WHERE id = '"+recipe.recipeID+"';");
+        recipeAppDatabase.execSQL("DELETE FROM recipe WHERE id = '"+recipe.recipeID+"';");
         recipeList.remove(recipe);
     }
 
+//    public static Cursor getUserFromEmail(String em3){
+//        Cursor cursor = recipeAppDatabase.rawQuery("SELECT id, email, password FROM user WHERE email = '" + em3 + "';", new String[]{});
+//        return cursor;
+//    }
+
     public static void setCurrentUser(Cursor cursor)
     {
+        cursor.moveToFirst();
         User user=new User();
         user.ID=cursor.getInt(0);
         user.email=cursor.getString(1);

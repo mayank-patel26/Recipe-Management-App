@@ -2,19 +2,17 @@ package com.javaproject.recipemanagementapp.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Database;
 
 import com.javaproject.recipemanagementapp.DatabaseHelper;
 import com.javaproject.recipemanagementapp.R;
 
 public class options extends AppCompatActivity {
-    TextView optionEmail;
+    public TextView optionEmail;
     Button signOut;
 
     @Override
@@ -32,8 +30,7 @@ public class options extends AppCompatActivity {
         });
 
         optionEmail = findViewById(R.id.options_email);
-        optionEmail.setText(String.valueOf(DatabaseHelper.currentUser.email));
-
+        optionEmail.setText(DatabaseHelper.currentUser.email.trim());
     }
 
     void addOnClicks()

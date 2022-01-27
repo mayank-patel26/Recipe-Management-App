@@ -21,7 +21,7 @@ public class StartupPage extends AppCompatActivity {
 
         if(DatabaseHelper.checkRemStatus()){
             String setEmail = DatabaseHelper.getRemEmail();
-            DatabaseHelper.checkemail(setEmail);
+            DatabaseHelper.getRemCursor(setEmail);
             DatabaseHelper.getAllRecipe();
             Button get_started = findViewById(R.id.intro_skip);
             get_started.setOnClickListener(view -> {
