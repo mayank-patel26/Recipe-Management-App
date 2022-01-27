@@ -63,8 +63,8 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
         viewHolder.recipeServing.setText(String.valueOf(recipe.getServings()));
         viewHolder.dustbin.setOnClickListener(view -> {
             DatabaseHelper.deleteRecipe(recipe);
-            Intent refresh = new Intent(context, all_recipe.class);
-            context.startActivity(refresh);
+            notifyItemRemoved(i);
+            notifyItemRangeChanged(i,recipeList.size());
         });
     }
 
