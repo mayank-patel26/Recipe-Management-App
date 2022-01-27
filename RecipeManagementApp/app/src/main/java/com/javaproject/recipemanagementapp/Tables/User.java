@@ -11,7 +11,6 @@ public class User {
     public String email;
     public String username;
     public String password;
-    public SimpleDateFormat dateOfBirth;
     public String fullName;
     public Image profilePicture;
     public ArrayList<Recipe> recipeList;
@@ -21,17 +20,15 @@ public class User {
         this.email = "";
         this.username = "";
         this.password = "";
-        this.dateOfBirth = new SimpleDateFormat();
         this.fullName = "";
         this.profilePicture = null;
         recipeList=new ArrayList<>();
     }
 
-    public User(String email, String username, String password, SimpleDateFormat dateOfBirth, String fullName, Image profilePicture) {
+    public User(String email, String username, String password, String fullName, Image profilePicture) {
         this.email = email;
         this.username = username;
         this.password = password;
-        this.dateOfBirth = dateOfBirth;
         this.fullName = fullName;
         this.profilePicture = profilePicture;
         recipeList=new ArrayList<>();

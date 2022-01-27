@@ -42,14 +42,16 @@ public class edit_recipe_ingredients extends AppCompatActivity {
             EditText cookTime = findViewById(R.id.cooking_time_edittext);
             cookTime.setText(DatabaseHelper.currentEditRecipe.cookingTime);
             EditText servings = findViewById(R.id.servings_edittxt);
-            servings.setText(DatabaseHelper.currentEditRecipe.servings);
+            String servingsValue=DatabaseHelper.currentEditRecipe.servings+"";
+            servings.setText(servingsValue);
             EditText prepTime= findViewById(R.id.prep_time_edittext2);
             prepTime.setText(DatabaseHelper.currentEditRecipe.prepTime);
             EditText cuisine= findViewById(R.id.cuisine_edit_text);
             String cui=Recipe.ListtoString(DatabaseHelper.currentEditRecipe.Cuisine).replaceAll(",","\n•");
             cuisine.setText(cui);
             EditText ingredients= findViewById(R.id.ingredients_edit_text);
-            String ing=Recipe.ListtoString(DatabaseHelper.currentEditRecipe.Ingredients).replaceAll(",","\n•");
+            String ing=Recipe.ListtoString(DatabaseHelper.currentEditRecipe.Ingredients).replaceAll(",","\n•").replaceAll("~","\n•");
+            ing="\n•"+ing;
             ingredients.setText(ing);
     }
 
