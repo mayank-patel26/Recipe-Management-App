@@ -22,8 +22,8 @@ public class ExitPage extends AppCompatActivity {
         exit = findViewById(R.id.Exit_btn);
 
         cancel.setOnClickListener(view -> {
-            Intent toLandingPage = new Intent(this, landing_page.class);
-            startActivity(toLandingPage);
+//            Intent toLandingPage = new Intent(this, landing_page.class);
+            super.onBackPressed();
         });
 
         exit.setOnClickListener(view -> {

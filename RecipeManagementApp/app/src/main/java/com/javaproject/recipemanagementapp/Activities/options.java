@@ -25,8 +25,8 @@ public class options extends AppCompatActivity {
 
         signOut.setOnClickListener(view -> {
             DatabaseHelper.resetRemStatus();
-            Intent quitNow = new Intent(this, ExitPage.class);
-            startActivity(quitNow);
+            Intent toSignUp = new Intent(this, signup.class);
+            startActivity(toSignUp);
         });
 
         optionEmail = findViewById(R.id.options_email);
