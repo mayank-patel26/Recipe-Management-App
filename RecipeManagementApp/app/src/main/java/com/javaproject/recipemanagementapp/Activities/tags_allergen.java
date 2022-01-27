@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.javaproject.recipemanagementapp.AddBulletPoints;
 import com.javaproject.recipemanagementapp.DatabaseHelper;
@@ -14,6 +15,7 @@ import com.javaproject.recipemanagementapp.R;
 import com.javaproject.recipemanagementapp.Tables.Recipe;
 
 public class tags_allergen extends AppCompatActivity {
+    TextView recipeName2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,8 @@ public class tags_allergen extends AppCompatActivity {
         AddBulletPoints.setBulletPoints(findViewById(R.id.tags_edit_text),"#");
         setOnClicks();
 
+        recipeName2 = findViewById(R.id.recipe_name);
+        recipeName2.setText(DatabaseHelper.currentEditRecipe.recipeName.trim());
     }
 
     void setOnClicks()

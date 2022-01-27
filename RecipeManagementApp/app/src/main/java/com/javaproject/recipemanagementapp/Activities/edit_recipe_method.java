@@ -14,7 +14,10 @@ import com.javaproject.recipemanagementapp.DatabaseHelper;
 import com.javaproject.recipemanagementapp.R;
 import com.javaproject.recipemanagementapp.Tables.Recipe;
 
+import org.w3c.dom.Text;
+
 public class edit_recipe_method extends AppCompatActivity {
+    TextView recipeName1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,9 @@ public class edit_recipe_method extends AppCompatActivity {
         setContentView(R.layout.activity_edit_recipe_method);
         AddBulletPoints.setBulletPoints(findViewById(R.id.recipe_procedure),"•");
         addButtonOnClicks();
+
+        recipeName1 = findViewById(R.id.recipe_name);
+        recipeName1.setText(DatabaseHelper.currentEditRecipe.recipeName.trim());
     }
 
     void addButtonOnClicks()

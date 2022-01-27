@@ -59,6 +59,7 @@ public class login extends AppCompatActivity {
                 Boolean chk = DatabaseHelper.checklogin(e, p);
                 if(chk){
                     Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
+                    DatabaseHelper.checkemail(e);
                     DatabaseHelper.getAllRecipe();
                     Intent intent = new Intent(login.this, landing_page.class);
                     startActivity(intent);
