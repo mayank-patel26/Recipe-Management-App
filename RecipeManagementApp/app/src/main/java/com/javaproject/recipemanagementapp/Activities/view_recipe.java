@@ -61,6 +61,9 @@ public class view_recipe extends AppCompatActivity {
                 s.setSpan(new ForegroundColorSpan(0xFFFF0000), first.length(), first.length()+ing.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             }
         }
+        String ing=ingredients.getText().toString();
+        ing.replaceAll("• •","• ");
+        ingredients.setText(ing);
         String cuisineStr="Cuisine : \n• "+Recipe.ListtoString(DatabaseHelper.currentEditRecipe.Cuisine,"\n• ");
         cuisine.setText(cuisineStr);
         String procedureStr="Procedure : \n• "+DatabaseHelper.currentEditRecipe.procedure.replaceAll("~","\n• ");
@@ -68,6 +71,7 @@ public class view_recipe extends AppCompatActivity {
         procedure.setText(procedureStr);
         String tagsStr = "Tags :\n# "+Recipe.ListtoString(DatabaseHelper.currentEditRecipe.tags,"# ");
         tagsStr=tagsStr.replaceAll("# # ","# ");
+        tagsStr=tagsStr.replaceAll(",","\n#");
         tags.setText(tagsStr);
         cookingTime.setText(String.valueOf(DatabaseHelper.currentEditRecipe.cookingTime));
         prepTime.setText(String.valueOf(DatabaseHelper.currentEditRecipe.prepTime));

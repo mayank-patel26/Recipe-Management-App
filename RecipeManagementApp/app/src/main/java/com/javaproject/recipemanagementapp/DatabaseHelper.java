@@ -1,12 +1,9 @@
 package com.javaproject.recipemanagementapp;
 
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.provider.ContactsContract;
 
-import com.javaproject.recipemanagementapp.Activities.all_recipe;
 import com.javaproject.recipemanagementapp.Tables.Recipe;
 import com.javaproject.recipemanagementapp.Tables.User;
 
@@ -36,13 +33,16 @@ public class DatabaseHelper
     {
         currentUser=new User();
         currentEditRecipe=new Recipe();
+        recipeList=new ArrayList<>();
         //create a database if it doesn't exist
         recipeAppDatabase = context.openOrCreateDatabase("RecipeAppDatabase", Context.MODE_PRIVATE,null);
         // create a recipe database table here
-        recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS recipe(id INTEGER PRIMARY KEY AUTOINCREMENT, recipeName TEXT UNIQUE, ingredients TEXT, cuisine TEXT, procedure TEXT, servings INTEGER, cookingTime INTEGER, prepTime INTEGER, allergyWarning TEXT, tags TEXT,userID INTEGER)");
+        recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS recipe(id INTEGER PRIMARY KEY AUTOINCREMENT, recipeName TEXT UNIQUE, " +
+                "ingredients TEXT, cuisine TEXT, procedure TEXT, servings INTEGER, cookingTime INTEGER, prepTime INTEGER, allergyWarning " +
+                "TEXT, tags TEXT,userID INTEGER)");
         //create the user table here
         recipeAppDatabase.execSQL("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT UNIQUE, password TEXT, dateOfBirth TEXT, fullName TEXT, imagePath TEXT, RemStatus BOOLEAN)");
-//        recipeAppDatabase.execSQL("DROP TABLE user;");
+//
         setInitialValues(context);
     }
 
@@ -188,7 +188,7 @@ public class DatabaseHelper
                     if (node.getNodeType() == Node.ELEMENT_NODE) {
                         Element element2 = (Element) node;
                         String recipeName=getValue("name",element2);
-                        ArrayList<String> ingredients= new ArrayList<>(Arrays.asList(getValue("ingredients",element2).split(",")));
+                        ArrayList<String> ingredients= new ArrayList<>(Arrays.asList(getValue("ingredients",element2).split("~")));
                         ArrayList<String> cuisine = new ArrayList<>(Arrays.asList(getValue("cuisine",element2).split(",")));
                         String procedure=getValue("procedure",element2);
                         int servings=Integer.parseInt(getValue("servings",element2));
@@ -222,7 +222,7 @@ public class DatabaseHelper
             }
             try{
                 if(Integer.parseInt(values[8])==-1||Integer.parseInt(values[8])==DatabaseHelper.currentUser.ID) {
-                    Recipe recipe = new Recipe(Integer.parseInt(values[0]), values[1], Recipe.StringToList(values[2], ","), Recipe.StringToList(values[3], ","), values[4], Integer.parseInt(values[5]), values[6], values[7], Integer.parseInt(values[8]), values[9], Recipe.StringToList(values[10], "~"));
+                    Recipe recipe = new Recipe(Integer.parseInt(values[0]), values[1], Recipe.StringToList(values[2], ","), Recipe.StringToList(values[3], ","), values[4], Integer.parseInt(values[5]), values[6], values[7], Integer.parseInt(values[8]), values[9], Recipe.StringToList(values[10], ","));
                     recipeList.add(recipe);
                 }
             }

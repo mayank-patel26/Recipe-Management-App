@@ -14,6 +14,7 @@ import com.javaproject.recipemanagementapp.DatabaseHelper;
 import com.javaproject.recipemanagementapp.R;
 import com.javaproject.recipemanagementapp.Tables.Recipe;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class all_recipe extends AppCompatActivity{
@@ -23,10 +24,11 @@ public class all_recipe extends AppCompatActivity{
     RecyclerView rvPrograms;
     RecipeAdapter recipeAdapter;
     RecyclerView.LayoutManager layoutManager;
-    List<Recipe> recipeList;
+    List<Recipe> recipeList=new ArrayList<>();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_recipe);
         setRecipeList();

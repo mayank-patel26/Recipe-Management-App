@@ -26,9 +26,8 @@ public class edit_recipe_method extends AppCompatActivity {
         setContentView(R.layout.activity_edit_recipe_method);
         AddBulletPoints.setBulletPoints(findViewById(R.id.recipe_procedure),"•");
         addButtonOnClicks();
+        populateMethod();
 
-        recipeName1 = findViewById(R.id.recipe_name);
-        recipeName1.setText(DatabaseHelper.currentEditRecipe.recipeName.trim());
     }
 
     void addButtonOnClicks()
@@ -40,7 +39,13 @@ public class edit_recipe_method extends AppCompatActivity {
             startActivity(intent);
         });
     }
-
+    void populateMethod()
+    {
+        recipeName1 = findViewById(R.id.recipe_name);
+        recipeName1.setText(DatabaseHelper.currentEditRecipe.recipeName.trim());
+        EditText method=findViewById(R.id.recipe_procedure);
+        method.setText(DatabaseHelper.currentEditRecipe.procedure);
+    }
     void saveMethod()
     {
         String method=((EditText)findViewById(R.id.recipe_procedure)).getText().toString();

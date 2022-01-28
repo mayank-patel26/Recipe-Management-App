@@ -33,7 +33,7 @@
             android:id="@+id/login_signup_text"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:text="@+id/login_signup_text"
+            android:text="New user? Sign up now to make your cooking fun!"
             android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold"

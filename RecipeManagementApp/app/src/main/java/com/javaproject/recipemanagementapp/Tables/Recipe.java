@@ -98,7 +98,7 @@ public class Recipe {
                 ",'" + cookingTime +
                 "','" + prepTime +
                 "','" + allergyWarnings +
-                "','" + ListtoString(tags) +
+                "','" + ListtoString(tags,",") +
                 "'," + userID;
     }
 }

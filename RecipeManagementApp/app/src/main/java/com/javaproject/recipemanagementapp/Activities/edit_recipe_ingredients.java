@@ -28,26 +28,27 @@ public class edit_recipe_ingredients extends AppCompatActivity {
     {
         Button next = findViewById(R.id.next_button);
         next.setOnClickListener(view -> {
-
             saveRecipe();
-            Intent intent = new Intent(this, edit_recipe_method.class);
-            startActivity(intent);
         });
     }
 
     void populateRecipe()
     {
-            EditText name= findViewById(R.id.name_of_recipe);
+            EditText name = findViewById(R.id.name_of_recipe);
             name.setText(DatabaseHelper.currentEditRecipe.recipeName);
-            EditText cookTime= findViewById(R.id.cooking_time_edittext);
+            EditText cookTime = findViewById(R.id.cooking_time_edittext);
             cookTime.setText(DatabaseHelper.currentEditRecipe.cookingTime);
-            EditText prepTime= findViewById(R.id.prep_time_edittext);
+            EditText servings = findViewById(R.id.servings_edittxt);
+            String servingsValue=DatabaseHelper.currentEditRecipe.servings+"";
+            servings.setText(servingsValue);
+            EditText prepTime= findViewById(R.id.prep_time_edittext2);
             prepTime.setText(DatabaseHelper.currentEditRecipe.prepTime);
             EditText cuisine= findViewById(R.id.cuisine_edit_text);
             String cui=Recipe.ListtoString(DatabaseHelper.currentEditRecipe.Cuisine).replaceAll(",","\n•");
             cuisine.setText(cui);
             EditText ingredients= findViewById(R.id.ingredients_edit_text);
-            String ing=Recipe.ListtoString(DatabaseHelper.currentEditRecipe.Ingredients).replaceAll(",","\n•");
+            String ing=Recipe.ListtoString(DatabaseHelper.currentEditRecipe.Ingredients).replaceAll(",","\n•").replaceAll("~","\n•");
+            ing="• "+ing;
             ingredients.setText(ing);
     }
 
@@ -55,23 +56,27 @@ public class edit_recipe_ingredients extends AppCompatActivity {
     {
         String recipeName=((EditText)findViewById(R.id.name_of_recipe)).getText().toString();
         String cookTime=((EditText)findViewById(R.id.cooking_time_edittext)).getText().toString();
-        String prepTime=((EditText)findViewById(R.id.prep_time_edittext)).getText().toString();
+        String servings=((EditText)findViewById(R.id.servings_edittxt)).getText().toString();
+        String prepTime=((EditText)findViewById(R.id.prep_time_edittext2)).getText().toString();
         prepTime=prepTime.equals("")?"-":prepTime;
         String ingredients=((EditText)findViewById(R.id.ingredients_edit_text)).getText().toString();
         String cuisine=((EditText)findViewById(R.id.cuisine_edit_text)).getText().toString();
         ingredients=ingredients.replaceAll("\n•",",");
         cuisine=cuisine.replaceAll("\n•",",");
-        if(validate(recipeName,cookTime,ingredients))
+        if(validate(recipeName,cookTime,ingredients,servings))
         {
             DatabaseHelper.currentEditRecipe.recipeName = recipeName;
             DatabaseHelper.currentEditRecipe.cookingTime = cookTime;
             DatabaseHelper.currentEditRecipe.prepTime = prepTime;
             DatabaseHelper.currentEditRecipe.Ingredients=Recipe.StringToList(ingredients,",");
             DatabaseHelper.currentEditRecipe.Cuisine=Recipe.StringToList(cuisine,",");
+            DatabaseHelper.currentEditRecipe.servings=Integer.parseInt(servings);
+            Intent intent = new Intent(this, edit_recipe_method.class);
+            startActivity(intent);
         }
     }
     public static boolean isCreating=false;
-    boolean validate(String recipeName, String cookTime, String ingredients)
+    boolean validate(String recipeName, String cookTime, String ingredients,String servings)
     {
         if(recipeName.equals("") || cookTime.equals("") || ingredients.equals("")) {
             Toast.makeText(getApplicationContext(), "Fields cannot be empty", Toast.LENGTH_SHORT).show();
@@ -81,6 +86,17 @@ public class edit_recipe_ingredients extends AppCompatActivity {
         {
             Toast.makeText(getApplicationContext(),"Recipe with the same name already exists",Toast.LENGTH_SHORT).show();
             return false;
+        }
+        else
+        {
+            try{
+                Integer.parseInt(servings);
+            }
+            catch (NumberFormatException e)
+            {
+                Toast.makeText(getApplicationContext(),"Incorrect Serving count",Toast.LENGTH_SHORT).show();
+                return false;
+            }
         }
         return true;
     }
