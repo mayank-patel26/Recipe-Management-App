@@ -33,6 +33,7 @@ public class DatabaseHelper
     {
         currentUser=new User();
         currentEditRecipe=new Recipe();
+        recipeList=new ArrayList<>();
         //create a database if it doesn't exist
         recipeAppDatabase = context.openOrCreateDatabase("RecipeAppDatabase", Context.MODE_PRIVATE,null);
         // create a recipe database table here

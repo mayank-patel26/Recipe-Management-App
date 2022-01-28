@@ -28,10 +28,7 @@ public class edit_recipe_ingredients extends AppCompatActivity {
     {
         Button next = findViewById(R.id.next_button);
         next.setOnClickListener(view -> {
-
             saveRecipe();
-            Intent intent = new Intent(this, edit_recipe_method.class);
-            startActivity(intent);
         });
     }
 
@@ -74,6 +71,8 @@ public class edit_recipe_ingredients extends AppCompatActivity {
             DatabaseHelper.currentEditRecipe.Ingredients=Recipe.StringToList(ingredients,",");
             DatabaseHelper.currentEditRecipe.Cuisine=Recipe.StringToList(cuisine,",");
             DatabaseHelper.currentEditRecipe.servings=Integer.parseInt(servings);
+            Intent intent = new Intent(this, edit_recipe_method.class);
+            startActivity(intent);
         }
     }
     public static boolean isCreating=false;
