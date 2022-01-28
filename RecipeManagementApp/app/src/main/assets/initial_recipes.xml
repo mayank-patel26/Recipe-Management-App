@@ -204,7 +204,7 @@
         <allergens>-</allergens>
         <tags>spicy</tags>
     </recipe>
-    <recipe>
+    <!--<recipe>
         <name>Cheese Dosa</name>
         <user_id>-1</user_id>
         <ingredients>3 Tbsp Chilli tomato ketchup~1 tsp Mustard~2 tbsp Mayonnaise~3 slices White or brown bread~4 slices Cheese~4 Egg whites~1 Spring onion~2 Green chillies~Few Coriander leaves~2-3 Basil leaves~1 bunch Chives~ Salt to taste~ Olive oil</ingredients>
@@ -227,7 +227,7 @@
         <prep_time>10 mins</prep_time>
         <allergens>-</allergens>
         <tags>toast, spicy</tags>
-    </recipe>
+    </recipe>-->
     <recipe>
         <name>Risotto and Milanese</name>
         <user_id>-1</user_id>

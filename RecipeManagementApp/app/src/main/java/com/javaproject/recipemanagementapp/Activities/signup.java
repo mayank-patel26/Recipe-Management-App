@@ -39,14 +39,15 @@ public class signup extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Fields are empty", Toast.LENGTH_SHORT).show();
             }
 
-            else {
+            else if(signup_email.contains("@"))
+            {
                 if (signup_pass.equals(reenter_pass)) {
                     Boolean check = DatabaseHelper.checkemail(signup_email);
                     if (!check) {
                         DatabaseHelper.insertUserData(signup_email, signup_pass, fname);
                         DatabaseHelper.checkemail(signup_email);
                         DatabaseHelper.getAllRecipe();
-                        Toast.makeText(getApplicationContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_SHORT).show();
                         Intent intent22 = new Intent(signup.this, landing_page.class);
                         startActivity(intent22);
                     }
@@ -59,6 +60,10 @@ public class signup extends AppCompatActivity {
                 else {
                     Toast.makeText(getApplicationContext(), "Passwords do not match", Toast.LENGTH_SHORT).show();
                 }
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(), "Please enter a valid Email!", Toast.LENGTH_SHORT).show();
             }
         });
 

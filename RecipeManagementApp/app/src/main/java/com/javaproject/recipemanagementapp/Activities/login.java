@@ -55,18 +55,22 @@ public class login extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Fields are empty", Toast.LENGTH_SHORT).show();
             }
 
-            else{
+            else if(e.contains("@")){
                 Boolean chk = DatabaseHelper.checklogin(e, p);
                 if(chk){
-                    Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Login Successful.", Toast.LENGTH_SHORT).show();
                     DatabaseHelper.checkemail(e);
                     DatabaseHelper.getAllRecipe();
                     Intent intent = new Intent(login.this, landing_page.class);
                     startActivity(intent);
                 }
                 else{
-                    Toast.makeText(getApplicationContext(), "Wrong email or password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Wrong Email or Password", Toast.LENGTH_SHORT).show();
                 }
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(), "Please enter a valid Email!", Toast.LENGTH_SHORT).show();
             }
             /*Boolean Checkemailpassword = db.emailpassword(email, password);
 

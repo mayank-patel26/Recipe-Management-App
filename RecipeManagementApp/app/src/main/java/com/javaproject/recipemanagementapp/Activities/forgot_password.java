@@ -50,7 +50,7 @@ public class forgot_password extends AppCompatActivity {
             {
                 Toast.makeText(getApplicationContext(), "Field is empty", Toast.LENGTH_SHORT).show();
             }
-            else
+            else if(find_email.contains("@"))
             {
 
                 boolean email_check = DatabaseHelper.findEmail(find_email);
@@ -66,7 +66,10 @@ public class forgot_password extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Incorrect email address", Toast.LENGTH_SHORT).show();
                 }
             }
-
+            else
+            {
+                Toast.makeText(getApplicationContext(), "Please enter a valid Email!", Toast.LENGTH_SHORT).show();
+            }
         });
 
 
