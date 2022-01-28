@@ -29,7 +29,7 @@
     <string name="servings_value">5</string>
     <string name="servings">Servings</string>
     <string name="recipe_name">Recipe Name</string>
-    <string name="search_for_recipe">search for recipe</string>
+    <string name="search_for_recipe">Search for recipe</string>
     <string name="method">Method</string>
     <string name="recipe_details_name">Name: </string>
     <string name="get_started">Get Started</string>
