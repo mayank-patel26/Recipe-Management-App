@@ -30,7 +30,7 @@ public class options extends AppCompatActivity {
 
         signOut.setOnClickListener(view -> {
             DatabaseHelper.resetRemStatus();
-            Intent toLoginSignup = new Intent(this, login_signup.class);
+            Intent toLoginSignup = new Intent(this, SignoutActivity.class);
             startActivity(toLoginSignup);
             recipeListSignOut.clear();
         });
@@ -52,7 +52,7 @@ public class options extends AppCompatActivity {
             recipeListSignOut.clear();
             String email = DatabaseHelper.currentUser.email;
             DatabaseHelper.deleteUser(email);
-            Toast.makeText(getApplicationContext(), "Account Deleted Successfully.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Account Deleted Successfully", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(options.this, login_signup.class);
             startActivity(intent);
         });

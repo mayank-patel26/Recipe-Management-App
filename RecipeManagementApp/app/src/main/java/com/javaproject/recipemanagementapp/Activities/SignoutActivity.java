@@ -24,15 +24,19 @@ public class SignoutActivity extends AppCompatActivity {
     {
         Button signoutCancel_button = findViewById(R.id.signoutCancel_button);
         signoutCancel_button.setOnClickListener(v -> {
-            Intent intent = new Intent(SignoutActivity.this, options.class);
-            startActivity(intent);
+                onBackPressed();
             });
 
             Button signoutConfirm_button = findViewById(R.id.signoutConfirm_button);
             signoutConfirm_button.setOnClickListener(v -> {
-            Toast.makeText(getApplicationContext(), "Signed Out Successfully.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Signed Out Successfully", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(SignoutActivity.this, login_signup.class);
             startActivity(intent);
             });
+    }
+
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
     }
 }
