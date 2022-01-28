@@ -188,7 +188,7 @@ public class DatabaseHelper
                     if (node.getNodeType() == Node.ELEMENT_NODE) {
                         Element element2 = (Element) node;
                         String recipeName=getValue("name",element2);
-                        ArrayList<String> ingredients= new ArrayList<>(Arrays.asList(getValue("ingredients",element2).split(",")));
+                        ArrayList<String> ingredients= new ArrayList<>(Arrays.asList(getValue("ingredients",element2).split("~")));
                         ArrayList<String> cuisine = new ArrayList<>(Arrays.asList(getValue("cuisine",element2).split(",")));
                         String procedure=getValue("procedure",element2);
                         int servings=Integer.parseInt(getValue("servings",element2));
@@ -222,7 +222,7 @@ public class DatabaseHelper
             }
             try{
                 if(Integer.parseInt(values[8])==-1||Integer.parseInt(values[8])==DatabaseHelper.currentUser.ID) {
-                    Recipe recipe = new Recipe(Integer.parseInt(values[0]), values[1], Recipe.StringToList(values[2], ","), Recipe.StringToList(values[3], ","), values[4], Integer.parseInt(values[5]), values[6], values[7], Integer.parseInt(values[8]), values[9], Recipe.StringToList(values[10], "~"));
+                    Recipe recipe = new Recipe(Integer.parseInt(values[0]), values[1], Recipe.StringToList(values[2], ","), Recipe.StringToList(values[3], ","), values[4], Integer.parseInt(values[5]), values[6], values[7], Integer.parseInt(values[8]), values[9], Recipe.StringToList(values[10], ","));
                     recipeList.add(recipe);
                 }
             }

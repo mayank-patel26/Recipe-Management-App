@@ -48,7 +48,7 @@ public class edit_recipe_ingredients extends AppCompatActivity {
             cuisine.setText(cui);
             EditText ingredients= findViewById(R.id.ingredients_edit_text);
             String ing=Recipe.ListtoString(DatabaseHelper.currentEditRecipe.Ingredients).replaceAll(",","\n•").replaceAll("~","\n•");
-            ing="\n•"+ing;
+            ing="• "+ing;
             ingredients.setText(ing);
     }
 
